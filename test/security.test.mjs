@@ -11,10 +11,19 @@ function filesUnder(path) {
   const output = []
   const visit = (current) => {
     for (const entry of readdirSync(current, { withFileTypes: true })) {
-      if (entry.name === '.git' || entry.name.startsWith('.test-')) continue
       const child = join(current, entry.name)
+      const repositoryRelative = relative(ROOT, child).split('\\').join('/')
       const status = lstatSync(child)
       if (status.isSymbolicLink()) throw new Error(`symbolic link is forbidden: ${relative(ROOT, child)}`)
+      if (repositoryRelative === '.git') {
+        if (!status.isDirectory()) throw new Error('repository-root .git must be a real directory')
+        continue
+      }
+      if (entry.name === '.git') throw new Error(`nested Git metadata is forbidden: ${repositoryRelative}`)
+      if (entry.name.startsWith('.test-')) {
+        if (!status.isDirectory()) throw new Error(`non-directory test state is forbidden: ${repositoryRelative}`)
+        continue
+      }
       if (status.isDirectory()) visit(child)
       else if (status.isFile()) output.push(child)
       else throw new Error(`non-regular repository entry is forbidden: ${relative(ROOT, child)}`)
@@ -110,8 +119,6 @@ test('all six generator and conformance sources have exact byte receipts', () =>
 })
 
 test('repository contains no symlink, special file, dependency lock or nested Git metadata', () => {
-  const rootGit = join(ROOT, '.git')
-  if (existsSync(rootGit)) assert.fail('producer must not initialize Git before authorization')
   for (const path of filesUnder(ROOT)) assert.equal(lstatSync(path).isFile(), true, relative(ROOT, path))
   assert.equal(existsSync(join(ROOT, 'package-lock.json')), false)
   assert.equal(existsSync(join(ROOT, 'node_modules')), false)
