@@ -1,0 +1,3368 @@
+{
+  "fixtureSet": {
+    "id": "polyphonic-claim-atlas-phase-0-fixtures",
+    "version": "0.1.0",
+    "asOf": "2026-08-26",
+    "declaredCaseCount": 24,
+    "syntheticOnly": true,
+    "realPeople": false,
+    "liveClaims": false,
+    "runtimeCurrentnessClaim": false
+  },
+  "cases": [
+    {
+      "id": "signed-false-statement",
+      "title": "A valid signature on a contradicted claim",
+      "lesson": "Origin and integrity do not establish content correspondence.",
+      "synthetic": true,
+      "declaredQuestion": "What does the signature establish, and what must be tested separately?",
+      "scenario": "A sealed synthetic note says a tray contains five tiles. The author-stipulated tray contains three.",
+      "timeScope": {
+        "from": "2026-08-26",
+        "through": "2026-08-26",
+        "basis": "AUTHOR_STIPULATED_FIXTURE_TIME",
+        "runtimeCurrentnessClaim": false
+      },
+      "authorStipulatedConditions": [
+        {
+          "id": "signed-false-statement:condition-1",
+          "statement": "The synthetic tray contains exactly three tiles during the fixture.",
+          "scope": "This closed fixture only.",
+          "authorStipulated": true,
+          "establishesBeyondFixture": false
+        }
+      ],
+      "expressions": [
+        {
+          "id": "signed-false-statement:expression-1",
+          "level": "L0_EXPRESSION",
+          "form": "The tray contains five tiles.",
+          "medium": "SIGNED_SYNTHETIC_NOTE",
+          "speakerRole": "SYNTHETIC_SIGNER",
+          "speechAct": "ASSERTION",
+          "genre": "INVENTED_REPORT",
+          "languagePractice": "ENGLISH_PHASE_0_FIXTURE",
+          "assertsClaimIds": [
+            "signed-false-statement:claim-1"
+          ],
+          "interpretationNote": "The signature is stipulated valid only for origin and byte integrity."
+        }
+      ],
+      "claims": [
+        {
+          "id": "signed-false-statement:claim-1",
+          "level": "L0_CLAIM",
+          "proposition": "The synthetic tray contains five tiles during the fixture.",
+          "regime": "EMPIRICAL",
+          "scope": "The one declared tray.",
+          "temporalQualifier": "During the declared fixture time.",
+          "expressionIds": [
+            "signed-false-statement:expression-1"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "signed-false-statement:evidence-1",
+          "kind": "SYNTHETIC_SIGNATURE_RECORD",
+          "description": "A stipulated valid signature binds the note bytes to the synthetic signer role.",
+          "sourceRole": "FIXTURE_PROVENANCE_RECORD",
+          "bearsOnClaimIds": [
+            "signed-false-statement:claim-1"
+          ],
+          "direction": "DOES_NOT_BEAR_ON_CORRESPONDENCE",
+          "integrityState": "DECLARED_INTACT",
+          "establishesTruth": false,
+          "scoresSourceOrPerson": false
+        },
+        {
+          "id": "signed-false-statement:evidence-2",
+          "kind": "DECLARED_FIXTURE_INSPECTION",
+          "description": "The stipulated fixture comparison counts three tiles.",
+          "sourceRole": "PHASE_0_FIXTURE_METHOD",
+          "bearsOnClaimIds": [
+            "signed-false-statement:claim-1"
+          ],
+          "direction": "CHALLENGES",
+          "integrityState": "AUTHOR_STIPULATED",
+          "establishesTruth": false,
+          "scoresSourceOrPerson": false
+        }
+      ],
+      "reasoning": [],
+      "events": [],
+      "narratives": [],
+      "assessments": [
+        {
+          "id": "signed-false-statement:assessment-1",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "signed-false-statement:claim-1"
+          ],
+          "disposition": "CONTRADICTED_UNDER_NAMED_TEST",
+          "methodId": "DECLARED_FIXTURE_WORLD_COMPARISON",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "signed-false-statement",
+          "scope": "Comparison with condition-1 inside this synthetic fixture only.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "signed-false-statement:condition-1",
+            "signed-false-statement:evidence-2"
+          ],
+          "rationale": "Five differs from the author-stipulated count of three.",
+          "limitations": "This disposition is authored fixture behavior, not an oracle result or a judgment about the signer.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        }
+      ],
+      "assessmentAudits": [],
+      "lifecycleRecords": [],
+      "nonClaims": [
+        "The signature does not make the assertion true.",
+        "The fixture does not classify or score the synthetic signer."
+      ]
+    },
+    {
+      "id": "valid-inference-false-premise",
+      "title": "Valid consequence from a contradicted premise",
+      "lesson": "Formal validity and premise correspondence are separate questions.",
+      "synthetic": true,
+      "declaredQuestion": "Can an inference be valid while its empirical conclusion is contradicted?",
+      "scenario": "A calculation assumes four gates of width two, but the stipulated fixture has two such gates.",
+      "timeScope": {
+        "from": "2026-08-26",
+        "through": "2026-08-26",
+        "basis": "AUTHOR_STIPULATED_FIXTURE_TIME",
+        "runtimeCurrentnessClaim": false
+      },
+      "authorStipulatedConditions": [
+        {
+          "id": "valid-inference-false-premise:condition-1",
+          "statement": "The synthetic wall has two gates and each gate is two units wide.",
+          "scope": "This closed fixture only.",
+          "authorStipulated": true,
+          "establishesBeyondFixture": false
+        }
+      ],
+      "expressions": [
+        {
+          "id": "valid-inference-false-premise:expression-1",
+          "level": "L0_EXPRESSION",
+          "form": "There are four gates; each is two units wide; therefore total gate width is eight units.",
+          "medium": "SYNTHETIC_CALCULATION",
+          "speakerRole": "FIXTURE_REASONER",
+          "speechAct": "ARGUMENT",
+          "genre": "INVENTED_PROOF_SKETCH",
+          "languagePractice": "ENGLISH_PHASE_0_FIXTURE",
+          "assertsClaimIds": [
+            "valid-inference-false-premise:claim-1",
+            "valid-inference-false-premise:claim-2",
+            "valid-inference-false-premise:claim-3",
+            "valid-inference-false-premise:claim-4"
+          ],
+          "interpretationNote": "The multiplication rule is interpreted under ordinary finite arithmetic."
+        }
+      ],
+      "claims": [
+        {
+          "id": "valid-inference-false-premise:claim-1",
+          "level": "L0_CLAIM",
+          "proposition": "The synthetic wall has four gates.",
+          "regime": "EMPIRICAL",
+          "scope": "The one declared wall.",
+          "temporalQualifier": "During the fixture.",
+          "expressionIds": [
+            "valid-inference-false-premise:expression-1"
+          ]
+        },
+        {
+          "id": "valid-inference-false-premise:claim-2",
+          "level": "L0_CLAIM",
+          "proposition": "Each gate is two units wide.",
+          "regime": "EMPIRICAL",
+          "scope": "The declared gates.",
+          "temporalQualifier": "During the fixture.",
+          "expressionIds": [
+            "valid-inference-false-premise:expression-1"
+          ]
+        },
+        {
+          "id": "valid-inference-false-premise:claim-3",
+          "level": "L0_CLAIM",
+          "proposition": "The total gate width is eight units.",
+          "regime": "EMPIRICAL",
+          "scope": "The declared wall.",
+          "temporalQualifier": "During the fixture.",
+          "expressionIds": [
+            "valid-inference-false-premise:expression-1"
+          ]
+        },
+        {
+          "id": "valid-inference-false-premise:claim-4",
+          "level": "L0_CLAIM",
+          "proposition": "Given claims 1 and 2, claim 3 follows by multiplication.",
+          "regime": "FORMAL_LOGICAL",
+          "scope": "The declared premises and ordinary arithmetic rule.",
+          "temporalQualifier": "Atemporal within the fixture model.",
+          "expressionIds": [
+            "valid-inference-false-premise:expression-1"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "valid-inference-false-premise:evidence-1",
+          "kind": "DECLARED_FIXTURE_INSPECTION",
+          "description": "The stipulated wall description contains two gates of two units each.",
+          "sourceRole": "PHASE_0_FIXTURE_METHOD",
+          "bearsOnClaimIds": [
+            "valid-inference-false-premise:claim-1",
+            "valid-inference-false-premise:claim-2",
+            "valid-inference-false-premise:claim-3"
+          ],
+          "direction": "MIXED_BEARING",
+          "integrityState": "AUTHOR_STIPULATED",
+          "establishesTruth": false,
+          "scoresSourceOrPerson": false
+        }
+      ],
+      "reasoning": [
+        {
+          "id": "valid-inference-false-premise:reasoning-1",
+          "level": "L0_REASONING",
+          "premiseClaimIds": [
+            "valid-inference-false-premise:claim-1",
+            "valid-inference-false-premise:claim-2"
+          ],
+          "conclusionClaimId": "valid-inference-false-premise:claim-3",
+          "rule": "gate_count multiplied by width_per_gate equals total_gate_width",
+          "structuralNote": "The consequence is structurally valid under the declared premises."
+        }
+      ],
+      "events": [],
+      "narratives": [],
+      "assessments": [
+        {
+          "id": "valid-inference-false-premise:assessment-1",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "valid-inference-false-premise:claim-4"
+          ],
+          "disposition": "SUPPORTED_UNDER_NAMED_TEST",
+          "methodId": "FORMAL_VALIDITY_CHECK",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "valid-inference-false-premise",
+          "scope": "Only the declared inference form.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "valid-inference-false-premise:reasoning-1"
+          ],
+          "rationale": "The multiplication conclusion follows from the two stated premises.",
+          "limitations": "This assessment says nothing about whether either empirical premise obtains.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        },
+        {
+          "id": "valid-inference-false-premise:assessment-2",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "valid-inference-false-premise:claim-1",
+            "valid-inference-false-premise:claim-3"
+          ],
+          "disposition": "CONTRADICTED_UNDER_NAMED_TEST",
+          "methodId": "DECLARED_FIXTURE_WORLD_COMPARISON",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "valid-inference-false-premise",
+          "scope": "The stipulated wall description only.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "valid-inference-false-premise:condition-1",
+            "valid-inference-false-premise:evidence-1"
+          ],
+          "rationale": "Two gates of width two yield four units, not four gates or eight units.",
+          "limitations": "This fixture assessment does not invalidate the inference rule itself.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        },
+        {
+          "id": "valid-inference-false-premise:assessment-3",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "valid-inference-false-premise:claim-2"
+          ],
+          "disposition": "SUPPORTED_UNDER_NAMED_TEST",
+          "methodId": "DECLARED_FIXTURE_WORLD_COMPARISON",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "valid-inference-false-premise",
+          "scope": "Width of each stipulated gate only.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "valid-inference-false-premise:condition-1",
+            "valid-inference-false-premise:evidence-1"
+          ],
+          "rationale": "The two-unit width matches the author-stipulated condition.",
+          "limitations": "Scoped support for this premise does not support the contradicted gate count.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        }
+      ],
+      "assessmentAudits": [],
+      "lifecycleRecords": [],
+      "nonClaims": [
+        "Formal validity is not a global truth label.",
+        "A contradicted premise does not imply defective arithmetic."
+      ]
+    },
+    {
+      "id": "true-conclusion-invalid-inference",
+      "title": "Supported conclusion reached by invalid reasoning",
+      "lesson": "A supported conclusion does not repair an invalid argument.",
+      "synthetic": true,
+      "declaredQuestion": "Can a conclusion match the fixture while the offered reasoning fails?",
+      "scenario": "A box contains four red tokens. An argument concludes four solely because the box is square.",
+      "timeScope": {
+        "from": "2026-08-26",
+        "through": "2026-08-26",
+        "basis": "AUTHOR_STIPULATED_FIXTURE_TIME",
+        "runtimeCurrentnessClaim": false
+      },
+      "authorStipulatedConditions": [
+        {
+          "id": "true-conclusion-invalid-inference:condition-1",
+          "statement": "The synthetic box is square and contains four red tokens.",
+          "scope": "This closed fixture only.",
+          "authorStipulated": true,
+          "establishesBeyondFixture": false
+        }
+      ],
+      "expressions": [
+        {
+          "id": "true-conclusion-invalid-inference:expression-1",
+          "level": "L0_EXPRESSION",
+          "form": "The box is square, therefore it contains four red tokens.",
+          "medium": "SYNTHETIC_ARGUMENT",
+          "speakerRole": "FIXTURE_REASONER",
+          "speechAct": "ARGUMENT",
+          "genre": "INVENTED_PROOF_SKETCH",
+          "languagePractice": "ENGLISH_PHASE_0_FIXTURE",
+          "assertsClaimIds": [
+            "true-conclusion-invalid-inference:claim-1",
+            "true-conclusion-invalid-inference:claim-2",
+            "true-conclusion-invalid-inference:claim-3"
+          ],
+          "interpretationNote": "No rule connecting squareness to token count is declared."
+        }
+      ],
+      "claims": [
+        {
+          "id": "true-conclusion-invalid-inference:claim-1",
+          "level": "L0_CLAIM",
+          "proposition": "The synthetic box is square.",
+          "regime": "EMPIRICAL",
+          "scope": "The declared box.",
+          "temporalQualifier": "During the fixture.",
+          "expressionIds": [
+            "true-conclusion-invalid-inference:expression-1"
+          ]
+        },
+        {
+          "id": "true-conclusion-invalid-inference:claim-2",
+          "level": "L0_CLAIM",
+          "proposition": "The synthetic box contains four red tokens.",
+          "regime": "EMPIRICAL",
+          "scope": "The declared box.",
+          "temporalQualifier": "During the fixture.",
+          "expressionIds": [
+            "true-conclusion-invalid-inference:expression-1"
+          ]
+        },
+        {
+          "id": "true-conclusion-invalid-inference:claim-3",
+          "level": "L0_CLAIM",
+          "proposition": "Claim 2 follows from claim 1 alone.",
+          "regime": "FORMAL_LOGICAL",
+          "scope": "The declared one-premise argument.",
+          "temporalQualifier": "Atemporal within the fixture model.",
+          "expressionIds": [
+            "true-conclusion-invalid-inference:expression-1"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "true-conclusion-invalid-inference:evidence-1",
+          "kind": "DECLARED_FIXTURE_INSPECTION",
+          "description": "The stipulated fixture describes four red tokens.",
+          "sourceRole": "PHASE_0_FIXTURE_METHOD",
+          "bearsOnClaimIds": [
+            "true-conclusion-invalid-inference:claim-2"
+          ],
+          "direction": "SUPPORTS",
+          "integrityState": "AUTHOR_STIPULATED",
+          "establishesTruth": false,
+          "scoresSourceOrPerson": false
+        }
+      ],
+      "reasoning": [
+        {
+          "id": "true-conclusion-invalid-inference:reasoning-1",
+          "level": "L0_REASONING",
+          "premiseClaimIds": [
+            "true-conclusion-invalid-inference:claim-1"
+          ],
+          "conclusionClaimId": "true-conclusion-invalid-inference:claim-2",
+          "rule": "No connecting rule is declared.",
+          "structuralNote": "The premise does not entail the conclusion."
+        }
+      ],
+      "events": [],
+      "narratives": [],
+      "assessments": [
+        {
+          "id": "true-conclusion-invalid-inference:assessment-1",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "true-conclusion-invalid-inference:claim-2"
+          ],
+          "disposition": "SUPPORTED_UNDER_NAMED_TEST",
+          "methodId": "DECLARED_FIXTURE_WORLD_COMPARISON",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "true-conclusion-invalid-inference",
+          "scope": "The stipulated token count only.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "true-conclusion-invalid-inference:condition-1",
+            "true-conclusion-invalid-inference:evidence-1"
+          ],
+          "rationale": "The conclusion matches the author-stipulated token count.",
+          "limitations": "Support for the conclusion does not support the offered inference.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        },
+        {
+          "id": "true-conclusion-invalid-inference:assessment-2",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "true-conclusion-invalid-inference:claim-3"
+          ],
+          "disposition": "CONTRADICTED_UNDER_NAMED_TEST",
+          "methodId": "FORMAL_VALIDITY_CHECK",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "true-conclusion-invalid-inference",
+          "scope": "The declared inference form only.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "true-conclusion-invalid-inference:reasoning-1"
+          ],
+          "rationale": "No declared rule makes token count follow from box shape.",
+          "limitations": "This assessment does not challenge the token count itself.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        },
+        {
+          "id": "true-conclusion-invalid-inference:assessment-3",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "true-conclusion-invalid-inference:claim-1"
+          ],
+          "disposition": "SUPPORTED_UNDER_NAMED_TEST",
+          "methodId": "DECLARED_FIXTURE_WORLD_COMPARISON",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "true-conclusion-invalid-inference",
+          "scope": "Shape of the stipulated box only.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "true-conclusion-invalid-inference:condition-1"
+          ],
+          "rationale": "The box's squareness matches the author-stipulated condition.",
+          "limitations": "Scoped support for box shape does not make token count follow from shape.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        }
+      ],
+      "assessmentAudits": [],
+      "lifecycleRecords": [],
+      "nonClaims": [
+        "A matching conclusion does not validate the route used to reach it.",
+        "This fixture does not infer competence or intent."
+      ]
+    },
+    {
+      "id": "two-coherent-narratives",
+      "title": "Two coherent stories selecting one event set",
+      "lesson": "Narrative coherence, selection, causal attribution and correspondence require separate inspection.",
+      "synthetic": true,
+      "declaredQuestion": "How can two coherent stories differ without assigning one whole-story truth status?",
+      "scenario": "A synthetic square experiences a gate closure, crowd movement, a bell and later reopening. Two stories select different events and causes.",
+      "timeScope": {
+        "from": "2026-08-26",
+        "through": "2026-08-26",
+        "basis": "AUTHOR_STIPULATED_FIXTURE_TIME",
+        "runtimeCurrentnessClaim": false
+      },
+      "authorStipulatedConditions": [
+        {
+          "id": "two-coherent-narratives:condition-1",
+          "statement": "The four declared events occur in sequence; the fixture does not stipulate why the crowd moved.",
+          "scope": "This closed fixture only.",
+          "authorStipulated": true,
+          "establishesBeyondFixture": false
+        }
+      ],
+      "expressions": [
+        {
+          "id": "two-coherent-narratives:expression-1",
+          "level": "L0_EXPRESSION",
+          "form": "The closure redirected the crowd; the bell merely marked the interval.",
+          "medium": "SYNTHETIC_STORY_A",
+          "speakerRole": "NARRATOR_ROLE_A",
+          "speechAct": "NARRATION",
+          "genre": "INVENTED_CHRONICLE",
+          "languagePractice": "ENGLISH_PHASE_0_FIXTURE",
+          "assertsClaimIds": [
+            "two-coherent-narratives:claim-1"
+          ],
+          "interpretationNote": "This expression selects closure and movement as its causal frame."
+        },
+        {
+          "id": "two-coherent-narratives:expression-2",
+          "level": "L0_EXPRESSION",
+          "form": "The bell prompted the crowd to move while the closed gate shaped the route.",
+          "medium": "SYNTHETIC_STORY_B",
+          "speakerRole": "NARRATOR_ROLE_B",
+          "speechAct": "NARRATION",
+          "genre": "INVENTED_CHRONICLE",
+          "languagePractice": "ENGLISH_PHASE_0_FIXTURE",
+          "assertsClaimIds": [
+            "two-coherent-narratives:claim-2"
+          ],
+          "interpretationNote": "This expression selects the bell as prompt and the gate as constraint."
+        }
+      ],
+      "claims": [
+        {
+          "id": "two-coherent-narratives:claim-1",
+          "level": "L0_CLAIM",
+          "proposition": "Within story A, gate closure caused the crowd movement.",
+          "regime": "NARRATIVE_CLAIM_FRAGMENT",
+          "scope": "The causal fragment extracted from story A.",
+          "temporalQualifier": "Across events 1 and 2.",
+          "expressionIds": [
+            "two-coherent-narratives:expression-1"
+          ]
+        },
+        {
+          "id": "two-coherent-narratives:claim-2",
+          "level": "L0_CLAIM",
+          "proposition": "Within story B, the bell prompted the crowd movement.",
+          "regime": "NARRATIVE_CLAIM_FRAGMENT",
+          "scope": "The causal fragment extracted from story B.",
+          "temporalQualifier": "Across events 2 and 3 as narratively reordered.",
+          "expressionIds": [
+            "two-coherent-narratives:expression-2"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "two-coherent-narratives:evidence-1",
+          "kind": "DECLARED_EVENT_SEQUENCE",
+          "description": "The fixture stipulates event occurrence and sequence but no causal mechanism.",
+          "sourceRole": "PHASE_0_FIXTURE_METHOD",
+          "bearsOnClaimIds": [
+            "two-coherent-narratives:claim-1",
+            "two-coherent-narratives:claim-2"
+          ],
+          "direction": "CONTEXTUALISES",
+          "integrityState": "AUTHOR_STIPULATED",
+          "establishesTruth": false,
+          "scoresSourceOrPerson": false
+        }
+      ],
+      "reasoning": [],
+      "events": [
+        {
+          "id": "two-coherent-narratives:event-1",
+          "description": "The east gate closes.",
+          "sequenceIndex": 1,
+          "conditionIds": [
+            "two-coherent-narratives:condition-1"
+          ]
+        },
+        {
+          "id": "two-coherent-narratives:event-2",
+          "description": "The crowd begins moving west.",
+          "sequenceIndex": 2,
+          "conditionIds": [
+            "two-coherent-narratives:condition-1"
+          ]
+        },
+        {
+          "id": "two-coherent-narratives:event-3",
+          "description": "A bell sounds.",
+          "sequenceIndex": 3,
+          "conditionIds": [
+            "two-coherent-narratives:condition-1"
+          ]
+        },
+        {
+          "id": "two-coherent-narratives:event-4",
+          "description": "The east gate reopens.",
+          "sequenceIndex": 4,
+          "conditionIds": [
+            "two-coherent-narratives:condition-1"
+          ]
+        }
+      ],
+      "narratives": [
+        {
+          "id": "two-coherent-narratives:narrative-1",
+          "level": "L0_NARRATIVE_ARTIFACT",
+          "title": "Closure and redirection",
+          "genre": "INVENTED_CHRONICLE",
+          "audience": "PHASE_0_READER",
+          "standpoint": "GATE_OBSERVER_FRAME",
+          "selectorRole": "NARRATOR_ROLE_A",
+          "selectionRationale": "Foreground the gate as the organizing constraint on movement.",
+          "claimFragmentIds": [
+            "two-coherent-narratives:claim-1"
+          ],
+          "selectedEventIds": [
+            "two-coherent-narratives:event-1",
+            "two-coherent-narratives:event-2",
+            "two-coherent-narratives:event-4"
+          ],
+          "omittedEventIds": [
+            "two-coherent-narratives:event-3"
+          ],
+          "orderedEventIds": [
+            "two-coherent-narratives:event-1",
+            "two-coherent-narratives:event-2",
+            "two-coherent-narratives:event-4"
+          ],
+          "causalAttributions": [
+            {
+              "fromEventId": "two-coherent-narratives:event-1",
+              "toEventId": "two-coherent-narratives:event-2",
+              "relation": "CAUSED",
+              "basis": "NARRATOR_ASSERTED_NOT_FIXTURE_ESTABLISHED"
+            }
+          ],
+          "counterstoryIds": [
+            "two-coherent-narratives:narrative-2"
+          ],
+          "counterstorySearchState": "REFERENCED",
+          "coherenceNote": "The selected sequence is internally intelligible.",
+          "fidelityNote": "It includes three stipulated events and omits the bell.",
+          "correspondenceNote": "The causal attribution is not stipulated by the fixture."
+        },
+        {
+          "id": "two-coherent-narratives:narrative-2",
+          "level": "L0_NARRATIVE_ARTIFACT",
+          "title": "Bell and movement",
+          "genre": "INVENTED_CHRONICLE",
+          "audience": "PHASE_0_READER",
+          "standpoint": "SOUND_OBSERVER_FRAME",
+          "selectorRole": "NARRATOR_ROLE_B",
+          "selectionRationale": "Foreground the audible marker as the organizing prompt for movement.",
+          "claimFragmentIds": [
+            "two-coherent-narratives:claim-2"
+          ],
+          "selectedEventIds": [
+            "two-coherent-narratives:event-1",
+            "two-coherent-narratives:event-2",
+            "two-coherent-narratives:event-3"
+          ],
+          "omittedEventIds": [
+            "two-coherent-narratives:event-4"
+          ],
+          "orderedEventIds": [
+            "two-coherent-narratives:event-1",
+            "two-coherent-narratives:event-3",
+            "two-coherent-narratives:event-2"
+          ],
+          "causalAttributions": [
+            {
+              "fromEventId": "two-coherent-narratives:event-3",
+              "toEventId": "two-coherent-narratives:event-2",
+              "relation": "PROMPTED",
+              "basis": "NARRATOR_ASSERTED_NOT_FIXTURE_ESTABLISHED"
+            }
+          ],
+          "counterstoryIds": [
+            "two-coherent-narratives:narrative-1"
+          ],
+          "counterstorySearchState": "REFERENCED",
+          "coherenceNote": "The narrated order supplies an intelligible prompt structure.",
+          "fidelityNote": "It includes three stipulated events, omits reopening and reorders bell before movement.",
+          "correspondenceNote": "Neither the reordered chronology nor causal prompt is stipulated by the fixture."
+        }
+      ],
+      "assessments": [
+        {
+          "id": "two-coherent-narratives:assessment-1",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "two-coherent-narratives:claim-1"
+          ],
+          "disposition": "MIXED_UNDER_NAMED_TEST",
+          "methodId": "NARRATIVE_SELECTION_AUDIT",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "two-coherent-narratives",
+          "scope": "Story A selection, order and causal fragment only.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "two-coherent-narratives:condition-1",
+            "two-coherent-narratives:narrative-1"
+          ],
+          "rationale": "Selected events are stipulated, while the causal attribution is not.",
+          "limitations": "No whole-story verdict and no narrator assessment is produced.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        },
+        {
+          "id": "two-coherent-narratives:assessment-2",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "two-coherent-narratives:claim-2"
+          ],
+          "disposition": "MIXED_UNDER_NAMED_TEST",
+          "methodId": "NARRATIVE_SELECTION_AUDIT",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "two-coherent-narratives",
+          "scope": "Story B selection, order and causal fragment only.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "two-coherent-narratives:condition-1",
+            "two-coherent-narratives:narrative-2"
+          ],
+          "rationale": "Selected events are stipulated, while chronology is reordered and causation unstipulated.",
+          "limitations": "Coherence is recorded separately from correspondence and fidelity.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        }
+      ],
+      "assessmentAudits": [],
+      "lifecycleRecords": [],
+      "nonClaims": [
+        "Neither narrative receives a whole-story truth status.",
+        "Internal coherence does not establish causal correspondence."
+      ]
+    },
+    {
+      "id": "official-correction",
+      "title": "An official record corrected without erasing history",
+      "lesson": "Official status, correction lifecycle and empirical assessment are distinct.",
+      "synthetic": true,
+      "declaredQuestion": "How can a correction repair reliance without turning lifecycle into a truth verdict?",
+      "scenario": "A synthetic office first publishes a count of twelve, then corrects it to seven while retaining the earlier record.",
+      "timeScope": {
+        "from": "2026-08-26",
+        "through": "2026-08-26",
+        "basis": "AUTHOR_STIPULATED_FIXTURE_TIME",
+        "runtimeCurrentnessClaim": false
+      },
+      "authorStipulatedConditions": [
+        {
+          "id": "official-correction:condition-1",
+          "statement": "The stipulated fixture count is seven units.",
+          "scope": "This closed fixture only.",
+          "authorStipulated": true,
+          "establishesBeyondFixture": false
+        }
+      ],
+      "expressions": [
+        {
+          "id": "official-correction:expression-1",
+          "level": "L0_EXPRESSION",
+          "form": "Official bulletin one: the count is twelve.",
+          "medium": "SYNTHETIC_OFFICIAL_BULLETIN",
+          "speakerRole": "SYNTHETIC_OFFICE",
+          "speechAct": "ASSERTION",
+          "genre": "INVENTED_OFFICIAL_RECORD",
+          "languagePractice": "ENGLISH_PHASE_0_FIXTURE",
+          "assertsClaimIds": [
+            "official-correction:claim-1"
+          ],
+          "interpretationNote": "Official publication status is stipulated but not empirical accuracy."
+        },
+        {
+          "id": "official-correction:expression-2",
+          "level": "L0_EXPRESSION",
+          "form": "Correction bulletin: replace twelve with seven for this count.",
+          "medium": "SYNTHETIC_OFFICIAL_BULLETIN",
+          "speakerRole": "SYNTHETIC_OFFICE",
+          "speechAct": "CORRECTION",
+          "genre": "INVENTED_OFFICIAL_RECORD",
+          "languagePractice": "ENGLISH_PHASE_0_FIXTURE",
+          "assertsClaimIds": [
+            "official-correction:claim-2"
+          ],
+          "interpretationNote": "The correction supersedes the active record while preserving the earlier bulletin."
+        }
+      ],
+      "claims": [
+        {
+          "id": "official-correction:claim-1",
+          "level": "L0_CLAIM",
+          "proposition": "The fixture count is twelve units.",
+          "regime": "EMPIRICAL",
+          "scope": "The declared count.",
+          "temporalQualifier": "As asserted in bulletin one.",
+          "expressionIds": [
+            "official-correction:expression-1"
+          ]
+        },
+        {
+          "id": "official-correction:claim-2",
+          "level": "L0_CLAIM",
+          "proposition": "The fixture count is seven units.",
+          "regime": "EMPIRICAL",
+          "scope": "The declared count.",
+          "temporalQualifier": "As asserted in the correction bulletin.",
+          "expressionIds": [
+            "official-correction:expression-2"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "official-correction:evidence-1",
+          "kind": "DECLARED_FIXTURE_INSPECTION",
+          "description": "The author-stipulated count is seven.",
+          "sourceRole": "PHASE_0_FIXTURE_METHOD",
+          "bearsOnClaimIds": [
+            "official-correction:claim-1",
+            "official-correction:claim-2"
+          ],
+          "direction": "MIXED_BEARING",
+          "integrityState": "AUTHOR_STIPULATED",
+          "establishesTruth": false,
+          "scoresSourceOrPerson": false
+        }
+      ],
+      "reasoning": [],
+      "events": [],
+      "narratives": [],
+      "assessments": [
+        {
+          "id": "official-correction:assessment-1",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "official-correction:claim-1"
+          ],
+          "disposition": "CONTRADICTED_UNDER_NAMED_TEST",
+          "methodId": "DECLARED_FIXTURE_WORLD_COMPARISON",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "official-correction",
+          "scope": "Bulletin one's count compared with condition-1.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "official-correction:condition-1",
+            "official-correction:evidence-1"
+          ],
+          "rationale": "Twelve differs from the stipulated count of seven.",
+          "limitations": "Retraction, correction and source intent are not inferred from this disposition.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        },
+        {
+          "id": "official-correction:assessment-2",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "official-correction:claim-2"
+          ],
+          "disposition": "SUPPORTED_UNDER_NAMED_TEST",
+          "methodId": "DECLARED_FIXTURE_WORLD_COMPARISON",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "official-correction",
+          "scope": "Correction bulletin's count compared with condition-1.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "official-correction:condition-1",
+            "official-correction:evidence-1"
+          ],
+          "rationale": "Seven matches the stipulated fixture count.",
+          "limitations": "Official status is not part of the comparison method.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        }
+      ],
+      "assessmentAudits": [],
+      "lifecycleRecords": [
+        {
+          "id": "official-correction:lifecycle-1",
+          "targetExpressionIds": [
+            "official-correction:expression-1"
+          ],
+          "replacementExpressionIds": [
+            "official-correction:expression-2"
+          ],
+          "state": "CORRECTED",
+          "asOf": "2026-08-26",
+          "scope": "Active count record for this fixture only.",
+          "reason": "The synthetic office issued an explicit replacement count.",
+          "establishesTruthOrFalsehood": false,
+          "preservesHistory": true
+        }
+      ],
+      "nonClaims": [
+        "Correction lifecycle is not itself a falsehood verdict.",
+        "Official publication does not establish empirical correspondence."
+      ]
+    },
+    {
+      "id": "institutional-versus-empirical",
+      "title": "An effective declaration with no physical power",
+      "lesson": "A performative can constitute institutional status without changing an empirical condition.",
+      "synthetic": true,
+      "declaredQuestion": "What can an authorized declaration make institutionally so?",
+      "scenario": "A synthetic council validly declares a garden open while stipulated rain keeps its paths wet.",
+      "timeScope": {
+        "from": "2026-08-26",
+        "through": "2026-08-26",
+        "basis": "AUTHOR_STIPULATED_FIXTURE_TIME",
+        "runtimeCurrentnessClaim": false
+      },
+      "authorStipulatedConditions": [
+        {
+          "id": "institutional-versus-empirical:condition-1",
+          "statement": "The council role has fixture authority to set the garden's open status at noon.",
+          "scope": "The invented garden rule only.",
+          "authorStipulated": true,
+          "establishesBeyondFixture": false
+        },
+        {
+          "id": "institutional-versus-empirical:condition-2",
+          "statement": "Rain leaves the synthetic garden paths wet at noon.",
+          "scope": "The invented garden conditions only.",
+          "authorStipulated": true,
+          "establishesBeyondFixture": false
+        }
+      ],
+      "expressions": [
+        {
+          "id": "institutional-versus-empirical:expression-1",
+          "level": "L0_EXPRESSION",
+          "form": "Under the garden rule, the garden is open from noon.",
+          "medium": "SYNTHETIC_DECLARATION",
+          "speakerRole": "AUTHORIZED_SYNTHETIC_COUNCIL",
+          "speechAct": "DECLARATION",
+          "genre": "INVENTED_INSTITUTIONAL_RECORD",
+          "languagePractice": "ENGLISH_PHASE_0_FIXTURE",
+          "assertsClaimIds": [
+            "institutional-versus-empirical:claim-1"
+          ],
+          "interpretationNote": "The declaration operates only within the stipulated institutional rule."
+        },
+        {
+          "id": "institutional-versus-empirical:expression-2",
+          "level": "L0_EXPRESSION",
+          "form": "Because the council opened the garden, the paths are dry.",
+          "medium": "SYNTHETIC_COMMENT",
+          "speakerRole": "FIXTURE_COMMENTATOR",
+          "speechAct": "ASSERTION",
+          "genre": "INVENTED_REPORT",
+          "languagePractice": "ENGLISH_PHASE_0_FIXTURE",
+          "assertsClaimIds": [
+            "institutional-versus-empirical:claim-2"
+          ],
+          "interpretationNote": "The expression improperly carries institutional force into a physical claim."
+        }
+      ],
+      "claims": [
+        {
+          "id": "institutional-versus-empirical:claim-1",
+          "level": "L0_CLAIM",
+          "proposition": "The garden has open status from noon under the synthetic rule.",
+          "regime": "PERFORMATIVE_OR_DIRECTIVE",
+          "scope": "The declared garden institution.",
+          "temporalQualifier": "From noon on the fixture date.",
+          "expressionIds": [
+            "institutional-versus-empirical:expression-1"
+          ]
+        },
+        {
+          "id": "institutional-versus-empirical:claim-2",
+          "level": "L0_CLAIM",
+          "proposition": "The declaration caused the garden paths to be dry.",
+          "regime": "CAUSAL",
+          "scope": "The physical paths in the synthetic garden.",
+          "temporalQualifier": "At noon on the fixture date.",
+          "expressionIds": [
+            "institutional-versus-empirical:expression-2"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "institutional-versus-empirical:evidence-1",
+          "kind": "DECLARED_AUTHORITY_RECORD",
+          "description": "The fixture grants the council role authority to set open status only.",
+          "sourceRole": "PHASE_0_FIXTURE_METHOD",
+          "bearsOnClaimIds": [
+            "institutional-versus-empirical:claim-1",
+            "institutional-versus-empirical:claim-2"
+          ],
+          "direction": "MIXED_BEARING",
+          "integrityState": "AUTHOR_STIPULATED",
+          "establishesTruth": false,
+          "scoresSourceOrPerson": false
+        }
+      ],
+      "reasoning": [],
+      "events": [],
+      "narratives": [],
+      "assessments": [
+        {
+          "id": "institutional-versus-empirical:assessment-1",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "institutional-versus-empirical:claim-1"
+          ],
+          "disposition": "SUPPORTED_UNDER_NAMED_TEST",
+          "methodId": "AUTHORITY_SCOPE_CHECK",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "institutional-versus-empirical",
+          "scope": "Felicity and authority under the invented garden rule only.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "institutional-versus-empirical:condition-1",
+            "institutional-versus-empirical:evidence-1"
+          ],
+          "rationale": "The declared role and procedure satisfy the fixture's institutional rule.",
+          "limitations": "This method does not assess physical conditions or moral legitimacy.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        },
+        {
+          "id": "institutional-versus-empirical:assessment-2",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "institutional-versus-empirical:claim-2"
+          ],
+          "disposition": "CONTRADICTED_UNDER_NAMED_TEST",
+          "methodId": "CAUSAL_MODEL_CHECK",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "institutional-versus-empirical",
+          "scope": "Physical path condition in this fixture only.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "institutional-versus-empirical:condition-2"
+          ],
+          "rationale": "The stipulated paths remain wet after the declaration.",
+          "limitations": "The empirical disposition does not undo the garden's institutional open status.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        }
+      ],
+      "assessmentAudits": [],
+      "lifecycleRecords": [],
+      "nonClaims": [
+        "The atlas does not grant the council real authority.",
+        "Institutional validity is not empirical or moral validity."
+      ]
+    },
+    {
+      "id": "testimony-uptake-injustice",
+      "title": "Relevant testimony receives less uptake",
+      "lesson": "Social uptake and evidential access are different; neither licenses a witness score.",
+      "synthetic": true,
+      "declaredQuestion": "What changes when power affects who is heard rather than what was observed?",
+      "scenario": "A nearby anonymous observer reports a leak. A distant office report omits it and receives wider uptake.",
+      "timeScope": {
+        "from": "2026-08-26",
+        "through": "2026-08-26",
+        "basis": "AUTHOR_STIPULATED_FIXTURE_TIME",
+        "runtimeCurrentnessClaim": false
+      },
+      "authorStipulatedConditions": [
+        {
+          "id": "testimony-uptake-injustice:condition-1",
+          "statement": "A synthetic pipe leaks and the anonymous observer role is nearby while the office role is remote.",
+          "scope": "This closed fixture only.",
+          "authorStipulated": true,
+          "establishesBeyondFixture": false
+        }
+      ],
+      "expressions": [
+        {
+          "id": "testimony-uptake-injustice:expression-1",
+          "level": "L0_EXPRESSION",
+          "form": "I observed water escaping from the pipe.",
+          "medium": "SYNTHETIC_ANONYMOUS_TESTIMONY",
+          "speakerRole": "ANONYMOUS_NEARBY_OBSERVER",
+          "speechAct": "TESTIMONY",
+          "genre": "INVENTED_FIRST_PERSON_REPORT",
+          "languagePractice": "ENGLISH_PHASE_0_FIXTURE",
+          "assertsClaimIds": [
+            "testimony-uptake-injustice:claim-1"
+          ],
+          "interpretationNote": "Anonymity is preserved and not converted into a credibility penalty."
+        },
+        {
+          "id": "testimony-uptake-injustice:expression-2",
+          "level": "L0_EXPRESSION",
+          "form": "The office record contains no leak entry, so no leak occurred.",
+          "medium": "SYNTHETIC_OFFICE_REPORT",
+          "speakerRole": "REMOTE_OFFICE_ROLE",
+          "speechAct": "ASSERTION",
+          "genre": "INVENTED_OFFICIAL_RECORD",
+          "languagePractice": "ENGLISH_PHASE_0_FIXTURE",
+          "assertsClaimIds": [
+            "testimony-uptake-injustice:claim-2"
+          ],
+          "interpretationNote": "Archive silence is presented as event absence."
+        }
+      ],
+      "claims": [
+        {
+          "id": "testimony-uptake-injustice:claim-1",
+          "level": "L0_CLAIM",
+          "proposition": "The anonymous observer role reports seeing water escape from the pipe.",
+          "regime": "TESTIMONIAL",
+          "scope": "The one report and its declared access conditions.",
+          "temporalQualifier": "During the fixture observation window.",
+          "expressionIds": [
+            "testimony-uptake-injustice:expression-1"
+          ]
+        },
+        {
+          "id": "testimony-uptake-injustice:claim-2",
+          "level": "L0_CLAIM",
+          "proposition": "No leak occurred because the office archive contains no entry.",
+          "regime": "EMPIRICAL",
+          "scope": "The synthetic pipe and office archive.",
+          "temporalQualifier": "During the fixture observation window.",
+          "expressionIds": [
+            "testimony-uptake-injustice:expression-2"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "testimony-uptake-injustice:evidence-1",
+          "kind": "DECLARED_ACCESS_COMPARISON",
+          "description": "The observer role has direct stipulated proximity; the office role has only archive access.",
+          "sourceRole": "PHASE_0_FIXTURE_METHOD",
+          "bearsOnClaimIds": [
+            "testimony-uptake-injustice:claim-1",
+            "testimony-uptake-injustice:claim-2"
+          ],
+          "direction": "MIXED_BEARING",
+          "integrityState": "AUTHOR_STIPULATED",
+          "establishesTruth": false,
+          "scoresSourceOrPerson": false
+        },
+        {
+          "id": "testimony-uptake-injustice:evidence-2",
+          "kind": "DECLARED_SOCIAL_UPTAKE_RECORD",
+          "description": "The anonymous report receives one synthetic relay while the office report receives eight; relay count is social distribution only.",
+          "sourceRole": "PHASE_0_FIXTURE_METHOD",
+          "bearsOnClaimIds": [
+            "testimony-uptake-injustice:claim-1",
+            "testimony-uptake-injustice:claim-2"
+          ],
+          "direction": "DOES_NOT_BEAR_ON_CORRESPONDENCE",
+          "integrityState": "AUTHOR_STIPULATED",
+          "establishesTruth": false,
+          "scoresSourceOrPerson": false
+        }
+      ],
+      "reasoning": [],
+      "events": [],
+      "narratives": [],
+      "assessments": [
+        {
+          "id": "testimony-uptake-injustice:assessment-1",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "testimony-uptake-injustice:claim-1"
+          ],
+          "disposition": "SUPPORTED_UNDER_NAMED_TEST",
+          "methodId": "TESTIMONY_UPTAKE_AUDIT",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "testimony-uptake-injustice",
+          "scope": "Existence and access conditions of this testimony only.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "testimony-uptake-injustice:expression-1",
+            "testimony-uptake-injustice:evidence-1",
+            "testimony-uptake-injustice:evidence-2"
+          ],
+          "rationale": "The fixture contains the report, stipulates nearby access and separately records lower social distribution than the remote office report.",
+          "limitations": "Relay count is not credibility or evidential strength; this does not score the witness, infer identity or establish all details of the reported event.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        },
+        {
+          "id": "testimony-uptake-injustice:assessment-2",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "testimony-uptake-injustice:claim-2"
+          ],
+          "disposition": "CONTRADICTED_UNDER_NAMED_TEST",
+          "methodId": "DECLARED_FIXTURE_WORLD_COMPARISON",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "testimony-uptake-injustice",
+          "scope": "The leak condition stipulated by condition-1.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "testimony-uptake-injustice:condition-1"
+          ],
+          "rationale": "The fixture stipulates a leak despite archive silence.",
+          "limitations": "This illustrates archive incompleteness; it does not generalize to real testimony or institutions.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        }
+      ],
+      "assessmentAudits": [],
+      "lifecycleRecords": [],
+      "nonClaims": [
+        "Anonymity is not low credibility.",
+        "The atlas never creates a witness or institution score."
+      ]
+    },
+    {
+      "id": "syndicated-source-dependence",
+      "title": "Five reports with one upstream assertion",
+      "lesson": "Source count and repetition do not establish independent support.",
+      "synthetic": true,
+      "declaredQuestion": "How many independent observations exist when reports are syndicated?",
+      "scenario": "Five synthetic outlets repeat one upstream note without independent observation.",
+      "timeScope": {
+        "from": "2026-08-26",
+        "through": "2026-08-26",
+        "basis": "AUTHOR_STIPULATED_FIXTURE_TIME",
+        "runtimeCurrentnessClaim": false
+      },
+      "authorStipulatedConditions": [
+        {
+          "id": "syndicated-source-dependence:condition-1",
+          "statement": "All five reports derive from one upstream assertion and contain no independent observation.",
+          "scope": "This closed fixture only.",
+          "authorStipulated": true,
+          "establishesBeyondFixture": false
+        }
+      ],
+      "expressions": [
+        {
+          "id": "syndicated-source-dependence:expression-1",
+          "level": "L0_EXPRESSION",
+          "form": "Five sources independently confirm that the synthetic flag is raised.",
+          "medium": "SYNTHETIC_SUMMARY",
+          "speakerRole": "FIXTURE_AGGREGATOR",
+          "speechAct": "ASSERTION",
+          "genre": "INVENTED_MEDIA_SUMMARY",
+          "languagePractice": "ENGLISH_PHASE_0_FIXTURE",
+          "assertsClaimIds": [
+            "syndicated-source-dependence:claim-1"
+          ],
+          "interpretationNote": "The expression claims independence, not merely five copies."
+        }
+      ],
+      "claims": [
+        {
+          "id": "syndicated-source-dependence:claim-1",
+          "level": "L0_CLAIM",
+          "proposition": "Five independent observations support the flag assertion.",
+          "regime": "PROCEDURAL",
+          "scope": "The provenance structure of the five synthetic reports.",
+          "temporalQualifier": "At fixture publication time.",
+          "expressionIds": [
+            "syndicated-source-dependence:expression-1"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "syndicated-source-dependence:evidence-1",
+          "kind": "DECLARED_DERIVATION_GRAPH",
+          "description": "Each of five report nodes points to the same upstream note.",
+          "sourceRole": "PHASE_0_FIXTURE_METHOD",
+          "bearsOnClaimIds": [
+            "syndicated-source-dependence:claim-1"
+          ],
+          "direction": "CHALLENGES",
+          "integrityState": "AUTHOR_STIPULATED",
+          "establishesTruth": false,
+          "scoresSourceOrPerson": false
+        }
+      ],
+      "reasoning": [],
+      "events": [],
+      "narratives": [],
+      "assessments": [
+        {
+          "id": "syndicated-source-dependence:assessment-1",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "syndicated-source-dependence:claim-1"
+          ],
+          "disposition": "CONTRADICTED_UNDER_NAMED_TEST",
+          "methodId": "SOURCE_INDEPENDENCE_AUDIT",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "syndicated-source-dependence",
+          "scope": "Independence of the five declared report nodes only.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "syndicated-source-dependence:condition-1",
+            "syndicated-source-dependence:evidence-1"
+          ],
+          "rationale": "The derivation graph contains one upstream assertion, not five independent observations.",
+          "limitations": "The audit does not assess whether the underlying flag assertion corresponds to the fixture world.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        }
+      ],
+      "assessmentAudits": [],
+      "lifecycleRecords": [],
+      "nonClaims": [
+        "Five copies are not five independent sources.",
+        "Source dependence is not a source-worth score."
+      ]
+    },
+    {
+      "id": "hallucinated-citation",
+      "title": "A fluent citation absent from the declared catalogue",
+      "lesson": "Plausible form does not establish source existence or support.",
+      "synthetic": true,
+      "declaredQuestion": "What may be concluded when a citation-shaped string has no catalogue match?",
+      "scenario": "A synthetic model output cites an invented paper identifier that is absent from the closed fixture catalogue.",
+      "timeScope": {
+        "from": "2026-08-26",
+        "through": "2026-08-26",
+        "basis": "AUTHOR_STIPULATED_FIXTURE_TIME",
+        "runtimeCurrentnessClaim": false
+      },
+      "authorStipulatedConditions": [
+        {
+          "id": "hallucinated-citation:condition-1",
+          "statement": "The closed fixture catalogue contains identifiers A-01 and A-02 but not Z-99.",
+          "scope": "This closed fixture catalogue only.",
+          "authorStipulated": true,
+          "establishesBeyondFixture": false
+        }
+      ],
+      "expressions": [
+        {
+          "id": "hallucinated-citation:expression-1",
+          "level": "L0_EXPRESSION",
+          "form": "The claim is established by Synthetic Review Z-99.",
+          "medium": "PRECOMPOSED_SYNTHETIC_MODEL_OUTPUT",
+          "speakerRole": "INERT_MODEL_FIXTURE",
+          "speechAct": "ASSERTION_WITH_CITATION",
+          "genre": "INVENTED_ANSWER",
+          "languagePractice": "ENGLISH_PHASE_0_FIXTURE",
+          "assertsClaimIds": [
+            "hallucinated-citation:claim-1"
+          ],
+          "interpretationNote": "No model runs; the text is a fixed fixture string."
+        }
+      ],
+      "claims": [
+        {
+          "id": "hallucinated-citation:claim-1",
+          "level": "L0_CLAIM",
+          "proposition": "Identifier Z-99 exists in the declared fixture catalogue.",
+          "regime": "PROCEDURAL",
+          "scope": "The closed fixture catalogue.",
+          "temporalQualifier": "At the fixture as-of date.",
+          "expressionIds": [
+            "hallucinated-citation:expression-1"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "hallucinated-citation:evidence-1",
+          "kind": "DECLARED_CATALOGUE_LOOKUP",
+          "description": "Exact lookup of Z-99 in the stipulated two-entry catalogue returns no entry.",
+          "sourceRole": "PHASE_0_FIXTURE_METHOD",
+          "bearsOnClaimIds": [
+            "hallucinated-citation:claim-1"
+          ],
+          "direction": "CHALLENGES",
+          "integrityState": "AUTHOR_STIPULATED",
+          "establishesTruth": false,
+          "scoresSourceOrPerson": false
+        }
+      ],
+      "reasoning": [],
+      "events": [],
+      "narratives": [],
+      "assessments": [
+        {
+          "id": "hallucinated-citation:assessment-1",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "hallucinated-citation:claim-1"
+          ],
+          "disposition": "CONTRADICTED_UNDER_NAMED_TEST",
+          "methodId": "CITATION_EXISTENCE_CHECK",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "hallucinated-citation",
+          "scope": "Existence of Z-99 in the declared catalogue only.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "hallucinated-citation:condition-1",
+            "hallucinated-citation:evidence-1"
+          ],
+          "rationale": "Z-99 is absent from the complete stipulated catalogue.",
+          "limitations": "Catalogue absence outside this closed fixture is not inferred, and no model-wide reliability claim is made.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        }
+      ],
+      "assessmentAudits": [],
+      "lifecycleRecords": [],
+      "nonClaims": [
+        "Citation shape is not source existence.",
+        "One fabricated fixture citation does not produce a model score."
+      ]
+    },
+    {
+      "id": "privacy-preserving-refusal",
+      "title": "A refusal that asserts no hidden proposition",
+      "lesson": "Privacy-preserving non-disclosure is not deception or evidence of falsehood.",
+      "synthetic": true,
+      "declaredQuestion": "What may be assessed when an expression is a refusal rather than an answer?",
+      "scenario": "A synthetic role declines to answer a private question; an observer claims the refusal proves a concealed assertion false.",
+      "timeScope": {
+        "from": "2026-08-26",
+        "through": "2026-08-26",
+        "basis": "AUTHOR_STIPULATED_FIXTURE_TIME",
+        "runtimeCurrentnessClaim": false
+      },
+      "authorStipulatedConditions": [
+        {
+          "id": "privacy-preserving-refusal:condition-1",
+          "statement": "The first expression is a refusal and contains no answer to the private question.",
+          "scope": "This closed fixture only.",
+          "authorStipulated": true,
+          "establishesBeyondFixture": false
+        }
+      ],
+      "expressions": [
+        {
+          "id": "privacy-preserving-refusal:expression-1",
+          "level": "L0_EXPRESSION",
+          "form": "I decline to answer that private question.",
+          "medium": "SYNTHETIC_DIALOGUE",
+          "speakerRole": "PRIVACY_PRESERVING_ROLE",
+          "speechAct": "REFUSAL",
+          "genre": "INVENTED_DIALOGUE",
+          "languagePractice": "ENGLISH_PHASE_0_FIXTURE",
+          "assertsClaimIds": [],
+          "interpretationNote": "The refusal is not silently promoted into an answer."
+        },
+        {
+          "id": "privacy-preserving-refusal:expression-2",
+          "level": "L0_EXPRESSION",
+          "form": "The refusal proves the undisclosed answer would be false.",
+          "medium": "SYNTHETIC_DIALOGUE",
+          "speakerRole": "FIXTURE_OBSERVER",
+          "speechAct": "ASSERTION",
+          "genre": "INVENTED_DIALOGUE",
+          "languagePractice": "ENGLISH_PHASE_0_FIXTURE",
+          "assertsClaimIds": [
+            "privacy-preserving-refusal:claim-1"
+          ],
+          "interpretationNote": "This expression converts non-disclosure into an unsupported conclusion."
+        }
+      ],
+      "claims": [
+        {
+          "id": "privacy-preserving-refusal:claim-1",
+          "level": "L0_CLAIM",
+          "proposition": "The refusal establishes that an undisclosed answer would be false.",
+          "regime": "FORMAL_LOGICAL",
+          "scope": "The inference from refusal alone.",
+          "temporalQualifier": "At the fixture dialogue time.",
+          "expressionIds": [
+            "privacy-preserving-refusal:expression-2"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "privacy-preserving-refusal:evidence-1",
+          "kind": "DECLARED_SPEECH_ACT_RECORD",
+          "description": "The expression is typed as REFUSAL with no answer claim.",
+          "sourceRole": "PHASE_0_FIXTURE_METHOD",
+          "bearsOnClaimIds": [
+            "privacy-preserving-refusal:claim-1"
+          ],
+          "direction": "CHALLENGES",
+          "integrityState": "AUTHOR_STIPULATED",
+          "establishesTruth": false,
+          "scoresSourceOrPerson": false
+        }
+      ],
+      "reasoning": [],
+      "events": [],
+      "narratives": [],
+      "assessments": [
+        {
+          "id": "privacy-preserving-refusal:assessment-1",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "privacy-preserving-refusal:claim-1"
+          ],
+          "disposition": "CONTRADICTED_UNDER_NAMED_TEST",
+          "methodId": "FORMAL_VALIDITY_CHECK",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "privacy-preserving-refusal",
+          "scope": "The inference from the refusal expression alone.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "privacy-preserving-refusal:condition-1",
+            "privacy-preserving-refusal:evidence-1"
+          ],
+          "rationale": "A refusal supplies no answer proposition from which falsehood follows.",
+          "limitations": "The atlas does not infer private content, motive, belief or intent.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        }
+      ],
+      "assessmentAudits": [],
+      "lifecycleRecords": [],
+      "nonClaims": [
+        "Silence or refusal is not an assertion of a false proposition.",
+        "No private state or intent is inferred."
+      ]
+    },
+    {
+      "id": "self-reference-stratified",
+      "title": "A self-referential sentence stopped at typed levels",
+      "lesson": "L0 claims, L1 assessments and L2 audits must not collapse into a fixed point.",
+      "synthetic": true,
+      "declaredQuestion": "How should the atlas handle a sentence referring to its own assessment?",
+      "scenario": "A sentence says that no named method can support this very claim. The atlas refuses untyped self-adjudication.",
+      "timeScope": {
+        "from": "2026-08-26",
+        "through": "2026-08-26",
+        "basis": "AUTHOR_STIPULATED_FIXTURE_TIME",
+        "runtimeCurrentnessClaim": false
+      },
+      "authorStipulatedConditions": [
+        {
+          "id": "self-reference-stratified:condition-1",
+          "statement": "The expression refers to assessment of its own claim and no object-language fixed-point semantics is declared.",
+          "scope": "This closed fixture only.",
+          "authorStipulated": true,
+          "establishesBeyondFixture": false
+        }
+      ],
+      "expressions": [
+        {
+          "id": "self-reference-stratified:expression-1",
+          "level": "L0_EXPRESSION",
+          "form": "This claim cannot be supported under any named method.",
+          "medium": "SYNTHETIC_SENTENCE",
+          "speakerRole": "FIXTURE_TEXT_ROLE",
+          "speechAct": "ASSERTION",
+          "genre": "INVENTED_SELF_REFERENCE",
+          "languagePractice": "ENGLISH_PHASE_0_FIXTURE",
+          "assertsClaimIds": [
+            "self-reference-stratified:claim-1"
+          ],
+          "interpretationNote": "The content mentions assessment, but the claim remains an L0 target."
+        }
+      ],
+      "claims": [
+        {
+          "id": "self-reference-stratified:claim-1",
+          "level": "L0_CLAIM",
+          "proposition": "No named method can support this claim.",
+          "regime": "SELF_REFERENTIAL",
+          "scope": "The sentence's own untyped assessment reference.",
+          "temporalQualifier": "At the fixture as-of date.",
+          "expressionIds": [
+            "self-reference-stratified:expression-1"
+          ]
+        }
+      ],
+      "evidence": [],
+      "reasoning": [],
+      "events": [],
+      "narratives": [],
+      "assessments": [
+        {
+          "id": "self-reference-stratified:assessment-1",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "self-reference-stratified:claim-1"
+          ],
+          "disposition": "OUTSIDE_NAMED_METHOD",
+          "methodId": "SELF_REFERENCE_STRATIFICATION_CHECK",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "self-reference-stratified",
+          "scope": "Availability of a declared stratified interpretation method only.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "self-reference-stratified:condition-1",
+            "self-reference-stratified:expression-1"
+          ],
+          "rationale": "The fixture declares no fixed-point semantics capable of adjudicating the self-reference.",
+          "limitations": "OUTSIDE_NAMED_METHOD is a refusal to collapse levels, not a truth value for the sentence.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        }
+      ],
+      "assessmentAudits": [
+        {
+          "id": "self-reference-stratified:audit-1",
+          "level": "L2_ASSESSMENT_AUDIT",
+          "targetAssessmentIds": [
+            "self-reference-stratified:assessment-1"
+          ],
+          "methodId": "SELF_REFERENCE_STRATIFICATION_CHECK",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "self-reference-stratified",
+          "scope": "Structural audit of L1 targeting and cycle absence only.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "rationale": "The L1 assessment targets only an L0 claim; the L2 audit targets only that L1 assessment.",
+          "downwardOnly": true,
+          "cycleDetected": false,
+          "grantsAuthority": false,
+          "authorizesAction": false
+        }
+      ],
+      "lifecycleRecords": [],
+      "nonClaims": [
+        "The L1 disposition is not fed back as an L0 premise.",
+        "No paradox receives a fixed-point truth verdict."
+      ]
+    },
+    {
+      "id": "consensus-preserves-error",
+      "title": "Unanimous repetition of a challenged claim",
+      "lesson": "Consensus and repetition do not establish correspondence.",
+      "synthetic": true,
+      "declaredQuestion": "Does unanimous repetition change the relation between a claim and the declared fixture?",
+      "scenario": "Twelve synthetic voice tokens repeat that a marker is red; the stipulated marker is blue.",
+      "timeScope": {
+        "from": "2026-08-26",
+        "through": "2026-08-26",
+        "basis": "AUTHOR_STIPULATED_FIXTURE_TIME",
+        "runtimeCurrentnessClaim": false
+      },
+      "authorStipulatedConditions": [
+        {
+          "id": "consensus-preserves-error:condition-1",
+          "statement": "The synthetic marker is blue while twelve voice tokens repeat that it is red.",
+          "scope": "This closed fixture only.",
+          "authorStipulated": true,
+          "establishesBeyondFixture": false
+        }
+      ],
+      "expressions": [
+        {
+          "id": "consensus-preserves-error:expression-1",
+          "level": "L0_EXPRESSION",
+          "form": "All twelve tokens say the marker is red, therefore it is red.",
+          "medium": "SYNTHETIC_CONSENSUS_SUMMARY",
+          "speakerRole": "FIXTURE_AGGREGATOR",
+          "speechAct": "ASSERTION",
+          "genre": "INVENTED_REPORT",
+          "languagePractice": "ENGLISH_PHASE_0_FIXTURE",
+          "assertsClaimIds": [
+            "consensus-preserves-error:claim-1"
+          ],
+          "interpretationNote": "Agreement is the stated basis."
+        }
+      ],
+      "claims": [
+        {
+          "id": "consensus-preserves-error:claim-1",
+          "level": "L0_CLAIM",
+          "proposition": "The synthetic marker is red.",
+          "regime": "EMPIRICAL",
+          "scope": "The one declared marker.",
+          "temporalQualifier": "During the fixture.",
+          "expressionIds": [
+            "consensus-preserves-error:expression-1"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "consensus-preserves-error:evidence-1",
+          "kind": "DECLARED_REPETITION_RECORD",
+          "description": "Twelve identical assertion tokens are present.",
+          "sourceRole": "FIXTURE_CONSENSUS_RECORD",
+          "bearsOnClaimIds": [
+            "consensus-preserves-error:claim-1"
+          ],
+          "direction": "DOES_NOT_BEAR_ON_CORRESPONDENCE",
+          "integrityState": "AUTHOR_STIPULATED",
+          "establishesTruth": false,
+          "scoresSourceOrPerson": false
+        },
+        {
+          "id": "consensus-preserves-error:evidence-2",
+          "kind": "DECLARED_FIXTURE_INSPECTION",
+          "description": "The stipulated marker condition is blue.",
+          "sourceRole": "PHASE_0_FIXTURE_METHOD",
+          "bearsOnClaimIds": [
+            "consensus-preserves-error:claim-1"
+          ],
+          "direction": "CHALLENGES",
+          "integrityState": "AUTHOR_STIPULATED",
+          "establishesTruth": false,
+          "scoresSourceOrPerson": false
+        }
+      ],
+      "reasoning": [],
+      "events": [],
+      "narratives": [],
+      "assessments": [
+        {
+          "id": "consensus-preserves-error:assessment-1",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "consensus-preserves-error:claim-1"
+          ],
+          "disposition": "CONTRADICTED_UNDER_NAMED_TEST",
+          "methodId": "DECLARED_FIXTURE_WORLD_COMPARISON",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "consensus-preserves-error",
+          "scope": "Marker colour in this fixture only.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "consensus-preserves-error:condition-1",
+            "consensus-preserves-error:evidence-2"
+          ],
+          "rationale": "Red conflicts with the stipulated blue condition; repetition is not used as a correspondence method.",
+          "limitations": "No voice token is ranked or classified.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        }
+      ],
+      "assessmentAudits": [],
+      "lifecycleRecords": [],
+      "nonClaims": [
+        "Unanimity is not an empirical instrument.",
+        "Consensus does not mint a truth state."
+      ]
+    },
+    {
+      "id": "selective-omission",
+      "title": "Accurate fragments assembled into a misleading summary",
+      "lesson": "True-seeming fragments can mislead through selection and omission.",
+      "synthetic": true,
+      "declaredQuestion": "How should selection be exposed without scoring an author or whole story?",
+      "scenario": "A summary reports the north indicator glowing and omits a simultaneous south alarm before claiming all systems are nominal.",
+      "timeScope": {
+        "from": "2026-08-26",
+        "through": "2026-08-26",
+        "basis": "AUTHOR_STIPULATED_FIXTURE_TIME",
+        "runtimeCurrentnessClaim": false
+      },
+      "authorStipulatedConditions": [
+        {
+          "id": "selective-omission:condition-1",
+          "statement": "The north indicator glows and the south alarm sounds at the same fixture time.",
+          "scope": "This closed fixture only.",
+          "authorStipulated": true,
+          "establishesBeyondFixture": false
+        }
+      ],
+      "expressions": [
+        {
+          "id": "selective-omission:expression-1",
+          "level": "L0_EXPRESSION",
+          "form": "The north indicator is glowing; all systems are nominal.",
+          "medium": "SYNTHETIC_STATUS_STORY",
+          "speakerRole": "FIXTURE_SUMMARIZER",
+          "speechAct": "NARRATION",
+          "genre": "INVENTED_STATUS_SUMMARY",
+          "languagePractice": "ENGLISH_PHASE_0_FIXTURE",
+          "assertsClaimIds": [
+            "selective-omission:claim-1",
+            "selective-omission:claim-2"
+          ],
+          "interpretationNote": "The second claim generalizes beyond the selected north event."
+        }
+      ],
+      "claims": [
+        {
+          "id": "selective-omission:claim-1",
+          "level": "L0_CLAIM",
+          "proposition": "The north indicator is glowing.",
+          "regime": "EMPIRICAL",
+          "scope": "The north indicator.",
+          "temporalQualifier": "At the fixture status time.",
+          "expressionIds": [
+            "selective-omission:expression-1"
+          ]
+        },
+        {
+          "id": "selective-omission:claim-2",
+          "level": "L0_CLAIM",
+          "proposition": "All synthetic systems are nominal.",
+          "regime": "NARRATIVE_CLAIM_FRAGMENT",
+          "scope": "The full north-and-south status set.",
+          "temporalQualifier": "At the fixture status time.",
+          "expressionIds": [
+            "selective-omission:expression-1"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "selective-omission:evidence-1",
+          "kind": "DECLARED_EVENT_SEQUENCE",
+          "description": "The fixture contains both north glow and south alarm events.",
+          "sourceRole": "PHASE_0_FIXTURE_METHOD",
+          "bearsOnClaimIds": [
+            "selective-omission:claim-1",
+            "selective-omission:claim-2"
+          ],
+          "direction": "MIXED_BEARING",
+          "integrityState": "AUTHOR_STIPULATED",
+          "establishesTruth": false,
+          "scoresSourceOrPerson": false
+        }
+      ],
+      "reasoning": [],
+      "events": [
+        {
+          "id": "selective-omission:event-1",
+          "description": "The north indicator glows.",
+          "sequenceIndex": 1,
+          "conditionIds": [
+            "selective-omission:condition-1"
+          ]
+        },
+        {
+          "id": "selective-omission:event-2",
+          "description": "The south alarm sounds.",
+          "sequenceIndex": 2,
+          "conditionIds": [
+            "selective-omission:condition-1"
+          ]
+        }
+      ],
+      "narratives": [
+        {
+          "id": "selective-omission:narrative-1",
+          "level": "L0_NARRATIVE_ARTIFACT",
+          "title": "North-only status summary",
+          "genre": "INVENTED_STATUS_SUMMARY",
+          "audience": "PHASE_0_READER",
+          "standpoint": "NORTH_PANEL_FRAME",
+          "selectorRole": "FIXTURE_SUMMARIZER",
+          "selectionRationale": "Foreground the favorable north-panel observation.",
+          "claimFragmentIds": [
+            "selective-omission:claim-2"
+          ],
+          "selectedEventIds": [
+            "selective-omission:event-1"
+          ],
+          "omittedEventIds": [
+            "selective-omission:event-2"
+          ],
+          "orderedEventIds": [
+            "selective-omission:event-1"
+          ],
+          "causalAttributions": [],
+          "counterstoryIds": [
+            "selective-omission:narrative-2"
+          ],
+          "counterstorySearchState": "REFERENCED",
+          "coherenceNote": "The one-event summary is internally coherent.",
+          "fidelityNote": "It selects the north event and omits the south alarm.",
+          "correspondenceNote": "Its whole-system generalization conflicts with the omitted stipulated event."
+        },
+        {
+          "id": "selective-omission:narrative-2",
+          "level": "L0_NARRATIVE_ARTIFACT",
+          "title": "Whole-panel counterstory",
+          "genre": "INVENTED_STATUS_COUNTERSTORY",
+          "audience": "PHASE_0_READER",
+          "standpoint": "WHOLE_PANEL_FRAME",
+          "selectorRole": "PHASE_0_COUNTERSTORY_CONSTRUCTOR",
+          "selectionRationale": "Include both stipulated status events to test the north-only selection.",
+          "claimFragmentIds": [],
+          "selectedEventIds": [
+            "selective-omission:event-1",
+            "selective-omission:event-2"
+          ],
+          "omittedEventIds": [],
+          "orderedEventIds": [
+            "selective-omission:event-1",
+            "selective-omission:event-2"
+          ],
+          "causalAttributions": [],
+          "counterstoryIds": [
+            "selective-omission:narrative-1"
+          ],
+          "counterstorySearchState": "REFERENCED",
+          "coherenceNote": "The two-event frame is internally intelligible.",
+          "fidelityNote": "It includes both stipulated status events and omits none.",
+          "correspondenceNote": "It makes no whole-system nominal claim and supplies no causal attribution."
+        }
+      ],
+      "assessments": [
+        {
+          "id": "selective-omission:assessment-1",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "selective-omission:claim-1"
+          ],
+          "disposition": "SUPPORTED_UNDER_NAMED_TEST",
+          "methodId": "DECLARED_FIXTURE_WORLD_COMPARISON",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "selective-omission",
+          "scope": "North indicator condition only.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "selective-omission:condition-1",
+            "selective-omission:event-1"
+          ],
+          "rationale": "The north glow matches the stipulated event.",
+          "limitations": "This scoped support cannot be promoted to whole-system status.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        },
+        {
+          "id": "selective-omission:assessment-2",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "selective-omission:claim-2"
+          ],
+          "disposition": "CONTRADICTED_UNDER_NAMED_TEST",
+          "methodId": "NARRATIVE_SELECTION_AUDIT",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "selective-omission",
+          "scope": "Whole-system generalization and omitted event only.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "selective-omission:condition-1",
+            "selective-omission:event-2",
+            "selective-omission:narrative-1"
+          ],
+          "rationale": "A sounding alarm conflicts with the all-nominal generalization.",
+          "limitations": "The assessment targets a claim fragment, not the summarizer's character or intent.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        }
+      ],
+      "assessmentAudits": [],
+      "lifecycleRecords": [],
+      "nonClaims": [
+        "An accurate selected fact can accompany a challenged generalization.",
+        "Omission does not by itself establish deceptive intent."
+      ]
+    },
+    {
+      "id": "stale-claim",
+      "title": "A once-supported claim carried past its time",
+      "lesson": "Temporal scope and currentness must be explicit.",
+      "synthetic": true,
+      "declaredQuestion": "What changes when a supported record is reused after conditions change?",
+      "scenario": "A reservoir is stipulated at eight units at T1 and three at T2; a T1 report is presented as current at T2.",
+      "timeScope": {
+        "from": "2026-08-26",
+        "through": "2026-08-26",
+        "basis": "AUTHOR_STIPULATED_FIXTURE_TIME",
+        "runtimeCurrentnessClaim": false
+      },
+      "authorStipulatedConditions": [
+        {
+          "id": "stale-claim:condition-1",
+          "statement": "The synthetic reservoir level is eight at T1 and three at T2.",
+          "scope": "This closed fixture sequence only.",
+          "authorStipulated": true,
+          "establishesBeyondFixture": false
+        }
+      ],
+      "expressions": [
+        {
+          "id": "stale-claim:expression-1",
+          "level": "L0_EXPRESSION",
+          "form": "The reservoir level is eight units.",
+          "medium": "SYNTHETIC_T1_REPORT_REUSED_AT_T2",
+          "speakerRole": "FIXTURE_REPORT",
+          "speechAct": "ASSERTION",
+          "genre": "INVENTED_STATUS_RECORD",
+          "languagePractice": "ENGLISH_PHASE_0_FIXTURE",
+          "assertsClaimIds": [
+            "stale-claim:claim-1"
+          ],
+          "interpretationNote": "The reused expression omits its original T1 qualifier."
+        },
+        {
+          "id": "stale-claim:expression-2",
+          "level": "L0_EXPRESSION",
+          "form": "At T2, the reservoir level is three units.",
+          "medium": "SYNTHETIC_T2_REPLACEMENT_REPORT",
+          "speakerRole": "FIXTURE_REPORT",
+          "speechAct": "ASSERTION",
+          "genre": "INVENTED_STATUS_RECORD",
+          "languagePractice": "ENGLISH_PHASE_0_FIXTURE",
+          "assertsClaimIds": [
+            "stale-claim:claim-2"
+          ],
+          "interpretationNote": "The replacement expression declares its T2 qualifier."
+        }
+      ],
+      "claims": [
+        {
+          "id": "stale-claim:claim-1",
+          "level": "L0_CLAIM",
+          "proposition": "The reservoir level is eight units at T2.",
+          "regime": "EMPIRICAL",
+          "scope": "The synthetic reservoir.",
+          "temporalQualifier": "At T2 after reuse of a T1 report.",
+          "expressionIds": [
+            "stale-claim:expression-1"
+          ]
+        },
+        {
+          "id": "stale-claim:claim-2",
+          "level": "L0_CLAIM",
+          "proposition": "The reservoir level is three units at T2.",
+          "regime": "EMPIRICAL",
+          "scope": "The synthetic reservoir.",
+          "temporalQualifier": "At T2.",
+          "expressionIds": [
+            "stale-claim:expression-2"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "stale-claim:evidence-1",
+          "kind": "DECLARED_TEMPORAL_RECORD",
+          "description": "The source report belongs to T1 while the target claim is scoped to T2.",
+          "sourceRole": "PHASE_0_FIXTURE_METHOD",
+          "bearsOnClaimIds": [
+            "stale-claim:claim-1"
+          ],
+          "direction": "CHALLENGES",
+          "integrityState": "AUTHOR_STIPULATED",
+          "establishesTruth": false,
+          "scoresSourceOrPerson": false
+        },
+        {
+          "id": "stale-claim:evidence-2",
+          "kind": "DECLARED_TEMPORAL_RECORD",
+          "description": "The replacement record explicitly belongs to T2 and states three units.",
+          "sourceRole": "PHASE_0_FIXTURE_METHOD",
+          "bearsOnClaimIds": [
+            "stale-claim:claim-2"
+          ],
+          "direction": "SUPPORTS",
+          "integrityState": "AUTHOR_STIPULATED",
+          "establishesTruth": false,
+          "scoresSourceOrPerson": false
+        }
+      ],
+      "reasoning": [],
+      "events": [],
+      "narratives": [],
+      "assessments": [
+        {
+          "id": "stale-claim:assessment-1",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "stale-claim:claim-1"
+          ],
+          "disposition": "CONTRADICTED_UNDER_NAMED_TEST",
+          "methodId": "TEMPORAL_SCOPE_CHECK",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "stale-claim",
+          "scope": "T2 currentness of the reused T1 expression only.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "stale-claim:condition-1",
+            "stale-claim:evidence-1"
+          ],
+          "rationale": "The fixture stipulates three at T2; the eight-unit value belongs to T1.",
+          "limitations": "The assessment does not deny that the report matched T1.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        },
+        {
+          "id": "stale-claim:assessment-2",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "stale-claim:claim-2"
+          ],
+          "disposition": "SUPPORTED_UNDER_NAMED_TEST",
+          "methodId": "TEMPORAL_SCOPE_CHECK",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "stale-claim",
+          "scope": "T2 currentness of the replacement expression only.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "stale-claim:condition-1",
+            "stale-claim:evidence-2"
+          ],
+          "rationale": "The replacement expression's T2 qualifier and value match the stipulated T2 condition.",
+          "limitations": "Support is limited to the fixture's declared T2 record relation.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        }
+      ],
+      "assessmentAudits": [],
+      "lifecycleRecords": [
+        {
+          "id": "stale-claim:lifecycle-1",
+          "targetExpressionIds": [
+            "stale-claim:expression-1"
+          ],
+          "replacementExpressionIds": [
+            "stale-claim:expression-2"
+          ],
+          "state": "SUPERSEDED",
+          "asOf": "2026-08-26",
+          "scope": "Current T2 reservoir reporting only.",
+          "reason": "The T1 record is no longer current for T2.",
+          "establishesTruthOrFalsehood": false,
+          "preservesHistory": true
+        }
+      ],
+      "nonClaims": [
+        "A stale claim need not have always been unsupported.",
+        "The public atlas makes no runtime currentness claim."
+      ]
+    },
+    {
+      "id": "metaphysical-attribution-boundary",
+      "title": "Attribution recorded while the metaphysical referent remains outside method",
+      "lesson": "A source-attribution record is not proof or disproof of its metaphysical or theological referent claim.",
+      "synthetic": true,
+      "declaredQuestion": "What may Phase 0 establish about an invented source that advances a metaphysical claim?",
+      "scenario": "An invented scroll advances the proposition that an unobservable ember sustains the cosmos described by its discourse; the fixture stipulates only the source record.",
+      "timeScope": {
+        "from": "2026-08-26",
+        "through": "2026-08-26",
+        "basis": "AUTHOR_STIPULATED_FIXTURE_TIME",
+        "runtimeCurrentnessClaim": false
+      },
+      "authorStipulatedConditions": [
+        {
+          "id": "metaphysical-attribution-boundary:condition-1",
+          "statement": "The invented scroll contains the referent proposition; no method, observation, revelation authority or tradition is stipulated for adjudicating that proposition.",
+          "scope": "This closed invented source record only.",
+          "authorStipulated": true,
+          "establishesBeyondFixture": false
+        }
+      ],
+      "expressions": [
+        {
+          "id": "metaphysical-attribution-boundary:expression-1",
+          "level": "L0_EXPRESSION",
+          "form": "The invented Scroll of Ember advances: an unobservable ember sustains the cosmos described by this discourse.",
+          "medium": "SYNTHETIC_SOURCE_EXCERPT",
+          "speakerRole": "INVENTED_SCROLL_NARRATOR",
+          "speechAct": "ATTRIBUTION_AND_ASSERTION",
+          "genre": "INVENTED_METAPHYSICAL_TEXT",
+          "languagePractice": "ENGLISH_PHASE_0_FIXTURE",
+          "assertsClaimIds": [
+            "metaphysical-attribution-boundary:claim-1",
+            "metaphysical-attribution-boundary:claim-2"
+          ],
+          "interpretationNote": "The attribution to the invented scroll and the referent proposition are represented as separate claims."
+        }
+      ],
+      "claims": [
+        {
+          "id": "metaphysical-attribution-boundary:claim-1",
+          "level": "L0_CLAIM",
+          "proposition": "The invented Scroll of Ember advances the referent proposition recorded in claim 2.",
+          "regime": "METAPHYSICAL_SOURCE_ATTRIBUTION",
+          "scope": "Existence and content attribution of the invented source record only.",
+          "temporalQualifier": "At the fixture as-of date.",
+          "expressionIds": [
+            "metaphysical-attribution-boundary:expression-1"
+          ]
+        },
+        {
+          "id": "metaphysical-attribution-boundary:claim-2",
+          "level": "L0_CLAIM",
+          "proposition": "An unobservable ember sustains the cosmos described by the invented scroll's discourse.",
+          "regime": "METAPHYSICAL_REFERENT_PROPOSITION",
+          "scope": "The referent proposition itself, not merely its source attribution.",
+          "temporalQualifier": "Within the invented scroll's discourse.",
+          "expressionIds": [
+            "metaphysical-attribution-boundary:expression-1"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "metaphysical-attribution-boundary:evidence-1",
+          "kind": "DECLARED_SOURCE_RECORD",
+          "description": "The fixed fixture bytes stipulate that the invented scroll advances the referent proposition.",
+          "sourceRole": "PHASE_0_FIXTURE_METHOD",
+          "bearsOnClaimIds": [
+            "metaphysical-attribution-boundary:claim-1",
+            "metaphysical-attribution-boundary:claim-2"
+          ],
+          "direction": "CONTEXTUALISES",
+          "integrityState": "AUTHOR_STIPULATED",
+          "establishesTruth": false,
+          "scoresSourceOrPerson": false
+        }
+      ],
+      "reasoning": [],
+      "events": [],
+      "narratives": [],
+      "assessments": [
+        {
+          "id": "metaphysical-attribution-boundary:assessment-1",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "metaphysical-attribution-boundary:claim-1"
+          ],
+          "disposition": "SUPPORTED_UNDER_NAMED_TEST",
+          "methodId": "METAPHYSICAL_ATTRIBUTION_BOUNDARY_CHECK",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "metaphysical-attribution-boundary",
+          "scope": "Whether the invented source record advances claim 2 only.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "metaphysical-attribution-boundary:condition-1",
+            "metaphysical-attribution-boundary:evidence-1"
+          ],
+          "rationale": "The fixed expression and stipulated source record contain the attributed proposition.",
+          "limitations": "Support applies only to attribution; it supplies no proof, disproof, equation or authority concerning the referent proposition or any real tradition.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        },
+        {
+          "id": "metaphysical-attribution-boundary:assessment-2",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "metaphysical-attribution-boundary:claim-2"
+          ],
+          "disposition": "OUTSIDE_NAMED_METHOD",
+          "methodId": "METAPHYSICAL_ATTRIBUTION_BOUNDARY_CHECK",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "metaphysical-attribution-boundary",
+          "scope": "Adjudication of the metaphysical referent proposition itself.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "metaphysical-attribution-boundary:condition-1",
+            "metaphysical-attribution-boundary:evidence-1"
+          ],
+          "rationale": "The named method checks attribution boundaries and declares no method for the referent proposition.",
+          "limitations": "OUTSIDE_NAMED_METHOD is not proof, disproof, equivalence among traditions or a metaphysical verdict.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        }
+      ],
+      "assessmentAudits": [],
+      "lifecycleRecords": [],
+      "nonClaims": [
+        "Recording that a source advances a claim does not establish the referent claim.",
+        "The atlas does not prove, disprove, rank or equate metaphysical or theological traditions."
+      ]
+    },
+    {
+      "id": "conflicting-evidence",
+      "title": "Genuine support and challenge remain unresolved",
+      "lesson": "Conflicting evidence may warrant contestability rather than forced closure.",
+      "synthetic": true,
+      "declaredQuestion": "How does the atlas preserve a live conflict when no discriminating condition is stipulated?",
+      "scenario": "One synthetic trace bears in favor of a switch activation and another bears against it; neither is privileged by the fixture.",
+      "timeScope": {
+        "from": "2026-08-26",
+        "through": "2026-08-26",
+        "basis": "AUTHOR_STIPULATED_FIXTURE_TIME",
+        "runtimeCurrentnessClaim": false
+      },
+      "authorStipulatedConditions": [
+        {
+          "id": "conflicting-evidence:condition-1",
+          "statement": "The fixture stipulates two intact conflicting traces and does not stipulate the switch state.",
+          "scope": "This closed fixture only.",
+          "authorStipulated": true,
+          "establishesBeyondFixture": false
+        }
+      ],
+      "expressions": [
+        {
+          "id": "conflicting-evidence:expression-1",
+          "level": "L0_EXPRESSION",
+          "form": "The switch was activated during interval Q.",
+          "medium": "SYNTHETIC_CLAIM_CARD",
+          "speakerRole": "FIXTURE_TEXT_ROLE",
+          "speechAct": "ASSERTION",
+          "genre": "INVENTED_REPORT",
+          "languagePractice": "ENGLISH_PHASE_0_FIXTURE",
+          "assertsClaimIds": [
+            "conflicting-evidence:claim-1"
+          ],
+          "interpretationNote": "The target interval and switch are explicitly scoped."
+        }
+      ],
+      "claims": [
+        {
+          "id": "conflicting-evidence:claim-1",
+          "level": "L0_CLAIM",
+          "proposition": "The synthetic switch was activated during interval Q.",
+          "regime": "EMPIRICAL",
+          "scope": "The declared switch and interval Q.",
+          "temporalQualifier": "During interval Q.",
+          "expressionIds": [
+            "conflicting-evidence:expression-1"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "conflicting-evidence:evidence-1",
+          "kind": "DECLARED_TRACE_A",
+          "description": "Trace A bears in favor of activation under the named reading rule.",
+          "sourceRole": "FIXTURE_TRACE_A",
+          "bearsOnClaimIds": [
+            "conflicting-evidence:claim-1"
+          ],
+          "direction": "SUPPORTS",
+          "integrityState": "DECLARED_INTACT",
+          "establishesTruth": false,
+          "scoresSourceOrPerson": false
+        },
+        {
+          "id": "conflicting-evidence:evidence-2",
+          "kind": "DECLARED_TRACE_B",
+          "description": "Trace B bears against activation under the same reading rule.",
+          "sourceRole": "FIXTURE_TRACE_B",
+          "bearsOnClaimIds": [
+            "conflicting-evidence:claim-1"
+          ],
+          "direction": "CHALLENGES",
+          "integrityState": "DECLARED_INTACT",
+          "establishesTruth": false,
+          "scoresSourceOrPerson": false
+        }
+      ],
+      "reasoning": [],
+      "events": [],
+      "narratives": [],
+      "assessments": [
+        {
+          "id": "conflicting-evidence:assessment-1",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "conflicting-evidence:claim-1"
+          ],
+          "disposition": "CONTESTED_UNDER_NAMED_TEST",
+          "methodId": "DECLARED_FIXTURE_WORLD_COMPARISON",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "conflicting-evidence",
+          "scope": "The two stipulated traces under one reading rule.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "conflicting-evidence:condition-1",
+            "conflicting-evidence:evidence-1",
+            "conflicting-evidence:evidence-2"
+          ],
+          "rationale": "One intact trace supports and one challenges, with no stipulated discriminator.",
+          "limitations": "The contest is fixture- and method-scoped, not a global undecidability claim.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        }
+      ],
+      "assessmentAudits": [],
+      "lifecycleRecords": [],
+      "nonClaims": [
+        "Conflict is preserved rather than averaged into a score.",
+        "Neither trace is ranked as a source."
+      ]
+    },
+    {
+      "id": "metaphor-not-literal-identity",
+      "title": "A metaphor protected from literal misclassification",
+      "lesson": "Genre and speech act must be interpreted before empirical testing.",
+      "synthetic": true,
+      "declaredQuestion": "What is lost when a metaphor is silently converted into a literal claim?",
+      "scenario": "A poem says the archive is a river to evoke continuity through change.",
+      "timeScope": {
+        "from": "2026-08-26",
+        "through": "2026-08-26",
+        "basis": "AUTHOR_STIPULATED_FIXTURE_TIME",
+        "runtimeCurrentnessClaim": false
+      },
+      "authorStipulatedConditions": [
+        {
+          "id": "metaphor-not-literal-identity:condition-1",
+          "statement": "The expression is declared poetic metaphor and not literal physical identity.",
+          "scope": "This closed fixture language practice only.",
+          "authorStipulated": true,
+          "establishesBeyondFixture": false
+        }
+      ],
+      "expressions": [
+        {
+          "id": "metaphor-not-literal-identity:expression-1",
+          "level": "L0_EXPRESSION",
+          "form": "The archive is a river carrying yesterday into tomorrow.",
+          "medium": "SYNTHETIC_POEM",
+          "speakerRole": "FIXTURE_POETIC_VOICE",
+          "speechAct": "METAPHOR",
+          "genre": "INVENTED_POETRY",
+          "languagePractice": "ENGLISH_PHASE_0_FIXTURE",
+          "assertsClaimIds": [
+            "metaphor-not-literal-identity:claim-1"
+          ],
+          "interpretationNote": "The declared comparison concerns continuity and change."
+        }
+      ],
+      "claims": [
+        {
+          "id": "metaphor-not-literal-identity:claim-1",
+          "level": "L0_CLAIM",
+          "proposition": "The archive is compared to a river as a figure of continuity through change.",
+          "regime": "METAPHORICAL",
+          "scope": "The declared poetic language practice.",
+          "temporalQualifier": "Within the fixture poem.",
+          "expressionIds": [
+            "metaphor-not-literal-identity:expression-1"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "metaphor-not-literal-identity:evidence-1",
+          "kind": "DECLARED_GENRE_RECORD",
+          "description": "The fixture marks the expression as poetry and metaphor.",
+          "sourceRole": "PHASE_0_FIXTURE_METHOD",
+          "bearsOnClaimIds": [
+            "metaphor-not-literal-identity:claim-1"
+          ],
+          "direction": "CONTEXTUALISES",
+          "integrityState": "AUTHOR_STIPULATED",
+          "establishesTruth": false,
+          "scoresSourceOrPerson": false
+        }
+      ],
+      "reasoning": [],
+      "events": [],
+      "narratives": [],
+      "assessments": [
+        {
+          "id": "metaphor-not-literal-identity:assessment-1",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "metaphor-not-literal-identity:claim-1"
+          ],
+          "disposition": "SUPPORTED_UNDER_NAMED_TEST",
+          "methodId": "INTERPRETATION_BOUNDARY_CHECK",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "metaphor-not-literal-identity",
+          "scope": "Genre and declared non-literal speech act only.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "metaphor-not-literal-identity:condition-1",
+            "metaphor-not-literal-identity:evidence-1"
+          ],
+          "rationale": "The fixture explicitly declares the comparison as metaphorical.",
+          "limitations": "The method does not adjudicate aesthetic worth, deeper meaning or literal physical correspondence.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        }
+      ],
+      "assessmentAudits": [],
+      "lifecycleRecords": [],
+      "nonClaims": [
+        "The archive is not asserted to be a physical watercourse.",
+        "Poetry is not classified as deception."
+      ]
+    },
+    {
+      "id": "declared-fiction",
+      "title": "Fictional events without deceptive assertion",
+      "lesson": "Declared fiction and literal-world report occupy different regimes.",
+      "synthetic": true,
+      "declaredQuestion": "Can an invented event be meaningful without being presented as empirical report?",
+      "scenario": "A declared fable describes a moonflower opening a locked sky gate.",
+      "timeScope": {
+        "from": "2026-08-26",
+        "through": "2026-08-26",
+        "basis": "AUTHOR_STIPULATED_FIXTURE_TIME",
+        "runtimeCurrentnessClaim": false
+      },
+      "authorStipulatedConditions": [
+        {
+          "id": "declared-fiction:condition-1",
+          "statement": "The expression is openly declared an invented fable.",
+          "scope": "This closed fixture language practice only.",
+          "authorStipulated": true,
+          "establishesBeyondFixture": false
+        }
+      ],
+      "expressions": [
+        {
+          "id": "declared-fiction:expression-1",
+          "level": "L0_EXPRESSION",
+          "form": "In the fable, the moonflower opens the locked sky gate.",
+          "medium": "SYNTHETIC_FABLE",
+          "speakerRole": "FIXTURE_NARRATOR",
+          "speechAct": "FICTIONAL_NARRATION",
+          "genre": "INVENTED_FABLE",
+          "languagePractice": "ENGLISH_PHASE_0_FIXTURE",
+          "assertsClaimIds": [
+            "declared-fiction:claim-1"
+          ],
+          "interpretationNote": "The in-story qualifier is explicit."
+        }
+      ],
+      "claims": [
+        {
+          "id": "declared-fiction:claim-1",
+          "level": "L0_CLAIM",
+          "proposition": "Within the declared fable, the moonflower opens the sky gate.",
+          "regime": "FICTIONAL",
+          "scope": "The invented fable world.",
+          "temporalQualifier": "At the narrated fable event.",
+          "expressionIds": [
+            "declared-fiction:expression-1"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "declared-fiction:evidence-1",
+          "kind": "DECLARED_GENRE_RECORD",
+          "description": "The fixture labels the expression as invented fable narration.",
+          "sourceRole": "PHASE_0_FIXTURE_METHOD",
+          "bearsOnClaimIds": [
+            "declared-fiction:claim-1"
+          ],
+          "direction": "CONTEXTUALISES",
+          "integrityState": "AUTHOR_STIPULATED",
+          "establishesTruth": false,
+          "scoresSourceOrPerson": false
+        }
+      ],
+      "reasoning": [],
+      "events": [],
+      "narratives": [],
+      "assessments": [
+        {
+          "id": "declared-fiction:assessment-1",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "declared-fiction:claim-1"
+          ],
+          "disposition": "SUPPORTED_UNDER_NAMED_TEST",
+          "methodId": "INTERPRETATION_BOUNDARY_CHECK",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "declared-fiction",
+          "scope": "Fictional-world and genre framing only.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "declared-fiction:condition-1",
+            "declared-fiction:evidence-1"
+          ],
+          "rationale": "The claim is correctly scoped to the declared fable world.",
+          "limitations": "No literal-world event, moral conclusion or aesthetic judgment is established.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        }
+      ],
+      "assessmentAudits": [],
+      "lifecycleRecords": [],
+      "nonClaims": [
+        "The fable does not assert a literal sky gate exists.",
+        "Declared fiction is not a lie classification."
+      ]
+    },
+    {
+      "id": "propaganda-label-action-refusal",
+      "title": "An attributed propaganda label denied action authority",
+      "lesson": "Recording an institutional label must not become a misinformation flag, ranking or suppression command.",
+      "synthetic": true,
+      "declaredQuestion": "What may Phase 0 record when an invented office labels a leaflet and asks for suppression?",
+      "scenario": "An invented office applies PROPAGANDA and MISINFORMATION labels to a synthetic leaflet and directs that it be removed.",
+      "timeScope": {
+        "from": "2026-08-26",
+        "through": "2026-08-26",
+        "basis": "AUTHOR_STIPULATED_FIXTURE_TIME",
+        "runtimeCurrentnessClaim": false
+      },
+      "authorStipulatedConditions": [
+        {
+          "id": "propaganda-label-action-refusal:condition-1",
+          "statement": "The fixture stipulates that the office record contains the two labels and a removal directive, but declares no substantive classification method, legal process, rights analysis or action authority.",
+          "scope": "This closed invented record only.",
+          "authorStipulated": true,
+          "establishesBeyondFixture": false
+        }
+      ],
+      "expressions": [
+        {
+          "id": "propaganda-label-action-refusal:expression-1",
+          "level": "L0_EXPRESSION",
+          "form": "Office label: PROPAGANDA and MISINFORMATION. Remove the synthetic leaflet.",
+          "medium": "SYNTHETIC_INSTITUTIONAL_LABEL_RECORD",
+          "speakerRole": "INVENTED_LABELING_OFFICE",
+          "speechAct": "LABEL_AND_DIRECTIVE",
+          "genre": "INVENTED_MODERATION_RECORD",
+          "languagePractice": "ENGLISH_PHASE_0_FIXTURE",
+          "assertsClaimIds": [
+            "propaganda-label-action-refusal:claim-1",
+            "propaganda-label-action-refusal:claim-2"
+          ],
+          "interpretationNote": "The attributed label record and the requested suppression effect are represented separately."
+        }
+      ],
+      "claims": [
+        {
+          "id": "propaganda-label-action-refusal:claim-1",
+          "level": "L0_CLAIM",
+          "proposition": "The invented office record applies PROPAGANDA and MISINFORMATION labels to the synthetic leaflet.",
+          "regime": "PROCEDURAL",
+          "scope": "Presence and attribution of the invented label record only.",
+          "temporalQualifier": "At the fixture record time.",
+          "expressionIds": [
+            "propaganda-label-action-refusal:expression-1"
+          ]
+        },
+        {
+          "id": "propaganda-label-action-refusal:claim-2",
+          "level": "L0_CLAIM",
+          "proposition": "The attributed labels authorize suppression of the synthetic leaflet.",
+          "regime": "NORMATIVE",
+          "scope": "The proposed removal effect and absent rights or legal process.",
+          "temporalQualifier": "At the fixture record time.",
+          "expressionIds": [
+            "propaganda-label-action-refusal:expression-1"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "propaganda-label-action-refusal:evidence-1",
+          "kind": "DECLARED_LABEL_RECORD",
+          "description": "The fixed fixture bytes contain the office-attributed labels and requested removal.",
+          "sourceRole": "PHASE_0_FIXTURE_METHOD",
+          "bearsOnClaimIds": [
+            "propaganda-label-action-refusal:claim-1",
+            "propaganda-label-action-refusal:claim-2"
+          ],
+          "direction": "CONTEXTUALISES",
+          "integrityState": "AUTHOR_STIPULATED",
+          "establishesTruth": false,
+          "scoresSourceOrPerson": false
+        }
+      ],
+      "reasoning": [],
+      "events": [],
+      "narratives": [],
+      "assessments": [
+        {
+          "id": "propaganda-label-action-refusal:assessment-1",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "propaganda-label-action-refusal:claim-1"
+          ],
+          "disposition": "SUPPORTED_UNDER_NAMED_TEST",
+          "methodId": "AUTHORITY_SCOPE_CHECK",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "propaganda-label-action-refusal",
+          "scope": "Presence and attribution of the invented office label record only.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "propaganda-label-action-refusal:condition-1",
+            "propaganda-label-action-refusal:evidence-1"
+          ],
+          "rationale": "The fixture stipulates that the office record contains the two attributed labels.",
+          "limitations": "Support establishes only record attribution; it does not endorse the labels, flag content, rank a source or classify propaganda or misinformation.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        },
+        {
+          "id": "propaganda-label-action-refusal:assessment-2",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "propaganda-label-action-refusal:claim-2"
+          ],
+          "disposition": "OUTSIDE_NAMED_METHOD",
+          "methodId": "NORMATIVE_REASON_BOUNDARY_CHECK",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "propaganda-label-action-refusal",
+          "scope": "Whether the attributed labels authorize suppression or any downstream effect.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "propaganda-label-action-refusal:condition-1"
+          ],
+          "rationale": "The Phase-0 method has no rights, legal, moderation, publication or enforcement process and grants no action authority.",
+          "limitations": "OUTSIDE_NAMED_METHOD neither validates nor invalidates a separate lawful rights-respecting process; none is included here.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        }
+      ],
+      "assessmentAudits": [],
+      "lifecycleRecords": [],
+      "nonClaims": [
+        "The atlas does not set a misinformation or propaganda flag.",
+        "No label, assessment or receipt authorizes censorship, suppression, moderation, publication change or enforcement."
+      ]
+    },
+    {
+      "id": "translation-ambiguity",
+      "title": "One source token with two declared readings",
+      "lesson": "Translation is a scoped mapping, not semantic identity.",
+      "synthetic": true,
+      "declaredQuestion": "How should unresolved lexical alternatives be preserved?",
+      "scenario": "The invented source token luma can mean boundary-edge or protective-shelter; the sentence supplies no discriminator.",
+      "timeScope": {
+        "from": "2026-08-26",
+        "through": "2026-08-26",
+        "basis": "AUTHOR_STIPULATED_FIXTURE_TIME",
+        "runtimeCurrentnessClaim": false
+      },
+      "authorStipulatedConditions": [
+        {
+          "id": "translation-ambiguity:condition-1",
+          "statement": "The invented lexicon permits EDGE and SHELTER readings for luma, with no contextual discriminator in the sentence.",
+          "scope": "This closed invented language practice only.",
+          "authorStipulated": true,
+          "establishesBeyondFixture": false
+        }
+      ],
+      "expressions": [
+        {
+          "id": "translation-ambiguity:expression-1",
+          "level": "L0_EXPRESSION",
+          "form": "Luma remains after the storm.",
+          "medium": "SYNTHETIC_SOURCE_SENTENCE",
+          "speakerRole": "FIXTURE_TEXT_ROLE",
+          "speechAct": "ASSERTION",
+          "genre": "INVENTED_SENTENCE",
+          "languagePractice": "INVENTED_LUMA_LANGUAGE",
+          "assertsClaimIds": [
+            "translation-ambiguity:claim-1",
+            "translation-ambiguity:claim-2"
+          ],
+          "interpretationNote": "Both claim objects are candidate definitional readings, not simultaneous asserted identities."
+        }
+      ],
+      "claims": [
+        {
+          "id": "translation-ambiguity:claim-1",
+          "level": "L0_CLAIM",
+          "proposition": "In this sentence, luma denotes a boundary-edge.",
+          "regime": "DEFINITIONAL",
+          "scope": "Candidate reading A in the invented language.",
+          "temporalQualifier": "At fixture interpretation time.",
+          "expressionIds": [
+            "translation-ambiguity:expression-1"
+          ]
+        },
+        {
+          "id": "translation-ambiguity:claim-2",
+          "level": "L0_CLAIM",
+          "proposition": "In this sentence, luma denotes protective shelter.",
+          "regime": "DEFINITIONAL",
+          "scope": "Candidate reading B in the invented language.",
+          "temporalQualifier": "At fixture interpretation time.",
+          "expressionIds": [
+            "translation-ambiguity:expression-1"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "translation-ambiguity:evidence-1",
+          "kind": "DECLARED_LEXICON_RECORD",
+          "description": "The invented lexicon includes both readings and no priority rule.",
+          "sourceRole": "PHASE_0_FIXTURE_METHOD",
+          "bearsOnClaimIds": [
+            "translation-ambiguity:claim-1",
+            "translation-ambiguity:claim-2"
+          ],
+          "direction": "MIXED_BEARING",
+          "integrityState": "AUTHOR_STIPULATED",
+          "establishesTruth": false,
+          "scoresSourceOrPerson": false
+        }
+      ],
+      "reasoning": [],
+      "events": [],
+      "narratives": [],
+      "assessments": [
+        {
+          "id": "translation-ambiguity:assessment-1",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "translation-ambiguity:claim-1",
+            "translation-ambiguity:claim-2"
+          ],
+          "disposition": "INCOMPARABLE_UNDER_NAMED_METHOD",
+          "methodId": "DEFINITIONAL_SCOPE_CHECK",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "translation-ambiguity",
+          "scope": "Selection between the two permitted readings for this sentence.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "translation-ambiguity:condition-1",
+            "translation-ambiguity:evidence-1"
+          ],
+          "rationale": "The named method finds both readings permitted and no declared discriminator.",
+          "limitations": "The alternatives are preserved; no translation is crowned identical to the source token.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        }
+      ],
+      "assessmentAudits": [],
+      "lifecycleRecords": [],
+      "nonClaims": [
+        "Translation does not establish semantic identity.",
+        "Ambiguity does not authorize silent selection."
+      ]
+    },
+    {
+      "id": "phenomenal-report-boundary",
+      "title": "A first-person-seeming report without private-state inference",
+      "lesson": "The expression of experience and external-world correspondence require different access.",
+      "synthetic": true,
+      "declaredQuestion": "What can be recorded about a phenomenal report without claiming access to private state?",
+      "scenario": "A synthetic subject role says a tone seems high; no external frequency or private-state access is stipulated.",
+      "timeScope": {
+        "from": "2026-08-26",
+        "through": "2026-08-26",
+        "basis": "AUTHOR_STIPULATED_FIXTURE_TIME",
+        "runtimeCurrentnessClaim": false
+      },
+      "authorStipulatedConditions": [
+        {
+          "id": "phenomenal-report-boundary:condition-1",
+          "statement": "The fixture contains the report expression but stipulates neither private experience nor an external tone measurement.",
+          "scope": "This closed fixture only.",
+          "authorStipulated": true,
+          "establishesBeyondFixture": false
+        }
+      ],
+      "expressions": [
+        {
+          "id": "phenomenal-report-boundary:expression-1",
+          "level": "L0_EXPRESSION",
+          "form": "The tone seems high to me.",
+          "medium": "SYNTHETIC_FIRST_PERSON_REPORT",
+          "speakerRole": "SYNTHETIC_SUBJECT_ROLE",
+          "speechAct": "PHENOMENAL_REPORT",
+          "genre": "INVENTED_FIRST_PERSON_REPORT",
+          "languagePractice": "ENGLISH_PHASE_0_FIXTURE",
+          "assertsClaimIds": [
+            "phenomenal-report-boundary:claim-1"
+          ],
+          "interpretationNote": "The claim is scoped to apparent experience as expressed."
+        }
+      ],
+      "claims": [
+        {
+          "id": "phenomenal-report-boundary:claim-1",
+          "level": "L0_CLAIM",
+          "proposition": "The tone seems high to the synthetic subject role as expressed in the report.",
+          "regime": "PHENOMENAL",
+          "scope": "The report's first-person phenomenal content.",
+          "temporalQualifier": "At the fixture report time.",
+          "expressionIds": [
+            "phenomenal-report-boundary:expression-1"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "phenomenal-report-boundary:evidence-1",
+          "kind": "DECLARED_EXPRESSION_RECORD",
+          "description": "The fixed fixture bytes contain the stated report.",
+          "sourceRole": "PHASE_0_FIXTURE_METHOD",
+          "bearsOnClaimIds": [
+            "phenomenal-report-boundary:claim-1"
+          ],
+          "direction": "CONTEXTUALISES",
+          "integrityState": "AUTHOR_STIPULATED",
+          "establishesTruth": false,
+          "scoresSourceOrPerson": false
+        }
+      ],
+      "reasoning": [],
+      "events": [],
+      "narratives": [],
+      "assessments": [
+        {
+          "id": "phenomenal-report-boundary:assessment-1",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "phenomenal-report-boundary:claim-1"
+          ],
+          "disposition": "SUPPORTED_UNDER_NAMED_TEST",
+          "methodId": "PHENOMENAL_REPORT_BOUNDARY_CHECK",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "phenomenal-report-boundary",
+          "scope": "Presence and declared phenomenal framing of the expression only.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "phenomenal-report-boundary:condition-1",
+            "phenomenal-report-boundary:evidence-1"
+          ],
+          "rationale": "The expression record supports that the report is present and phenomenally framed.",
+          "limitations": "No external frequency, private experience, sincerity, identity or intent is inferred.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        }
+      ],
+      "assessmentAudits": [],
+      "lifecycleRecords": [],
+      "nonClaims": [
+        "The atlas has no access to private experience.",
+        "A phenomenal report is not an external measurement."
+      ]
+    },
+    {
+      "id": "prediction-and-outcome",
+      "title": "A reasoned prediction that misses its horizon",
+      "lesson": "Ex-ante warrant and later outcome are different assessment targets.",
+      "synthetic": true,
+      "declaredQuestion": "Does a missed outcome imply the forecast was irrational or deceptive?",
+      "scenario": "A fixed forecast predicts six arrivals by T2 from declared assumptions; the fixture later stipulates four arrivals.",
+      "timeScope": {
+        "from": "2026-08-26",
+        "through": "2026-08-26",
+        "basis": "AUTHOR_STIPULATED_FIXTURE_TIME",
+        "runtimeCurrentnessClaim": false
+      },
+      "authorStipulatedConditions": [
+        {
+          "id": "prediction-and-outcome:condition-1",
+          "statement": "The forecast declares assumptions at T1 and the fixture stipulates four arrivals at T2.",
+          "scope": "This closed fixture horizon only.",
+          "authorStipulated": true,
+          "establishesBeyondFixture": false
+        }
+      ],
+      "expressions": [
+        {
+          "id": "prediction-and-outcome:expression-1",
+          "level": "L0_EXPRESSION",
+          "form": "Under assumptions A and B, six arrivals are predicted by T2.",
+          "medium": "SYNTHETIC_FORECAST",
+          "speakerRole": "FIXTURE_FORECASTER",
+          "speechAct": "PREDICTION",
+          "genre": "INVENTED_FORECAST",
+          "languagePractice": "ENGLISH_PHASE_0_FIXTURE",
+          "assertsClaimIds": [
+            "prediction-and-outcome:claim-1"
+          ],
+          "interpretationNote": "The assumptions and T2 horizon are explicit."
+        }
+      ],
+      "claims": [
+        {
+          "id": "prediction-and-outcome:claim-1",
+          "level": "L0_CLAIM",
+          "proposition": "Six synthetic arrivals will occur by T2 under assumptions A and B.",
+          "regime": "PREDICTIVE",
+          "scope": "The declared fixture process and assumptions.",
+          "temporalQualifier": "Forecast at T1 for horizon T2.",
+          "expressionIds": [
+            "prediction-and-outcome:expression-1"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "prediction-and-outcome:evidence-1",
+          "kind": "DECLARED_HORIZON_OUTCOME",
+          "description": "The stipulated T2 outcome contains four arrivals.",
+          "sourceRole": "PHASE_0_FIXTURE_METHOD",
+          "bearsOnClaimIds": [
+            "prediction-and-outcome:claim-1"
+          ],
+          "direction": "CHALLENGES",
+          "integrityState": "AUTHOR_STIPULATED",
+          "establishesTruth": false,
+          "scoresSourceOrPerson": false
+        }
+      ],
+      "reasoning": [],
+      "events": [],
+      "narratives": [],
+      "assessments": [
+        {
+          "id": "prediction-and-outcome:assessment-1",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "prediction-and-outcome:claim-1"
+          ],
+          "disposition": "CONTRADICTED_UNDER_NAMED_TEST",
+          "methodId": "PREDICTIVE_HORIZON_CHECK",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "prediction-and-outcome",
+          "scope": "Numeric outcome at the stipulated T2 horizon only.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "prediction-and-outcome:condition-1",
+            "prediction-and-outcome:evidence-1"
+          ],
+          "rationale": "The forecasted six differs from the stipulated outcome of four.",
+          "limitations": "Outcome mismatch does not determine ex-ante rationality, competence, sincerity or intent.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        }
+      ],
+      "assessmentAudits": [],
+      "lifecycleRecords": [],
+      "nonClaims": [
+        "A failed prediction is not a liar classification.",
+        "Forecast quality is not aggregated into a score."
+      ]
+    },
+    {
+      "id": "counterfactual-models",
+      "title": "Two counterfactual models without an intervention",
+      "lesson": "Counterfactual claims are model-relative and not direct observations.",
+      "synthetic": true,
+      "declaredQuestion": "What can be said when two declared models disagree about an unperformed alternative?",
+      "scenario": "Model A predicts a level drop if a valve opened; model B predicts no change. The valve remains closed.",
+      "timeScope": {
+        "from": "2026-08-26",
+        "through": "2026-08-26",
+        "basis": "AUTHOR_STIPULATED_FIXTURE_TIME",
+        "runtimeCurrentnessClaim": false
+      },
+      "authorStipulatedConditions": [
+        {
+          "id": "counterfactual-models:condition-1",
+          "statement": "The valve remains closed; models A and B have different declared response rules and no discriminator is stipulated.",
+          "scope": "This closed fixture only.",
+          "authorStipulated": true,
+          "establishesBeyondFixture": false
+        }
+      ],
+      "expressions": [
+        {
+          "id": "counterfactual-models:expression-1",
+          "level": "L0_EXPRESSION",
+          "form": "If the valve had opened, the level would have fallen.",
+          "medium": "SYNTHETIC_MODEL_STATEMENT",
+          "speakerRole": "MODEL_A_FIXTURE",
+          "speechAct": "COUNTERFACTUAL_ASSERTION",
+          "genre": "INVENTED_MODEL_OUTPUT",
+          "languagePractice": "ENGLISH_PHASE_0_FIXTURE",
+          "assertsClaimIds": [
+            "counterfactual-models:claim-1"
+          ],
+          "interpretationNote": "The claim belongs to model A's declared alternative world."
+        }
+      ],
+      "claims": [
+        {
+          "id": "counterfactual-models:claim-1",
+          "level": "L0_CLAIM",
+          "proposition": "Under the alternative where the valve opens, the synthetic level falls.",
+          "regime": "COUNTERFACTUAL",
+          "scope": "The declared alternative and competing models.",
+          "temporalQualifier": "At the unperformed fixture intervention horizon.",
+          "expressionIds": [
+            "counterfactual-models:expression-1"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "counterfactual-models:evidence-1",
+          "kind": "DECLARED_COMPETING_MODELS",
+          "description": "Model A predicts a fall and model B predicts no change; no intervention occurs.",
+          "sourceRole": "PHASE_0_FIXTURE_METHOD",
+          "bearsOnClaimIds": [
+            "counterfactual-models:claim-1"
+          ],
+          "direction": "MIXED_BEARING",
+          "integrityState": "AUTHOR_STIPULATED",
+          "establishesTruth": false,
+          "scoresSourceOrPerson": false
+        }
+      ],
+      "reasoning": [],
+      "events": [],
+      "narratives": [],
+      "assessments": [
+        {
+          "id": "counterfactual-models:assessment-1",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "counterfactual-models:claim-1"
+          ],
+          "disposition": "INCOMPARABLE_UNDER_NAMED_METHOD",
+          "methodId": "COUNTERFACTUAL_MODEL_COMPARISON",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "counterfactual-models",
+          "scope": "The two declared response rules without an intervention or discriminator.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "counterfactual-models:condition-1",
+            "counterfactual-models:evidence-1"
+          ],
+          "rationale": "The named comparison records incompatible model outputs but has no stipulated basis to privilege one.",
+          "limitations": "The unperformed alternative is not treated as an observed world condition.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        }
+      ],
+      "assessmentAudits": [],
+      "lifecycleRecords": [],
+      "nonClaims": [
+        "A model output is not direct observation of an alternative world.",
+        "The atlas does not rank the competing models."
+      ]
+    },
+    {
+      "id": "normative-is-ought-boundary",
+      "title": "A factual observation that does not supply an ought",
+      "lesson": "Normative conclusions require declared normative premises and affected commitments.",
+      "synthetic": true,
+      "declaredQuestion": "Can a congestion measurement alone establish what ought to be done?",
+      "scenario": "A synthetic gate is congested. A statement concludes a second gate ought to open without declaring a normative premise.",
+      "timeScope": {
+        "from": "2026-08-26",
+        "through": "2026-08-26",
+        "basis": "AUTHOR_STIPULATED_FIXTURE_TIME",
+        "runtimeCurrentnessClaim": false
+      },
+      "authorStipulatedConditions": [
+        {
+          "id": "normative-is-ought-boundary:condition-1",
+          "statement": "The synthetic north gate is congested; the fixture declares no priority, duty, cost, consent or safety premise.",
+          "scope": "This closed fixture only.",
+          "authorStipulated": true,
+          "establishesBeyondFixture": false
+        }
+      ],
+      "expressions": [
+        {
+          "id": "normative-is-ought-boundary:expression-1",
+          "level": "L0_EXPRESSION",
+          "form": "The north gate is congested, therefore the south gate ought to be opened.",
+          "medium": "SYNTHETIC_POLICY_ARGUMENT",
+          "speakerRole": "FIXTURE_REASONER",
+          "speechAct": "NORMATIVE_ARGUMENT",
+          "genre": "INVENTED_ARGUMENT",
+          "languagePractice": "ENGLISH_PHASE_0_FIXTURE",
+          "assertsClaimIds": [
+            "normative-is-ought-boundary:claim-1"
+          ],
+          "interpretationNote": "The conclusion is normative even though the only declared premise is empirical."
+        }
+      ],
+      "claims": [
+        {
+          "id": "normative-is-ought-boundary:claim-1",
+          "level": "L0_CLAIM",
+          "proposition": "The south gate ought to be opened because the north gate is congested.",
+          "regime": "NORMATIVE",
+          "scope": "The invented gate choice and unnamed affected interests.",
+          "temporalQualifier": "At the fixture congestion time.",
+          "expressionIds": [
+            "normative-is-ought-boundary:expression-1"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "normative-is-ought-boundary:evidence-1",
+          "kind": "DECLARED_FIXTURE_INSPECTION",
+          "description": "The fixture stipulates congestion but no normative bridge premise.",
+          "sourceRole": "PHASE_0_FIXTURE_METHOD",
+          "bearsOnClaimIds": [
+            "normative-is-ought-boundary:claim-1"
+          ],
+          "direction": "CONTEXTUALISES",
+          "integrityState": "AUTHOR_STIPULATED",
+          "establishesTruth": false,
+          "scoresSourceOrPerson": false
+        }
+      ],
+      "reasoning": [],
+      "events": [],
+      "narratives": [],
+      "assessments": [
+        {
+          "id": "normative-is-ought-boundary:assessment-1",
+          "level": "L1_ASSESSMENT",
+          "targetClaimIds": [
+            "normative-is-ought-boundary:claim-1"
+          ],
+          "disposition": "INSUFFICIENT_FOR_NAMED_METHOD",
+          "methodId": "NORMATIVE_REASON_BOUNDARY_CHECK",
+          "attributedTo": "PHASE_0_SYNTHETIC_METHOD",
+          "fixtureId": "normative-is-ought-boundary",
+          "scope": "Presence of declared normative bridge premises only.",
+          "window": {
+            "from": "2026-08-26",
+            "through": "2026-08-26",
+            "currentnessClaim": false
+          },
+          "basisIds": [
+            "normative-is-ought-boundary:condition-1",
+            "normative-is-ought-boundary:evidence-1"
+          ],
+          "rationale": "Congestion is stipulated, but no duty, priority, consent, safety or cost premise connects it to the proposed directive.",
+          "limitations": "The atlas does not recommend whether either gate should open and authorizes no action.",
+          "grantsAuthority": false,
+          "authorizesAction": false
+        }
+      ],
+      "assessmentAudits": [],
+      "lifecycleRecords": [],
+      "nonClaims": [
+        "An empirical observation does not silently derive an ought.",
+        "No gate action is recommended or authorized."
+      ]
+    }
+  ]
+}

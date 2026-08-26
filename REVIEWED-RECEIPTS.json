@@ -1,0 +1,50 @@
+{
+  "protocol": "kingdom.truth-relations/0.1",
+  "artifactId": "polyphonic-claim-atlas-2026-08-26",
+  "reviewState": "INDEPENDENT_REVIEW_COMPLETE",
+  "reviewAsOf": "2026-08-26",
+  "reviewEvidence": {
+    "independentReadOnlySuitePassed": true,
+    "nodeTestsPassed": 42,
+    "schemaIssues": 0,
+    "structuralIssues": 0,
+    "semanticIssues": 0,
+    "draft202012ExternalValidationIssues": 0,
+    "semanticChangeAfterReview": false
+  },
+  "publicationAuthorization": {
+    "state": "AUTHORIZED_FOR_EXACT_FILES_ONLY",
+    "files": [
+      {
+        "sourcePath": "public/truth/polyphonic-claim-atlas-2026-08-26.json",
+        "destinationPath": "/truth/polyphonic-claim-atlas-2026-08-26.json",
+        "bytes": 178016,
+        "byteSha256": "sha256:69d68faf0885cecf084bee3ff094c742786e7901f8d1da90fa510cce5194970b"
+      },
+      {
+        "sourcePath": "public/truth/schemas/v0.1/public-snapshot.schema.json",
+        "destinationPath": "/truth/schemas/v0.1/public-snapshot.schema.json",
+        "bytes": 62109,
+        "byteSha256": "sha256:8244c3428ea810defd98da1ca7c1d0fec6541c0c175e3195b711b89af39cdb27"
+      },
+      {
+        "sourcePath": "public/POLYPHONIC-CLAIM-ATLAS-v0.1.md",
+        "destinationPath": "/POLYPHONIC-CLAIM-ATLAS-v0.1.md",
+        "bytes": 9188,
+        "byteSha256": "sha256:974cb357ad1f5a23fa3f8798e444bbfb4dc43b1bf8aa1d14609599877ed13126"
+      }
+    ],
+    "mutableAlias": false,
+    "htmlPage": false,
+    "runtime": false,
+    "additionalFile": false,
+    "semanticAuthority": false,
+    "actionAuthority": false
+  },
+  "lockBoundary": {
+    "includedInPublicTriplet": false,
+    "receiptedByAtlas": false,
+    "affectsTripletBytes": false,
+    "selfReferentialReceipt": false
+  }
+}

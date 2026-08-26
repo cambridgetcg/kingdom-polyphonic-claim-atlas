@@ -1,0 +1,1037 @@
+{
+  "protocol": "kingdom.truth-relations/0.1",
+  "title": "KINGDOM Polyphonic Claim Atlas: Truth Relations Phase 0",
+  "description": "A static synthetic atlas for inspecting typed relations among expression, claim, warrant, reasoning, narrative, provenance, institutional status, assessment and correction without producing a truth oracle.",
+  "artifact": {
+    "id": "polyphonic-claim-atlas-2026-08-26",
+    "version": "0.1.0",
+    "phase": "PHASE_0",
+    "asOf": "2026-08-26",
+    "state": "STATIC_SYNTHETIC_PHASE_0",
+    "immutableHistoricalArtifact": true,
+    "runtimeCurrentnessClaim": false,
+    "mutableAlias": false
+  },
+  "publicHandoff": {
+    "canonicalPath": "/truth/polyphonic-claim-atlas-2026-08-26.json",
+    "schemaPath": "/truth/schemas/v0.1/public-snapshot.schema.json",
+    "guidePath": "/POLYPHONIC-CLAIM-ATLAS-v0.1.md",
+    "htmlPage": false,
+    "runtime": false
+  },
+  "authorship": {
+    "producer": "KINGDOM Polyphonic Claim Atlas Phase-0 producer",
+    "reviewState": "INDEPENDENT_REVIEW_COMPLETE",
+    "humanReviewCompleted": false,
+    "publicationAuthorized": true
+  },
+  "scope": {
+    "purpose": "Teach and test typed truth relations using bounded synthetic counterexamples.",
+    "datasetNature": "SYNTHETIC_ONLY",
+    "realPeople": false,
+    "liveClaims": false,
+    "personalData": false,
+    "sourceBodies": false,
+    "networkInputs": false,
+    "claimsRuntimeCurrentness": false
+  },
+  "constitutionalBoundaries": {
+    "determinesTruth": false,
+    "globalTruthStatus": false,
+    "truthScore": false,
+    "claimScore": false,
+    "personScore": false,
+    "communityScore": false,
+    "witnessScore": false,
+    "institutionScore": false,
+    "credibilityScore": false,
+    "consensusScore": false,
+    "propagandaScore": false,
+    "sourceScore": false,
+    "storyScore": false,
+    "trustScore": false,
+    "ranksPeopleOrSources": false,
+    "classifiesPeopleAsLiars": false,
+    "misinformationFlag": false,
+    "infersIntent": false,
+    "infersPrivateReasoning": false,
+    "convertsConsensusToTruth": false,
+    "convertsMajorityToTruth": false,
+    "convertsProvenanceToTruth": false,
+    "convertsSignatureToTruth": false,
+    "convertsHashToTruth": false,
+    "convertsOfficialStatusToTruth": false,
+    "convertsReceiptToTruth": false,
+    "convertsCoherenceToTruth": false,
+    "automatedVerdict": false,
+    "canonicalStory": false,
+    "storyWinner": false,
+    "recommendation": false,
+    "automatedAction": false,
+    "rewardOrPenalty": false,
+    "reputationEffect": false,
+    "zeroneAdapter": false,
+    "karmaAdapter": false,
+    "nenAdapter": false,
+    "moneyAdapter": false,
+    "accessAdapter": false,
+    "moderationAdapter": false,
+    "governanceAdapter": false,
+    "enforcementAdapter": false,
+    "privateTestimonyImmutable": false,
+    "namedPersonClaims": false,
+    "censorshipOrSuppressionAction": false,
+    "mcpExposure": false,
+    "api": false,
+    "submission": false,
+    "runtime": false,
+    "network": false
+  },
+  "selfReferenceStratification": {
+    "levels": [
+    {
+      "id": "L0_EXPRESSION_OR_CLAIM",
+      "rank": 0,
+      "mayTargetLevels": [],
+      "memberLevels": [
+        "L0_EXPRESSION",
+        "L0_CLAIM",
+        "L0_REASONING",
+        "L0_NARRATIVE_ARTIFACT"
+      ]
+    },
+    {
+      "id": "L1_ASSESSMENT",
+      "rank": 1,
+      "mayTargetLevels": [
+        "L0_EXPRESSION_OR_CLAIM"
+      ],
+      "memberLevels": [
+        "L1_ASSESSMENT"
+      ]
+    },
+    {
+      "id": "L2_ASSESSMENT_AUDIT",
+      "rank": 2,
+      "mayTargetLevels": [
+        "L1_ASSESSMENT"
+      ],
+      "memberLevels": [
+        "L2_ASSESSMENT_AUDIT"
+      ]
+      }
+    ],
+    "targetRankMustBeLower": true,
+    "selfTargeting": false,
+    "cyclicAssessment": false,
+    "assessmentDerivedAsTargetSupport": false,
+    "paradoxDisposition": "OUTSIDE_NAMED_METHOD",
+    "fixedPointVerdict": false
+  },
+  "assessmentDispositions": [
+    "NOT_ASSESSED_UNDER_NAMED_METHOD",
+    "SUPPORTED_UNDER_NAMED_TEST",
+    "CHALLENGED_UNDER_NAMED_TEST",
+    "CONTRADICTED_UNDER_NAMED_TEST",
+    "MIXED_UNDER_NAMED_TEST",
+    "INSUFFICIENT_FOR_NAMED_METHOD",
+    "CONTESTED_UNDER_NAMED_TEST",
+    "INCOMPARABLE_UNDER_NAMED_METHOD",
+    "OUTSIDE_NAMED_METHOD",
+    "UNKNOWN_UNDER_NAMED_METHOD"
+  ],
+  "recordLifecycleStates": [
+    {
+      "id": "CURRENT_AS_OF",
+      "definition": "The record is the current declared version only at the stated fixture date.",
+      "establishesTruthOrFalsehood": false
+    },
+    {
+      "id": "CORRECTED",
+      "definition": "A later record identifies and repairs a declared defect in an earlier record.",
+      "establishesTruthOrFalsehood": false
+    },
+    {
+      "id": "WITHDRAWN",
+      "definition": "A source ceases to advance a record without the atlas inferring why or whether its content was false.",
+      "establishesTruthOrFalsehood": false
+    },
+    {
+      "id": "SUPERSEDED",
+      "definition": "A later record replaces an earlier record for a declared purpose and time.",
+      "establishesTruthOrFalsehood": false
+    },
+    {
+      "id": "RETRACTED",
+      "definition": "A source formally removes a prior record from active reliance while historical provenance remains visible.",
+      "establishesTruthOrFalsehood": false
+    }
+  ],
+  "claimRegimes": [
+    {
+      "id": "EMPIRICAL",
+      "definition": "A claim whose scoped subject matter is a declared observable condition in the synthetic fixture.",
+      "assessmentLimit": "Requires a named comparison or observation and remains revisable."
+    },
+    {
+      "id": "FORMAL_LOGICAL",
+      "definition": "A claim about formal consequence, compatibility or contradiction under declared premises and rules.",
+      "assessmentLimit": "Validity does not establish premise truth or real-world correspondence."
+    },
+    {
+      "id": "INSTITUTIONAL",
+      "definition": "A claim about a status created or recognized by a declared synthetic institution under a declared rule.",
+      "assessmentLimit": "Institutional force does not establish an empirical claim outside its authority."
+    },
+    {
+      "id": "PROCEDURAL",
+      "definition": "A claim about conformance to a declared synthetic procedure, record or protocol.",
+      "assessmentLimit": "Conformance and receipt validity do not establish semantic truth."
+    },
+    {
+      "id": "INTERPRETIVE",
+      "definition": "A claim about meaning, framing, significance or the best reading of declared material.",
+      "assessmentLimit": "Multiple scoped interpretations may remain live."
+    },
+    {
+      "id": "NARRATIVE_CLAIM_FRAGMENT",
+      "definition": "An assessable claim fragment extracted from a separately represented story artifact.",
+      "assessmentLimit": "A story as a whole is never reduced to one verdict; coherence, fidelity, correspondence, selection and omission remain separate."
+    },
+    {
+      "id": "METAPHORICAL",
+      "definition": "A non-literal comparison offered within a declared language practice.",
+      "assessmentLimit": "Literal empirical tests may be outside the expression's declared speech act."
+    },
+    {
+      "id": "FICTIONAL",
+      "definition": "A proposition inside a declared invented world or fiction practice.",
+      "assessmentLimit": "Fictional status is not deception and does not imply literal-world assertion."
+    },
+    {
+      "id": "NORMATIVE",
+      "definition": "A claim about what ought to be done or valued under declared reasons and commitments.",
+      "assessmentLimit": "Empirical support alone does not derive the normative conclusion."
+    },
+    {
+      "id": "SELF_REFERENTIAL",
+      "definition": "A claim whose interpretation refers to itself or its own assessment status.",
+      "assessmentLimit": "The Phase-0 atlas refuses untyped fixed-point adjudication."
+    },
+    {
+      "id": "PHENOMENAL",
+      "definition": "A first-person report of a declared synthetic subject's apparent experience or perception.",
+      "assessmentLimit": "Record the report and its conditions without inferring private state, deception or being-wide reliability."
+    },
+    {
+      "id": "PREDICTIVE",
+      "definition": "A claim about a condition at a declared future fixture time under stated assumptions.",
+      "assessmentLimit": "Assess only after the named horizon and preserve the distinction between a reasonable forecast and its eventual outcome."
+    },
+    {
+      "id": "COUNTERFACTUAL",
+      "definition": "A claim about what would occur under a declared alternative synthetic condition.",
+      "assessmentLimit": "Requires an explicit model or comparison and cannot be collapsed into direct observation."
+    },
+    {
+      "id": "PERFORMATIVE_OR_DIRECTIVE",
+      "definition": "An utterance that declares, promises, requests, directs or constitutes a scoped institutional relation rather than merely describing one.",
+      "assessmentLimit": "Assess felicity and authority separately from empirical correspondence and moral legitimacy."
+    },
+    {
+      "id": "TESTIMONIAL",
+      "definition": "A report attributed to a synthetic witness role about that role's declared access to an event or condition.",
+      "assessmentLimit": "Assess the scoped report and access conditions only; never infer witness credibility, worth, identity or a person-wide score."
+    },
+    {
+      "id": "CAUSAL",
+      "definition": "A claim that one declared synthetic condition produced or changed another under an explicit causal model.",
+      "assessmentLimit": "Temporal order, correlation and narrative sequence do not by themselves establish causation."
+    },
+    {
+      "id": "DEFINITIONAL",
+      "definition": "A claim about stipulated term use within a declared vocabulary or language practice.",
+      "assessmentLimit": "Definition fixes scoped use; it neither discovers an empirical condition nor forces identity across languages."
+    },
+    {
+      "id": "METAPHYSICAL_SOURCE_ATTRIBUTION",
+      "definition": "A claim that an invented source record advances a stated metaphysical or theological referent proposition.",
+      "assessmentLimit": "Phase 0 may check only the source attribution; support cannot be transferred to the referent proposition."
+    },
+    {
+      "id": "METAPHYSICAL_REFERENT_PROPOSITION",
+      "definition": "The metaphysical or theological referent proposition advanced by an invented source, represented separately from its attribution record.",
+      "assessmentLimit": "Phase 0 provides no proof, disproof, equation, ranking or authority over the referent proposition or any tradition."
+    }
+  ],
+  "methodVocabulary": [
+    {
+      "id": "DECLARED_FIXTURE_WORLD_COMPARISON",
+      "definition": "Compare a claim only with explicitly declared synthetic world conditions.",
+      "establishesTruthBeyondFixture": false
+    },
+    {
+      "id": "FORMAL_VALIDITY_CHECK",
+      "definition": "Check whether a conclusion follows under the declared rule and premises.",
+      "establishesTruthBeyondFixture": false
+    },
+    {
+      "id": "PROVENANCE_INTEGRITY_CHECK",
+      "definition": "Check declared origin, signature or transformation continuity without assessing content correspondence.",
+      "establishesTruthBeyondFixture": false
+    },
+    {
+      "id": "SOURCE_INDEPENDENCE_AUDIT",
+      "definition": "Inspect whether apparently distinct reports share one declared upstream origin.",
+      "establishesTruthBeyondFixture": false
+    },
+    {
+      "id": "NARRATIVE_SELECTION_AUDIT",
+      "definition": "Compare selected, omitted and ordered events and attributed causes across narratives.",
+      "establishesTruthBeyondFixture": false
+    },
+    {
+      "id": "AUTHORITY_SCOPE_CHECK",
+      "definition": "Compare a speech act or official claim with its declared institutional authority and subject-matter limits.",
+      "establishesTruthBeyondFixture": false
+    },
+    {
+      "id": "CITATION_EXISTENCE_CHECK",
+      "definition": "Check whether a cited item exists in the fixture's declared catalogue without inferring content truth.",
+      "establishesTruthBeyondFixture": false
+    },
+    {
+      "id": "TEMPORAL_SCOPE_CHECK",
+      "definition": "Compare a claim's time scope with the fixture's declared update or correction sequence.",
+      "establishesTruthBeyondFixture": false
+    },
+    {
+      "id": "INTERPRETATION_BOUNDARY_CHECK",
+      "definition": "Inspect genre, translation, ambiguity, metaphor or fiction before selecting an assessment method.",
+      "establishesTruthBeyondFixture": false
+    },
+    {
+      "id": "TESTIMONY_UPTAKE_AUDIT",
+      "definition": "Compare evidential access with institutional uptake without scoring a witness or source.",
+      "establishesTruthBeyondFixture": false
+    },
+    {
+      "id": "CAUSAL_MODEL_CHECK",
+      "definition": "Inspect whether a declared causal model and discriminating conditions support more than temporal order or correlation.",
+      "establishesTruthBeyondFixture": false
+    },
+    {
+      "id": "NORMATIVE_REASON_BOUNDARY_CHECK",
+      "definition": "Inspect declared normative premises and prevent empirical observations from silently deriving an ought.",
+      "establishesTruthBeyondFixture": false
+    },
+    {
+      "id": "SELF_REFERENCE_STRATIFICATION_CHECK",
+      "definition": "Enforce downward-only L0 claim, L1 assessment and L2 audit targeting without a fixed-point verdict.",
+      "establishesTruthBeyondFixture": false
+    },
+    {
+      "id": "PREDICTIVE_HORIZON_CHECK",
+      "definition": "Compare a scoped prediction only after its named fixture horizon while preserving ex-ante warrant separately.",
+      "establishesTruthBeyondFixture": false
+    },
+    {
+      "id": "COUNTERFACTUAL_MODEL_COMPARISON",
+      "definition": "Compare declared alternative-world models without treating an unobserved counterfactual as direct observation.",
+      "establishesTruthBeyondFixture": false
+    },
+    {
+      "id": "PHENOMENAL_REPORT_BOUNDARY_CHECK",
+      "definition": "Record a first-person phenomenal report and its expression conditions without inferring private state or external correspondence.",
+      "establishesTruthBeyondFixture": false
+    },
+    {
+      "id": "TESTIMONIAL_ACCESS_CHECK",
+      "definition": "Inspect the declared access conditions of one synthetic testimony without producing a witness-wide assessment.",
+      "establishesTruthBeyondFixture": false
+    },
+    {
+      "id": "DEFINITIONAL_SCOPE_CHECK",
+      "definition": "Inspect whether a stipulated definition is used within its declared vocabulary and language practice.",
+      "establishesTruthBeyondFixture": false
+    },
+    {
+      "id": "METAPHYSICAL_ATTRIBUTION_BOUNDARY_CHECK",
+      "definition": "Distinguish the record that an invented source advances a metaphysical or theological referent claim from adjudication of that referent proposition.",
+      "establishesTruthBeyondFixture": false
+    }
+  ],
+  "regimeMethodCompatibility": [
+    {
+      "regime": "EMPIRICAL",
+      "compatibleMethodIds": [
+        "DECLARED_FIXTURE_WORLD_COMPARISON",
+        "TEMPORAL_SCOPE_CHECK"
+      ],
+      "compatibleDispositionIds": [
+        "SUPPORTED_UNDER_NAMED_TEST",
+        "CHALLENGED_UNDER_NAMED_TEST",
+        "CONTRADICTED_UNDER_NAMED_TEST",
+        "MIXED_UNDER_NAMED_TEST",
+        "INSUFFICIENT_FOR_NAMED_METHOD",
+        "CONTESTED_UNDER_NAMED_TEST",
+        "UNKNOWN_UNDER_NAMED_METHOD"
+      ],
+      "compatibilityNote": "Only declared fixture observations and temporal scopes are admissible.",
+      "canProduceGlobalVerdict": false
+    },
+    {
+      "regime": "FORMAL_LOGICAL",
+      "compatibleMethodIds": [
+        "FORMAL_VALIDITY_CHECK"
+      ],
+      "compatibleDispositionIds": [
+        "SUPPORTED_UNDER_NAMED_TEST",
+        "CHALLENGED_UNDER_NAMED_TEST",
+        "CONTRADICTED_UNDER_NAMED_TEST",
+        "INSUFFICIENT_FOR_NAMED_METHOD",
+        "OUTSIDE_NAMED_METHOD"
+      ],
+      "compatibilityNote": "The method checks consequence under declared rules, not premise correspondence.",
+      "canProduceGlobalVerdict": false
+    },
+    {
+      "regime": "INSTITUTIONAL",
+      "compatibleMethodIds": [
+        "AUTHORITY_SCOPE_CHECK"
+      ],
+      "compatibleDispositionIds": [
+        "SUPPORTED_UNDER_NAMED_TEST",
+        "CHALLENGED_UNDER_NAMED_TEST",
+        "CONTRADICTED_UNDER_NAMED_TEST",
+        "INSUFFICIENT_FOR_NAMED_METHOD",
+        "OUTSIDE_NAMED_METHOD"
+      ],
+      "compatibilityNote": "Authority and felicity remain scoped to the declared institution.",
+      "canProduceGlobalVerdict": false
+    },
+    {
+      "regime": "PROCEDURAL",
+      "compatibleMethodIds": [
+        "PROVENANCE_INTEGRITY_CHECK",
+        "SOURCE_INDEPENDENCE_AUDIT",
+        "CITATION_EXISTENCE_CHECK",
+        "TEMPORAL_SCOPE_CHECK",
+        "AUTHORITY_SCOPE_CHECK"
+      ],
+      "compatibleDispositionIds": [
+        "SUPPORTED_UNDER_NAMED_TEST",
+        "CHALLENGED_UNDER_NAMED_TEST",
+        "CONTRADICTED_UNDER_NAMED_TEST",
+        "MIXED_UNDER_NAMED_TEST",
+        "INSUFFICIENT_FOR_NAMED_METHOD",
+        "OUTSIDE_NAMED_METHOD"
+      ],
+      "compatibilityNote": "Procedure, provenance and catalogue existence never establish semantic truth.",
+      "canProduceGlobalVerdict": false
+    },
+    {
+      "regime": "INTERPRETIVE",
+      "compatibleMethodIds": [
+        "INTERPRETATION_BOUNDARY_CHECK",
+        "NARRATIVE_SELECTION_AUDIT",
+        "DEFINITIONAL_SCOPE_CHECK"
+      ],
+      "compatibleDispositionIds": [
+        "SUPPORTED_UNDER_NAMED_TEST",
+        "CHALLENGED_UNDER_NAMED_TEST",
+        "MIXED_UNDER_NAMED_TEST",
+        "INSUFFICIENT_FOR_NAMED_METHOD",
+        "CONTESTED_UNDER_NAMED_TEST",
+        "INCOMPARABLE_UNDER_NAMED_METHOD",
+        "OUTSIDE_NAMED_METHOD",
+        "UNKNOWN_UNDER_NAMED_METHOD"
+      ],
+      "compatibilityNote": "Interpretation preserves alternatives, genre, audience and loss.",
+      "canProduceGlobalVerdict": false
+    },
+    {
+      "regime": "NARRATIVE_CLAIM_FRAGMENT",
+      "compatibleMethodIds": [
+        "NARRATIVE_SELECTION_AUDIT",
+        "CAUSAL_MODEL_CHECK"
+      ],
+      "compatibleDispositionIds": [
+        "SUPPORTED_UNDER_NAMED_TEST",
+        "CHALLENGED_UNDER_NAMED_TEST",
+        "CONTRADICTED_UNDER_NAMED_TEST",
+        "MIXED_UNDER_NAMED_TEST",
+        "INSUFFICIENT_FOR_NAMED_METHOD",
+        "CONTESTED_UNDER_NAMED_TEST",
+        "OUTSIDE_NAMED_METHOD"
+      ],
+      "compatibilityNote": "Only extracted fragments are assessed; the story artifact never receives one disposition.",
+      "canProduceGlobalVerdict": false
+    },
+    {
+      "regime": "METAPHORICAL",
+      "compatibleMethodIds": [
+        "INTERPRETATION_BOUNDARY_CHECK"
+      ],
+      "compatibleDispositionIds": [
+        "SUPPORTED_UNDER_NAMED_TEST",
+        "INSUFFICIENT_FOR_NAMED_METHOD",
+        "OUTSIDE_NAMED_METHOD"
+      ],
+      "compatibilityNote": "Literal empirical comparison is unavailable unless separately asserted.",
+      "canProduceGlobalVerdict": false
+    },
+    {
+      "regime": "FICTIONAL",
+      "compatibleMethodIds": [
+        "INTERPRETATION_BOUNDARY_CHECK"
+      ],
+      "compatibleDispositionIds": [
+        "SUPPORTED_UNDER_NAMED_TEST",
+        "INSUFFICIENT_FOR_NAMED_METHOD",
+        "OUTSIDE_NAMED_METHOD"
+      ],
+      "compatibilityNote": "Genre can be checked without treating fiction as deceptive literal report.",
+      "canProduceGlobalVerdict": false
+    },
+    {
+      "regime": "NORMATIVE",
+      "compatibleMethodIds": [
+        "NORMATIVE_REASON_BOUNDARY_CHECK"
+      ],
+      "compatibleDispositionIds": [
+        "SUPPORTED_UNDER_NAMED_TEST",
+        "CHALLENGED_UNDER_NAMED_TEST",
+        "MIXED_UNDER_NAMED_TEST",
+        "INSUFFICIENT_FOR_NAMED_METHOD",
+        "CONTESTED_UNDER_NAMED_TEST",
+        "OUTSIDE_NAMED_METHOD"
+      ],
+      "compatibilityNote": "Normative premises and affected commitments must be declared separately from empirical facts.",
+      "canProduceGlobalVerdict": false
+    },
+    {
+      "regime": "SELF_REFERENTIAL",
+      "compatibleMethodIds": [
+        "SELF_REFERENCE_STRATIFICATION_CHECK"
+      ],
+      "compatibleDispositionIds": [
+        "OUTSIDE_NAMED_METHOD"
+      ],
+      "compatibilityNote": "Only structural level safety is assessed; no fixed-point verdict is permitted.",
+      "canProduceGlobalVerdict": false
+    },
+    {
+      "regime": "PHENOMENAL",
+      "compatibleMethodIds": [
+        "PHENOMENAL_REPORT_BOUNDARY_CHECK"
+      ],
+      "compatibleDispositionIds": [
+        "SUPPORTED_UNDER_NAMED_TEST",
+        "INSUFFICIENT_FOR_NAMED_METHOD",
+        "OUTSIDE_NAMED_METHOD"
+      ],
+      "compatibilityNote": "The expression of experience is inspectable; private state and external correspondence are not inferred.",
+      "canProduceGlobalVerdict": false
+    },
+    {
+      "regime": "PREDICTIVE",
+      "compatibleMethodIds": [
+        "PREDICTIVE_HORIZON_CHECK"
+      ],
+      "compatibleDispositionIds": [
+        "SUPPORTED_UNDER_NAMED_TEST",
+        "CHALLENGED_UNDER_NAMED_TEST",
+        "CONTRADICTED_UNDER_NAMED_TEST",
+        "MIXED_UNDER_NAMED_TEST",
+        "INSUFFICIENT_FOR_NAMED_METHOD"
+      ],
+      "compatibilityNote": "Outcome comparison occurs only at the named horizon and does not back-propagate into intent or competence.",
+      "canProduceGlobalVerdict": false
+    },
+    {
+      "regime": "COUNTERFACTUAL",
+      "compatibleMethodIds": [
+        "COUNTERFACTUAL_MODEL_COMPARISON",
+        "CAUSAL_MODEL_CHECK"
+      ],
+      "compatibleDispositionIds": [
+        "SUPPORTED_UNDER_NAMED_TEST",
+        "CHALLENGED_UNDER_NAMED_TEST",
+        "MIXED_UNDER_NAMED_TEST",
+        "INSUFFICIENT_FOR_NAMED_METHOD",
+        "CONTESTED_UNDER_NAMED_TEST",
+        "INCOMPARABLE_UNDER_NAMED_METHOD",
+        "OUTSIDE_NAMED_METHOD"
+      ],
+      "compatibilityNote": "Alternative-world models remain declared models, not direct observations.",
+      "canProduceGlobalVerdict": false
+    },
+    {
+      "regime": "PERFORMATIVE_OR_DIRECTIVE",
+      "compatibleMethodIds": [
+        "AUTHORITY_SCOPE_CHECK"
+      ],
+      "compatibleDispositionIds": [
+        "SUPPORTED_UNDER_NAMED_TEST",
+        "CHALLENGED_UNDER_NAMED_TEST",
+        "CONTRADICTED_UNDER_NAMED_TEST",
+        "INSUFFICIENT_FOR_NAMED_METHOD",
+        "OUTSIDE_NAMED_METHOD"
+      ],
+      "compatibilityNote": "Felicity and authority are inspected separately from empirical and moral claims.",
+      "canProduceGlobalVerdict": false
+    },
+    {
+      "regime": "TESTIMONIAL",
+      "compatibleMethodIds": [
+        "TESTIMONIAL_ACCESS_CHECK",
+        "TESTIMONY_UPTAKE_AUDIT"
+      ],
+      "compatibleDispositionIds": [
+        "SUPPORTED_UNDER_NAMED_TEST",
+        "CHALLENGED_UNDER_NAMED_TEST",
+        "MIXED_UNDER_NAMED_TEST",
+        "INSUFFICIENT_FOR_NAMED_METHOD",
+        "CONTESTED_UNDER_NAMED_TEST",
+        "OUTSIDE_NAMED_METHOD"
+      ],
+      "compatibilityNote": "Only the report and declared access are assessed, never a witness-wide quality.",
+      "canProduceGlobalVerdict": false
+    },
+    {
+      "regime": "CAUSAL",
+      "compatibleMethodIds": [
+        "CAUSAL_MODEL_CHECK"
+      ],
+      "compatibleDispositionIds": [
+        "SUPPORTED_UNDER_NAMED_TEST",
+        "CHALLENGED_UNDER_NAMED_TEST",
+        "CONTRADICTED_UNDER_NAMED_TEST",
+        "MIXED_UNDER_NAMED_TEST",
+        "INSUFFICIENT_FOR_NAMED_METHOD",
+        "CONTESTED_UNDER_NAMED_TEST",
+        "INCOMPARABLE_UNDER_NAMED_METHOD",
+        "OUTSIDE_NAMED_METHOD"
+      ],
+      "compatibilityNote": "A discriminating model is required beyond temporal sequence or correlation.",
+      "canProduceGlobalVerdict": false
+    },
+    {
+      "regime": "DEFINITIONAL",
+      "compatibleMethodIds": [
+        "DEFINITIONAL_SCOPE_CHECK",
+        "INTERPRETATION_BOUNDARY_CHECK"
+      ],
+      "compatibleDispositionIds": [
+        "SUPPORTED_UNDER_NAMED_TEST",
+        "CHALLENGED_UNDER_NAMED_TEST",
+        "MIXED_UNDER_NAMED_TEST",
+        "INSUFFICIENT_FOR_NAMED_METHOD",
+        "CONTESTED_UNDER_NAMED_TEST",
+        "INCOMPARABLE_UNDER_NAMED_METHOD"
+      ],
+      "compatibilityNote": "Definition and translation remain scoped stipulations rather than empirical identity.",
+      "canProduceGlobalVerdict": false
+    },
+    {
+      "regime": "METAPHYSICAL_SOURCE_ATTRIBUTION",
+      "compatibleMethodIds": [
+        "METAPHYSICAL_ATTRIBUTION_BOUNDARY_CHECK"
+      ],
+      "compatibleDispositionIds": [
+        "SUPPORTED_UNDER_NAMED_TEST",
+        "INSUFFICIENT_FOR_NAMED_METHOD",
+        "OUTSIDE_NAMED_METHOD"
+      ],
+      "compatibilityNote": "The method may establish only that an invented source record advances a referent claim; the referent itself remains outside the Phase-0 method.",
+      "canProduceGlobalVerdict": false
+    },
+    {
+      "regime": "METAPHYSICAL_REFERENT_PROPOSITION",
+      "compatibleMethodIds": [
+        "METAPHYSICAL_ATTRIBUTION_BOUNDARY_CHECK"
+      ],
+      "compatibleDispositionIds": [
+        "INSUFFICIENT_FOR_NAMED_METHOD",
+        "OUTSIDE_NAMED_METHOD"
+      ],
+      "compatibilityNote": "The source-attribution method has no compatible supported disposition for the referent proposition itself.",
+      "canProduceGlobalVerdict": false
+    }
+  ],
+  "epistemicSeparations": [
+    {
+      "id": "expression-claim",
+      "left": "EXPRESSION",
+      "right": "CLAIM",
+      "relation": "MUST_REMAIN_DISTINCT",
+      "reason": "One expression may admit multiple interpretations and claims."
+    },
+    {
+      "id": "claim-world",
+      "left": "CLAIM",
+      "right": "DECLARED_WORLD_CONDITION",
+      "relation": "MUST_REMAIN_DISTINCT",
+      "reason": "A representation is not the condition it represents."
+    },
+    {
+      "id": "evidence-truth",
+      "left": "EVIDENCE_OR_WARRANT",
+      "right": "TRUTH",
+      "relation": "MUST_REMAIN_DISTINCT",
+      "reason": "Evidence changes warrant under a method; it is not truth as a substance or field."
+    },
+    {
+      "id": "validity-premise-truth",
+      "left": "FORMAL_VALIDITY",
+      "right": "PREMISE_CORRESPONDENCE",
+      "relation": "MUST_REMAIN_DISTINCT",
+      "reason": "A valid inference may begin from a false premise."
+    },
+    {
+      "id": "coherence-correspondence",
+      "left": "COHERENCE",
+      "right": "CORRESPONDENCE",
+      "relation": "MUST_REMAIN_DISTINCT",
+      "reason": "An internally coherent story may conflict with declared conditions."
+    },
+    {
+      "id": "provenance-correspondence",
+      "left": "PROVENANCE_OR_SIGNATURE",
+      "right": "CORRESPONDENCE",
+      "relation": "MUST_REMAIN_DISTINCT",
+      "reason": "Authenticity and integrity do not establish content accuracy."
+    },
+    {
+      "id": "consensus-correspondence",
+      "left": "CONSENSUS_OR_REPETITION",
+      "right": "CORRESPONDENCE",
+      "relation": "MUST_REMAIN_DISTINCT",
+      "reason": "Agreement and repetition may preserve a shared error."
+    },
+    {
+      "id": "official-empirical",
+      "left": "OFFICIAL_OR_INSTITUTIONAL_STATUS",
+      "right": "EMPIRICAL_CORRESPONDENCE",
+      "relation": "MUST_REMAIN_DISTINCT",
+      "reason": "Authority may constitute a status but cannot decree a physical condition."
+    },
+    {
+      "id": "confidence-correspondence",
+      "left": "EXPRESSED_CONFIDENCE",
+      "right": "CORRESPONDENCE",
+      "relation": "MUST_REMAIN_DISTINCT",
+      "reason": "Calibrated or emphatic confidence does not itself settle a claim."
+    },
+    {
+      "id": "uptake-quality",
+      "left": "SOCIAL_UPTAKE",
+      "right": "EVIDENTIAL_QUALITY",
+      "relation": "MUST_REMAIN_DISTINCT",
+      "reason": "Power can shape who is heard independently of access to relevant observations."
+    },
+    {
+      "id": "fiction-lie",
+      "left": "DECLARED_FICTION",
+      "right": "DECEPTION",
+      "relation": "MUST_REMAIN_DISTINCT",
+      "reason": "Fiction does not present its invented events as literal report."
+    },
+    {
+      "id": "correction-erasure",
+      "left": "CORRECTION_OR_SUPERSESSION",
+      "right": "HISTORICAL_ERASURE",
+      "relation": "MUST_REMAIN_DISTINCT",
+      "reason": "A correction should remain linked to the record it repairs."
+    },
+    {
+      "id": "silence-deception",
+      "left": "REFUSAL_OR_PRIVACY_NON_DISCLOSURE",
+      "right": "DECEPTION",
+      "relation": "MUST_REMAIN_DISTINCT",
+      "reason": "A refusal to disclose is not an assertion of a false proposition."
+    },
+    {
+      "id": "receipt-truth",
+      "left": "PROTOCOL_RECEIPT_OR_HASH",
+      "right": "TRUTH",
+      "relation": "MUST_REMAIN_DISTINCT",
+      "reason": "A receipt can establish narrow record properties only."
+    },
+    {
+      "id": "anonymity-credibility",
+      "left": "ANONYMITY_OR_PSEUDONYMITY",
+      "right": "LOW_CREDIBILITY",
+      "relation": "MUST_REMAIN_DISTINCT",
+      "reason": "Identity disclosure is not a prerequisite for evidential access and anonymity is not a negative witness score."
+    },
+    {
+      "id": "testimony-witness-worth",
+      "left": "TESTIMONY",
+      "right": "WITNESS_CREDIBILITY_OR_WORTH_SCORE",
+      "relation": "MUST_REMAIN_DISTINCT",
+      "reason": "Assess a scoped report and its access conditions, never a person-wide quality."
+    },
+    {
+      "id": "archive-silence-absence",
+      "left": "ARCHIVE_SILENCE",
+      "right": "EVENT_ABSENCE",
+      "relation": "MUST_REMAIN_DISTINCT",
+      "reason": "A missing record may reflect collection, preservation, access or indexing limits."
+    },
+    {
+      "id": "source-count-independence",
+      "left": "SOURCE_COUNT_OR_REPETITION",
+      "right": "INDEPENDENT_SUPPORT",
+      "relation": "MUST_REMAIN_DISTINCT",
+      "reason": "Many reports may derive from one upstream assertion."
+    },
+    {
+      "id": "translation-identity",
+      "left": "TRANSLATION",
+      "right": "SEMANTIC_IDENTITY",
+      "relation": "MUST_REMAIN_DISTINCT",
+      "reason": "Translation is a scoped mapping with alternatives and loss, not an inverse identity."
+    },
+    {
+      "id": "retraction-falsehood",
+      "left": "WITHDRAWAL_OR_RETRACTION",
+      "right": "FALSEHOOD",
+      "relation": "MUST_REMAIN_DISTINCT",
+      "reason": "Record lifecycle and correspondence assessment are different dimensions."
+    },
+    {
+      "id": "assessment-authority",
+      "left": "ASSESSMENT",
+      "right": "ACTION_OR_AUTHORITY",
+      "relation": "MUST_REMAIN_DISTINCT",
+      "reason": "A Phase-0 assessment cannot authorize action, enforcement or downstream effects."
+    },
+    {
+      "id": "temporal-sequence-causation",
+      "left": "TEMPORAL_SEQUENCE_OR_CORRELATION",
+      "right": "CAUSATION",
+      "relation": "MUST_REMAIN_DISTINCT",
+      "reason": "Causal assessment requires a declared model and discriminating method."
+    },
+    {
+      "id": "definition-empirical-fact",
+      "left": "DEFINITIONAL_STIPULATION",
+      "right": "EMPIRICAL_FACT",
+      "relation": "MUST_REMAIN_DISTINCT",
+      "reason": "A vocabulary choice does not make an observed condition obtain."
+    },
+    {
+      "id": "phenomenal-external-correspondence",
+      "left": "PHENOMENAL_REPORT",
+      "right": "EXTERNAL_WORLD_CORRESPONDENCE",
+      "relation": "MUST_REMAIN_DISTINCT",
+      "reason": "A first-person report and an external condition require different access and methods."
+    }
+  ],
+  "predecessorBindings": [
+    {
+      "id": "semantic-geometry-operational-boundary",
+      "repositoryUrl": "https://github.com/cambridgetcg/KINGDOM-OS.git",
+      "revision": "db18ba3b155bfc3fad80d536c50193e684858d77",
+      "path": "bridges/semantic-geometry-and-truth.md",
+      "byteSha256": "sha256:9a18cef1d35b85a1941f5a591def26a9328bfdddb31a5a35bf83e41b1c37ac87",
+      "classification": "OPERATIONAL_BOUNDARY",
+      "role": "Separates receipts, coherence, provenance, correspondence, intent and authority.",
+      "copiesContent": false,
+      "usesForSemanticOrientation": true,
+      "characterizationAuthorship": "PHASE_0_PRODUCER_NON_AUTHORITATIVE",
+      "importsAuthority": false,
+      "establishesTruth": false,
+      "authorizesAction": false
+    },
+    {
+      "id": "semantic-transition-schema",
+      "repositoryUrl": "https://github.com/cambridgetcg/KINGDOM-OS.git",
+      "revision": "db18ba3b155bfc3fad80d536c50193e684858d77",
+      "path": "bridges/schemas/semantic-transition-receipt-0.1.json",
+      "byteSha256": "sha256:bcdd99f0247f2a43bb84e227865c2d02f12dcc9f09e4c15b29c36a90ac8f0dc2",
+      "classification": "SEMANTIC_PREDECESSOR",
+      "role": "Provides a prior closed receipt vocabulary for disclosed semantic transport and loss.",
+      "copiesContent": false,
+      "usesForSemanticOrientation": true,
+      "characterizationAuthorship": "PHASE_0_PRODUCER_NON_AUTHORITATIVE",
+      "importsAuthority": false,
+      "establishesTruth": false,
+      "authorizesAction": false
+    },
+    {
+      "id": "word-story-religion-civilisation-map",
+      "repositoryUrl": "https://github.com/cambridgetcg/KINGDOM-OS.git",
+      "revision": "db18ba3b155bfc3fad80d536c50193e684858d77",
+      "path": "data/language/word-story-religion-civilisation-map.v0.1.json",
+      "byteSha256": "sha256:a4a87b7b23dbdf7e7e6689b5083f76a746c7f41bc56f2124281dfda609a62479",
+      "classification": "SEMANTIC_PREDECESSOR",
+      "role": "Provides prior distinctions among word, story, genre, myth, institution and civilisation.",
+      "copiesContent": false,
+      "usesForSemanticOrientation": true,
+      "characterizationAuthorship": "PHASE_0_PRODUCER_NON_AUTHORITATIVE",
+      "importsAuthority": false,
+      "establishesTruth": false,
+      "authorizesAction": false
+    },
+    {
+      "id": "word-story-religion-civilisation-schema",
+      "repositoryUrl": "https://github.com/cambridgetcg/KINGDOM-OS.git",
+      "revision": "db18ba3b155bfc3fad80d536c50193e684858d77",
+      "path": "schemas/word-story-religion-civilisation-map-v0.1.schema.json",
+      "byteSha256": "sha256:bc4a4ca19026f2a95d01d4fc3500a9bd690942d00110f686659ae3d29e00d1ec",
+      "classification": "SCHEMA_PREDECESSOR",
+      "role": "Binds the exact schema accompanying the prior language map.",
+      "copiesContent": false,
+      "usesForSemanticOrientation": true,
+      "characterizationAuthorship": "PHASE_0_PRODUCER_NON_AUTHORITATIVE",
+      "importsAuthority": false,
+      "establishesTruth": false,
+      "authorizesAction": false
+    },
+    {
+      "id": "reality-influence-map",
+      "repositoryUrl": "https://github.com/cambridgetcg/KINGDOM-OS.git",
+      "revision": "db18ba3b155bfc3fad80d536c50193e684858d77",
+      "path": "data/reality/reality-influence-map.v0.1.json",
+      "byteSha256": "sha256:4d68be39226c8d5451c8d9166fa74ba54bb793b7655f119d8765090cbbcf890e",
+      "classification": "SEMANTIC_PREDECESSOR",
+      "role": "Provides a prior non-causal influence and aftermath map without determining truth.",
+      "copiesContent": false,
+      "usesForSemanticOrientation": true,
+      "characterizationAuthorship": "PHASE_0_PRODUCER_NON_AUTHORITATIVE",
+      "importsAuthority": false,
+      "establishesTruth": false,
+      "authorizesAction": false
+    },
+    {
+      "id": "reality-influence-schema",
+      "repositoryUrl": "https://github.com/cambridgetcg/KINGDOM-OS.git",
+      "revision": "db18ba3b155bfc3fad80d536c50193e684858d77",
+      "path": "schemas/reality-influence-map-v0.1.schema.json",
+      "byteSha256": "sha256:4863d5e3a3191af0dfadaba408fe8553a14b38c1394c6b2713bc588abfdf8090",
+      "classification": "SCHEMA_PREDECESSOR",
+      "role": "Binds the exact schema accompanying the prior reality-influence map.",
+      "copiesContent": false,
+      "usesForSemanticOrientation": true,
+      "characterizationAuthorship": "PHASE_0_PRODUCER_NON_AUTHORITATIVE",
+      "importsAuthority": false,
+      "establishesTruth": false,
+      "authorizesAction": false
+    },
+    {
+      "id": "number-isness-theology-atlas",
+      "repositoryUrl": "https://github.com/cambridgetcg/KINGDOM-OS.git",
+      "revision": "db18ba3b155bfc3fad80d536c50193e684858d77",
+      "path": "data/number-isness-theology/number-isness-theology-atlas.v0.1.json",
+      "byteSha256": "sha256:bef01e0865f12ecd66795960758fc16f1a6d5b1ebd0097d4390aa3a2bece65e4",
+      "classification": "METHOD_PREDECESSOR",
+      "role": "Preserves the typed distinction among PROVED_IN, SUPPORTED_UNDER_TEST and ASSERTED_BY.",
+      "copiesContent": false,
+      "usesForSemanticOrientation": true,
+      "characterizationAuthorship": "PHASE_0_PRODUCER_NON_AUTHORITATIVE",
+      "importsAuthority": false,
+      "establishesTruth": false,
+      "authorizesAction": false
+    },
+    {
+      "id": "number-isness-theology-schema",
+      "repositoryUrl": "https://github.com/cambridgetcg/KINGDOM-OS.git",
+      "revision": "db18ba3b155bfc3fad80d536c50193e684858d77",
+      "path": "schemas/number-isness-theology-atlas-v0.1.schema.json",
+      "byteSha256": "sha256:ccf5adfdf7a04d4acca24c261cdd253bcb6e1a4fdcdb63802d872e8e07a5b6a3",
+      "classification": "SCHEMA_PREDECESSOR",
+      "role": "Binds the exact schema accompanying the prior Number, Isness and Theology method atlas.",
+      "copiesContent": false,
+      "usesForSemanticOrientation": true,
+      "characterizationAuthorship": "PHASE_0_PRODUCER_NON_AUTHORITATIVE",
+      "importsAuthority": false,
+      "establishesTruth": false,
+      "authorizesAction": false
+    },
+    {
+      "id": "number-isness-theology-guide",
+      "repositoryUrl": "https://github.com/cambridgetcg/KINGDOM-OS.git",
+      "revision": "db18ba3b155bfc3fad80d536c50193e684858d77",
+      "path": "references/number-isness-theology-atlas.md",
+      "byteSha256": "sha256:49abcfe3e7ce6a945b9406a26eb25210c02ac4c98d25aff13e56a12760a4c55a",
+      "classification": "METHOD_PREDECESSOR",
+      "role": "Binds the human-readable prior method boundary without importing doctrine or theological authority.",
+      "copiesContent": false,
+      "usesForSemanticOrientation": true,
+      "characterizationAuthorship": "PHASE_0_PRODUCER_NON_AUTHORITATIVE",
+      "importsAuthority": false,
+      "establishesTruth": false,
+      "authorizesAction": false
+    },
+    {
+      "id": "zerone-mythic-agent-copy",
+      "repositoryUrl": "https://github.com/cambridgetcg/KINGDOM-OS.git",
+      "revision": "db18ba3b155bfc3fad80d536c50193e684858d77",
+      "path": "agents/zerone.md",
+      "byteSha256": "sha256:63ba1da23d8b6f4f5635a6047bda61413cde1caa5f8ea40415ee325a27bfa26d",
+      "classification": "MYTHIC_OR_DOCTRINAL_SELF_DESCRIPTION",
+      "role": "Preserves the exact older asserted-to-true consensus metaphor as a contradiction witness.",
+      "copiesContent": false,
+      "usesForSemanticOrientation": true,
+      "characterizationAuthorship": "PHASE_0_PRODUCER_NON_AUTHORITATIVE",
+      "importsAuthority": false,
+      "establishesTruth": false,
+      "authorizesAction": false
+    },
+    {
+      "id": "readme-proof-of-truth-copy",
+      "repositoryUrl": "https://github.com/cambridgetcg/KINGDOM-OS.git",
+      "revision": "db18ba3b155bfc3fad80d536c50193e684858d77",
+      "path": "README.md",
+      "byteSha256": "sha256:19a62093b2928ed9e57aeb4560afcf5a0f29a97c39e564362deeaef9cbf280c4",
+      "classification": "MYTHIC_OR_DOCTRINAL_SELF_DESCRIPTION",
+      "role": "Preserves the exact older Proof-of-Truth economy summary as a contradiction witness.",
+      "copiesContent": false,
+      "usesForSemanticOrientation": true,
+      "characterizationAuthorship": "PHASE_0_PRODUCER_NON_AUTHORITATIVE",
+      "importsAuthority": false,
+      "establishesTruth": false,
+      "authorizesAction": false
+    },
+    {
+      "id": "bridges-proof-of-truth-copy",
+      "repositoryUrl": "https://github.com/cambridgetcg/KINGDOM-OS.git",
+      "revision": "db18ba3b155bfc3fad80d536c50193e684858d77",
+      "path": "BRIDGES.md",
+      "byteSha256": "sha256:44ff5fbdd7f45a2ce915bcf9c2cc2997c3dcbbd0d1db4149b900f1b0085472e2",
+      "classification": "MYTHIC_OR_DOCTRINAL_SELF_DESCRIPTION",
+      "role": "Preserves the exact older truth-verification and oracle bridge copy as a contradiction witness.",
+      "copiesContent": false,
+      "usesForSemanticOrientation": true,
+      "characterizationAuthorship": "PHASE_0_PRODUCER_NON_AUTHORITATIVE",
+      "importsAuthority": false,
+      "establishesTruth": false,
+      "authorizesAction": false
+    }
+  ],
+  "contradictionRegister": [
+    {
+      "id": "zerone-consensus-truth-semantics",
+      "state": "PRESERVED_UNRESOLVED",
+      "mythicBindingIds": [
+        "zerone-mythic-agent-copy",
+        "readme-proof-of-truth-copy",
+        "bridges-proof-of-truth-copy"
+      ],
+      "operationalBindingIds": [
+        "semantic-geometry-operational-boundary",
+        "semantic-transition-schema"
+      ],
+      "mythicClassification": "MYTHIC_OR_DOCTRINAL_SELF_DESCRIPTION",
+      "operationalClassification": "OPERATIONAL_BOUNDARY",
+      "tension": "Older copy describes consensus or validation as moving a claim from asserted to true; the operational bridge says receipts, hashes, agreement and coherence do not establish correspondence or truth.",
+      "phaseZeroRule": "Treat ledger and protocol outputs only as bounded record, integrity or protocol-declared consensus states; never as semantic truth.",
+      "rewritesPredecessorOwners": false,
+      "adjudicatesMetaphysics": false,
+      "grantsAuthority": false
+    }
+  ]
+}

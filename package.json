@@ -1,0 +1,22 @@
+{
+  "name": "@kingdom/polyphonic-claim-atlas",
+  "version": "0.1.0",
+  "description": "Deterministic offline synthetic Phase-0 atlas of typed truth relations.",
+  "type": "module",
+  "private": true,
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "kingdom-polyphonic-claim-atlas": "./src/cli.mjs"
+  },
+  "scripts": {
+    "test": "node --test",
+    "validate": "node ./src/cli.mjs validate",
+    "build": "node ./src/cli.mjs build",
+    "build:check": "node ./src/cli.mjs check",
+    "overview": "node ./src/cli.mjs overview",
+    "check": "node --check ./src/io.mjs && node --check ./src/schema-definition.mjs && node --check ./src/schema-validator.mjs && node --check ./src/atlas.mjs && node --check ./src/cli.mjs && node ./src/cli.mjs check"
+  }
+}

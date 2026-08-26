@@ -1,0 +1,2519 @@
+{
+  "$defs": {
+    "artifact": {
+      "additionalProperties": false,
+      "properties": {
+        "asOf": {
+          "format": "date",
+          "maxLength": 10,
+          "minLength": 10,
+          "type": "string"
+        },
+        "id": {
+          "const": "polyphonic-claim-atlas-2026-08-26",
+          "maxLength": 33,
+          "minLength": 33,
+          "type": "string"
+        },
+        "immutableHistoricalArtifact": {
+          "const": true,
+          "type": "boolean"
+        },
+        "mutableAlias": {
+          "const": false,
+          "type": "boolean"
+        },
+        "phase": {
+          "const": "PHASE_0",
+          "maxLength": 7,
+          "minLength": 7,
+          "type": "string"
+        },
+        "runtimeCurrentnessClaim": {
+          "const": false,
+          "type": "boolean"
+        },
+        "state": {
+          "const": "STATIC_SYNTHETIC_PHASE_0",
+          "maxLength": 24,
+          "minLength": 24,
+          "type": "string"
+        },
+        "version": {
+          "const": "0.1.0",
+          "maxLength": 5,
+          "minLength": 5,
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "version",
+        "phase",
+        "asOf",
+        "state",
+        "immutableHistoricalArtifact",
+        "runtimeCurrentnessClaim",
+        "mutableAlias"
+      ],
+      "type": "object"
+    },
+    "assessment": {
+      "additionalProperties": false,
+      "properties": {
+        "attributedTo": {
+          "const": "PHASE_0_SYNTHETIC_METHOD",
+          "maxLength": 24,
+          "minLength": 24,
+          "type": "string"
+        },
+        "authorizesAction": {
+          "const": false,
+          "type": "boolean"
+        },
+        "basisIds": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 3,
+            "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+            "type": "string"
+          },
+          "maxItems": 24,
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "disposition": {
+          "enum": [
+            "NOT_ASSESSED_UNDER_NAMED_METHOD",
+            "SUPPORTED_UNDER_NAMED_TEST",
+            "CHALLENGED_UNDER_NAMED_TEST",
+            "CONTRADICTED_UNDER_NAMED_TEST",
+            "MIXED_UNDER_NAMED_TEST",
+            "INSUFFICIENT_FOR_NAMED_METHOD",
+            "CONTESTED_UNDER_NAMED_TEST",
+            "INCOMPARABLE_UNDER_NAMED_METHOD",
+            "OUTSIDE_NAMED_METHOD",
+            "UNKNOWN_UNDER_NAMED_METHOD"
+          ],
+          "type": "string"
+        },
+        "fixtureId": {
+          "maxLength": 160,
+          "minLength": 3,
+          "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+          "type": "string"
+        },
+        "grantsAuthority": {
+          "const": false,
+          "type": "boolean"
+        },
+        "id": {
+          "maxLength": 160,
+          "minLength": 3,
+          "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+          "type": "string"
+        },
+        "level": {
+          "const": "L1_ASSESSMENT",
+          "maxLength": 13,
+          "minLength": 13,
+          "type": "string"
+        },
+        "limitations": {
+          "maxLength": 1000,
+          "minLength": 8,
+          "type": "string"
+        },
+        "methodId": {
+          "enum": [
+            "DECLARED_FIXTURE_WORLD_COMPARISON",
+            "FORMAL_VALIDITY_CHECK",
+            "PROVENANCE_INTEGRITY_CHECK",
+            "SOURCE_INDEPENDENCE_AUDIT",
+            "NARRATIVE_SELECTION_AUDIT",
+            "AUTHORITY_SCOPE_CHECK",
+            "CITATION_EXISTENCE_CHECK",
+            "TEMPORAL_SCOPE_CHECK",
+            "INTERPRETATION_BOUNDARY_CHECK",
+            "TESTIMONY_UPTAKE_AUDIT",
+            "CAUSAL_MODEL_CHECK",
+            "NORMATIVE_REASON_BOUNDARY_CHECK",
+            "SELF_REFERENCE_STRATIFICATION_CHECK",
+            "PREDICTIVE_HORIZON_CHECK",
+            "COUNTERFACTUAL_MODEL_COMPARISON",
+            "PHENOMENAL_REPORT_BOUNDARY_CHECK",
+            "TESTIMONIAL_ACCESS_CHECK",
+            "DEFINITIONAL_SCOPE_CHECK",
+            "METAPHYSICAL_ATTRIBUTION_BOUNDARY_CHECK"
+          ],
+          "type": "string"
+        },
+        "rationale": {
+          "maxLength": 1000,
+          "minLength": 8,
+          "type": "string"
+        },
+        "scope": {
+          "maxLength": 640,
+          "minLength": 8,
+          "type": "string"
+        },
+        "targetClaimIds": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 3,
+            "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+            "type": "string"
+          },
+          "maxItems": 12,
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "window": {
+          "$ref": "#/$defs/assessmentWindow"
+        }
+      },
+      "required": [
+        "id",
+        "level",
+        "targetClaimIds",
+        "disposition",
+        "methodId",
+        "attributedTo",
+        "fixtureId",
+        "scope",
+        "window",
+        "basisIds",
+        "rationale",
+        "limitations",
+        "grantsAuthority",
+        "authorizesAction"
+      ],
+      "type": "object"
+    },
+    "assessmentAudit": {
+      "additionalProperties": false,
+      "properties": {
+        "attributedTo": {
+          "const": "PHASE_0_SYNTHETIC_METHOD",
+          "maxLength": 24,
+          "minLength": 24,
+          "type": "string"
+        },
+        "authorizesAction": {
+          "const": false,
+          "type": "boolean"
+        },
+        "cycleDetected": {
+          "const": false,
+          "type": "boolean"
+        },
+        "downwardOnly": {
+          "const": true,
+          "type": "boolean"
+        },
+        "fixtureId": {
+          "maxLength": 160,
+          "minLength": 3,
+          "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+          "type": "string"
+        },
+        "grantsAuthority": {
+          "const": false,
+          "type": "boolean"
+        },
+        "id": {
+          "maxLength": 160,
+          "minLength": 3,
+          "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+          "type": "string"
+        },
+        "level": {
+          "const": "L2_ASSESSMENT_AUDIT",
+          "maxLength": 19,
+          "minLength": 19,
+          "type": "string"
+        },
+        "methodId": {
+          "const": "SELF_REFERENCE_STRATIFICATION_CHECK",
+          "maxLength": 35,
+          "minLength": 35,
+          "type": "string"
+        },
+        "rationale": {
+          "maxLength": 1000,
+          "minLength": 8,
+          "type": "string"
+        },
+        "scope": {
+          "maxLength": 640,
+          "minLength": 8,
+          "type": "string"
+        },
+        "targetAssessmentIds": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 3,
+            "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+            "type": "string"
+          },
+          "maxItems": 8,
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "window": {
+          "$ref": "#/$defs/assessmentWindow"
+        }
+      },
+      "required": [
+        "id",
+        "level",
+        "targetAssessmentIds",
+        "methodId",
+        "attributedTo",
+        "fixtureId",
+        "scope",
+        "window",
+        "rationale",
+        "downwardOnly",
+        "cycleDetected",
+        "grantsAuthority",
+        "authorizesAction"
+      ],
+      "type": "object"
+    },
+    "assessmentWindow": {
+      "additionalProperties": false,
+      "properties": {
+        "currentnessClaim": {
+          "const": false,
+          "type": "boolean"
+        },
+        "from": {
+          "format": "date",
+          "maxLength": 10,
+          "minLength": 10,
+          "type": "string"
+        },
+        "through": {
+          "format": "date",
+          "maxLength": 10,
+          "minLength": 10,
+          "type": "string"
+        }
+      },
+      "required": [
+        "from",
+        "through",
+        "currentnessClaim"
+      ],
+      "type": "object"
+    },
+    "authorship": {
+      "additionalProperties": false,
+      "properties": {
+        "humanReviewCompleted": {
+          "const": false,
+          "type": "boolean"
+        },
+        "producer": {
+          "maxLength": 160,
+          "minLength": 8,
+          "type": "string"
+        },
+        "publicationAuthorized": {
+          "const": true,
+          "type": "boolean"
+        },
+        "reviewState": {
+          "enum": [
+            "AWAITING_INDEPENDENT_REVIEW",
+            "INDEPENDENT_REVIEW_COMPLETE"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "producer",
+        "reviewState",
+        "humanReviewCompleted",
+        "publicationAuthorized"
+      ],
+      "type": "object"
+    },
+    "buildProvenance": {
+      "additionalProperties": false,
+      "properties": {
+        "clockRead": {
+          "const": false,
+          "type": "boolean"
+        },
+        "jsonInputReceipts": {
+          "items": {
+            "$ref": "#/$defs/jsonInputReceipt"
+          },
+          "maxItems": 2,
+          "minItems": 2,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "localeUsed": {
+          "const": false,
+          "type": "boolean"
+        },
+        "mode": {
+          "const": "DETERMINISTIC_OFFLINE_ZERO_DEPENDENCY",
+          "maxLength": 37,
+          "minLength": 37,
+          "type": "string"
+        },
+        "networkUsed": {
+          "const": false,
+          "type": "boolean"
+        },
+        "randomnessUsed": {
+          "const": false,
+          "type": "boolean"
+        },
+        "textInputReceipts": {
+          "items": {
+            "$ref": "#/$defs/textInputReceipt"
+          },
+          "maxItems": 6,
+          "minItems": 6,
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "mode",
+        "networkUsed",
+        "clockRead",
+        "randomnessUsed",
+        "localeUsed",
+        "jsonInputReceipts",
+        "textInputReceipts"
+      ],
+      "type": "object"
+    },
+    "causalAttribution": {
+      "additionalProperties": false,
+      "properties": {
+        "basis": {
+          "enum": [
+            "NARRATOR_ASSERTED_NOT_FIXTURE_ESTABLISHED",
+            "AUTHOR_STIPULATED"
+          ],
+          "type": "string"
+        },
+        "fromEventId": {
+          "maxLength": 160,
+          "minLength": 3,
+          "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+          "type": "string"
+        },
+        "relation": {
+          "maxLength": 120,
+          "minLength": 2,
+          "type": "string"
+        },
+        "toEventId": {
+          "maxLength": 160,
+          "minLength": 3,
+          "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "fromEventId",
+        "toEventId",
+        "relation",
+        "basis"
+      ],
+      "type": "object"
+    },
+    "claim": {
+      "additionalProperties": false,
+      "properties": {
+        "expressionIds": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 3,
+            "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+            "type": "string"
+          },
+          "maxItems": 8,
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "id": {
+          "maxLength": 160,
+          "minLength": 3,
+          "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+          "type": "string"
+        },
+        "level": {
+          "const": "L0_CLAIM",
+          "maxLength": 8,
+          "minLength": 8,
+          "type": "string"
+        },
+        "proposition": {
+          "maxLength": 1400,
+          "minLength": 8,
+          "type": "string"
+        },
+        "regime": {
+          "enum": [
+            "EMPIRICAL",
+            "FORMAL_LOGICAL",
+            "INSTITUTIONAL",
+            "PROCEDURAL",
+            "INTERPRETIVE",
+            "NARRATIVE_CLAIM_FRAGMENT",
+            "METAPHORICAL",
+            "FICTIONAL",
+            "NORMATIVE",
+            "SELF_REFERENTIAL",
+            "PHENOMENAL",
+            "PREDICTIVE",
+            "COUNTERFACTUAL",
+            "PERFORMATIVE_OR_DIRECTIVE",
+            "TESTIMONIAL",
+            "CAUSAL",
+            "DEFINITIONAL",
+            "METAPHYSICAL_SOURCE_ATTRIBUTION",
+            "METAPHYSICAL_REFERENT_PROPOSITION"
+          ],
+          "type": "string"
+        },
+        "scope": {
+          "maxLength": 640,
+          "minLength": 8,
+          "type": "string"
+        },
+        "temporalQualifier": {
+          "maxLength": 320,
+          "minLength": 4,
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "level",
+        "proposition",
+        "regime",
+        "scope",
+        "temporalQualifier",
+        "expressionIds"
+      ],
+      "type": "object"
+    },
+    "claimRegime": {
+      "additionalProperties": false,
+      "properties": {
+        "assessmentLimit": {
+          "maxLength": 640,
+          "minLength": 8,
+          "type": "string"
+        },
+        "definition": {
+          "maxLength": 640,
+          "minLength": 8,
+          "type": "string"
+        },
+        "id": {
+          "enum": [
+            "EMPIRICAL",
+            "FORMAL_LOGICAL",
+            "INSTITUTIONAL",
+            "PROCEDURAL",
+            "INTERPRETIVE",
+            "NARRATIVE_CLAIM_FRAGMENT",
+            "METAPHORICAL",
+            "FICTIONAL",
+            "NORMATIVE",
+            "SELF_REFERENTIAL",
+            "PHENOMENAL",
+            "PREDICTIVE",
+            "COUNTERFACTUAL",
+            "PERFORMATIVE_OR_DIRECTIVE",
+            "TESTIMONIAL",
+            "CAUSAL",
+            "DEFINITIONAL",
+            "METAPHYSICAL_SOURCE_ATTRIBUTION",
+            "METAPHYSICAL_REFERENT_PROPOSITION"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "definition",
+        "assessmentLimit"
+      ],
+      "type": "object"
+    },
+    "condition": {
+      "additionalProperties": false,
+      "properties": {
+        "authorStipulated": {
+          "const": true,
+          "type": "boolean"
+        },
+        "establishesBeyondFixture": {
+          "const": false,
+          "type": "boolean"
+        },
+        "id": {
+          "maxLength": 160,
+          "minLength": 3,
+          "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+          "type": "string"
+        },
+        "scope": {
+          "maxLength": 512,
+          "minLength": 8,
+          "type": "string"
+        },
+        "statement": {
+          "maxLength": 1200,
+          "minLength": 8,
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "statement",
+        "scope",
+        "authorStipulated",
+        "establishesBeyondFixture"
+      ],
+      "type": "object"
+    },
+    "constitutionalBoundaries": {
+      "additionalProperties": false,
+      "properties": {
+        "accessAdapter": {
+          "const": false,
+          "type": "boolean"
+        },
+        "api": {
+          "const": false,
+          "type": "boolean"
+        },
+        "automatedAction": {
+          "const": false,
+          "type": "boolean"
+        },
+        "automatedVerdict": {
+          "const": false,
+          "type": "boolean"
+        },
+        "canonicalStory": {
+          "const": false,
+          "type": "boolean"
+        },
+        "censorshipOrSuppressionAction": {
+          "const": false,
+          "type": "boolean"
+        },
+        "claimScore": {
+          "const": false,
+          "type": "boolean"
+        },
+        "classifiesPeopleAsLiars": {
+          "const": false,
+          "type": "boolean"
+        },
+        "communityScore": {
+          "const": false,
+          "type": "boolean"
+        },
+        "consensusScore": {
+          "const": false,
+          "type": "boolean"
+        },
+        "convertsCoherenceToTruth": {
+          "const": false,
+          "type": "boolean"
+        },
+        "convertsConsensusToTruth": {
+          "const": false,
+          "type": "boolean"
+        },
+        "convertsHashToTruth": {
+          "const": false,
+          "type": "boolean"
+        },
+        "convertsMajorityToTruth": {
+          "const": false,
+          "type": "boolean"
+        },
+        "convertsOfficialStatusToTruth": {
+          "const": false,
+          "type": "boolean"
+        },
+        "convertsProvenanceToTruth": {
+          "const": false,
+          "type": "boolean"
+        },
+        "convertsReceiptToTruth": {
+          "const": false,
+          "type": "boolean"
+        },
+        "convertsSignatureToTruth": {
+          "const": false,
+          "type": "boolean"
+        },
+        "credibilityScore": {
+          "const": false,
+          "type": "boolean"
+        },
+        "determinesTruth": {
+          "const": false,
+          "type": "boolean"
+        },
+        "enforcementAdapter": {
+          "const": false,
+          "type": "boolean"
+        },
+        "globalTruthStatus": {
+          "const": false,
+          "type": "boolean"
+        },
+        "governanceAdapter": {
+          "const": false,
+          "type": "boolean"
+        },
+        "infersIntent": {
+          "const": false,
+          "type": "boolean"
+        },
+        "infersPrivateReasoning": {
+          "const": false,
+          "type": "boolean"
+        },
+        "institutionScore": {
+          "const": false,
+          "type": "boolean"
+        },
+        "karmaAdapter": {
+          "const": false,
+          "type": "boolean"
+        },
+        "mcpExposure": {
+          "const": false,
+          "type": "boolean"
+        },
+        "misinformationFlag": {
+          "const": false,
+          "type": "boolean"
+        },
+        "moderationAdapter": {
+          "const": false,
+          "type": "boolean"
+        },
+        "moneyAdapter": {
+          "const": false,
+          "type": "boolean"
+        },
+        "namedPersonClaims": {
+          "const": false,
+          "type": "boolean"
+        },
+        "nenAdapter": {
+          "const": false,
+          "type": "boolean"
+        },
+        "network": {
+          "const": false,
+          "type": "boolean"
+        },
+        "personScore": {
+          "const": false,
+          "type": "boolean"
+        },
+        "privateTestimonyImmutable": {
+          "const": false,
+          "type": "boolean"
+        },
+        "propagandaScore": {
+          "const": false,
+          "type": "boolean"
+        },
+        "ranksPeopleOrSources": {
+          "const": false,
+          "type": "boolean"
+        },
+        "recommendation": {
+          "const": false,
+          "type": "boolean"
+        },
+        "reputationEffect": {
+          "const": false,
+          "type": "boolean"
+        },
+        "rewardOrPenalty": {
+          "const": false,
+          "type": "boolean"
+        },
+        "runtime": {
+          "const": false,
+          "type": "boolean"
+        },
+        "sourceScore": {
+          "const": false,
+          "type": "boolean"
+        },
+        "storyScore": {
+          "const": false,
+          "type": "boolean"
+        },
+        "storyWinner": {
+          "const": false,
+          "type": "boolean"
+        },
+        "submission": {
+          "const": false,
+          "type": "boolean"
+        },
+        "trustScore": {
+          "const": false,
+          "type": "boolean"
+        },
+        "truthScore": {
+          "const": false,
+          "type": "boolean"
+        },
+        "witnessScore": {
+          "const": false,
+          "type": "boolean"
+        },
+        "zeroneAdapter": {
+          "const": false,
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "determinesTruth",
+        "globalTruthStatus",
+        "truthScore",
+        "claimScore",
+        "personScore",
+        "communityScore",
+        "witnessScore",
+        "institutionScore",
+        "credibilityScore",
+        "consensusScore",
+        "propagandaScore",
+        "sourceScore",
+        "storyScore",
+        "trustScore",
+        "ranksPeopleOrSources",
+        "classifiesPeopleAsLiars",
+        "misinformationFlag",
+        "infersIntent",
+        "infersPrivateReasoning",
+        "convertsConsensusToTruth",
+        "convertsMajorityToTruth",
+        "convertsProvenanceToTruth",
+        "convertsSignatureToTruth",
+        "convertsHashToTruth",
+        "convertsOfficialStatusToTruth",
+        "convertsReceiptToTruth",
+        "convertsCoherenceToTruth",
+        "automatedVerdict",
+        "canonicalStory",
+        "storyWinner",
+        "recommendation",
+        "automatedAction",
+        "rewardOrPenalty",
+        "reputationEffect",
+        "zeroneAdapter",
+        "karmaAdapter",
+        "nenAdapter",
+        "moneyAdapter",
+        "accessAdapter",
+        "moderationAdapter",
+        "governanceAdapter",
+        "enforcementAdapter",
+        "privateTestimonyImmutable",
+        "namedPersonClaims",
+        "censorshipOrSuppressionAction",
+        "mcpExposure",
+        "api",
+        "submission",
+        "runtime",
+        "network"
+      ],
+      "type": "object"
+    },
+    "contradictionRegister": {
+      "additionalProperties": false,
+      "properties": {
+        "adjudicatesMetaphysics": {
+          "const": false,
+          "type": "boolean"
+        },
+        "grantsAuthority": {
+          "const": false,
+          "type": "boolean"
+        },
+        "id": {
+          "maxLength": 160,
+          "minLength": 3,
+          "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+          "type": "string"
+        },
+        "mythicBindingIds": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 3,
+            "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+            "type": "string"
+          },
+          "maxItems": 8,
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "mythicClassification": {
+          "const": "MYTHIC_OR_DOCTRINAL_SELF_DESCRIPTION",
+          "maxLength": 36,
+          "minLength": 36,
+          "type": "string"
+        },
+        "operationalBindingIds": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 3,
+            "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+            "type": "string"
+          },
+          "maxItems": 8,
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "operationalClassification": {
+          "const": "OPERATIONAL_BOUNDARY",
+          "maxLength": 20,
+          "minLength": 20,
+          "type": "string"
+        },
+        "phaseZeroRule": {
+          "maxLength": 1000,
+          "minLength": 20,
+          "type": "string"
+        },
+        "rewritesPredecessorOwners": {
+          "const": false,
+          "type": "boolean"
+        },
+        "state": {
+          "const": "PRESERVED_UNRESOLVED",
+          "maxLength": 20,
+          "minLength": 20,
+          "type": "string"
+        },
+        "tension": {
+          "maxLength": 1000,
+          "minLength": 20,
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "state",
+        "mythicBindingIds",
+        "operationalBindingIds",
+        "mythicClassification",
+        "operationalClassification",
+        "tension",
+        "phaseZeroRule",
+        "rewritesPredecessorOwners",
+        "adjudicatesMetaphysics",
+        "grantsAuthority"
+      ],
+      "type": "object"
+    },
+    "counts": {
+      "additionalProperties": false,
+      "properties": {
+        "assessmentAudits": {
+          "maximum": 1000,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "assessments": {
+          "maximum": 1000,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "cases": {
+          "maximum": 24,
+          "minimum": 24,
+          "type": "integer"
+        },
+        "claimRegimes": {
+          "maximum": 19,
+          "minimum": 19,
+          "type": "integer"
+        },
+        "claims": {
+          "maximum": 1000,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "conditions": {
+          "maximum": 1000,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "epistemicSeparations": {
+          "maximum": 100,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "events": {
+          "maximum": 1000,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "evidenceRecords": {
+          "maximum": 1000,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "expressions": {
+          "maximum": 1000,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "lifecycleRecords": {
+          "maximum": 1000,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "methods": {
+          "maximum": 19,
+          "minimum": 19,
+          "type": "integer"
+        },
+        "narratives": {
+          "maximum": 1000,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "predecessorBindings": {
+          "maximum": 100,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "reasoningObjects": {
+          "maximum": 1000,
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "cases",
+        "conditions",
+        "expressions",
+        "claims",
+        "evidenceRecords",
+        "reasoningObjects",
+        "events",
+        "narratives",
+        "assessments",
+        "assessmentAudits",
+        "lifecycleRecords",
+        "predecessorBindings",
+        "epistemicSeparations",
+        "claimRegimes",
+        "methods"
+      ],
+      "type": "object"
+    },
+    "epistemicSeparation": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 160,
+          "minLength": 3,
+          "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+          "type": "string"
+        },
+        "left": {
+          "maxLength": 120,
+          "minLength": 2,
+          "type": "string"
+        },
+        "reason": {
+          "maxLength": 512,
+          "minLength": 8,
+          "type": "string"
+        },
+        "relation": {
+          "const": "MUST_REMAIN_DISTINCT",
+          "maxLength": 20,
+          "minLength": 20,
+          "type": "string"
+        },
+        "right": {
+          "maxLength": 120,
+          "minLength": 2,
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "left",
+        "right",
+        "relation",
+        "reason"
+      ],
+      "type": "object"
+    },
+    "event": {
+      "additionalProperties": false,
+      "properties": {
+        "conditionIds": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 3,
+            "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+            "type": "string"
+          },
+          "maxItems": 8,
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "description": {
+          "maxLength": 640,
+          "minLength": 8,
+          "type": "string"
+        },
+        "id": {
+          "maxLength": 160,
+          "minLength": 3,
+          "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+          "type": "string"
+        },
+        "sequenceIndex": {
+          "maximum": 100,
+          "minimum": 1,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "description",
+        "sequenceIndex",
+        "conditionIds"
+      ],
+      "type": "object"
+    },
+    "evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "bearsOnClaimIds": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 3,
+            "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+            "type": "string"
+          },
+          "maxItems": 12,
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "description": {
+          "maxLength": 1000,
+          "minLength": 8,
+          "type": "string"
+        },
+        "direction": {
+          "enum": [
+            "SUPPORTS",
+            "CHALLENGES",
+            "CONTEXTUALISES",
+            "MIXED_BEARING",
+            "DOES_NOT_BEAR_ON_CORRESPONDENCE"
+          ],
+          "type": "string"
+        },
+        "establishesTruth": {
+          "const": false,
+          "type": "boolean"
+        },
+        "id": {
+          "maxLength": 160,
+          "minLength": 3,
+          "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+          "type": "string"
+        },
+        "integrityState": {
+          "enum": [
+            "AUTHOR_STIPULATED",
+            "DECLARED_INTACT"
+          ],
+          "type": "string"
+        },
+        "kind": {
+          "maxLength": 140,
+          "minLength": 3,
+          "type": "string"
+        },
+        "scoresSourceOrPerson": {
+          "const": false,
+          "type": "boolean"
+        },
+        "sourceRole": {
+          "maxLength": 140,
+          "minLength": 3,
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "description",
+        "sourceRole",
+        "bearsOnClaimIds",
+        "direction",
+        "integrityState",
+        "establishesTruth",
+        "scoresSourceOrPerson"
+      ],
+      "type": "object"
+    },
+    "expression": {
+      "additionalProperties": false,
+      "properties": {
+        "assertsClaimIds": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 3,
+            "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+            "type": "string"
+          },
+          "maxItems": 12,
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "form": {
+          "maxLength": 1600,
+          "minLength": 1,
+          "type": "string"
+        },
+        "genre": {
+          "maxLength": 120,
+          "minLength": 2,
+          "type": "string"
+        },
+        "id": {
+          "maxLength": 160,
+          "minLength": 3,
+          "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+          "type": "string"
+        },
+        "interpretationNote": {
+          "maxLength": 640,
+          "minLength": 8,
+          "type": "string"
+        },
+        "languagePractice": {
+          "maxLength": 120,
+          "minLength": 2,
+          "type": "string"
+        },
+        "level": {
+          "const": "L0_EXPRESSION",
+          "maxLength": 13,
+          "minLength": 13,
+          "type": "string"
+        },
+        "medium": {
+          "maxLength": 120,
+          "minLength": 2,
+          "type": "string"
+        },
+        "speakerRole": {
+          "maxLength": 120,
+          "minLength": 2,
+          "type": "string"
+        },
+        "speechAct": {
+          "maxLength": 120,
+          "minLength": 2,
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "level",
+        "form",
+        "medium",
+        "speakerRole",
+        "speechAct",
+        "genre",
+        "languagePractice",
+        "assertsClaimIds",
+        "interpretationNote"
+      ],
+      "type": "object"
+    },
+    "fixtureCase": {
+      "additionalProperties": false,
+      "properties": {
+        "assessmentAudits": {
+          "items": {
+            "$ref": "#/$defs/assessmentAudit"
+          },
+          "maxItems": 4,
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "assessments": {
+          "items": {
+            "$ref": "#/$defs/assessment"
+          },
+          "maxItems": 16,
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "authorStipulatedConditions": {
+          "items": {
+            "$ref": "#/$defs/condition"
+          },
+          "maxItems": 8,
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "claims": {
+          "items": {
+            "$ref": "#/$defs/claim"
+          },
+          "maxItems": 16,
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "declaredQuestion": {
+          "maxLength": 640,
+          "minLength": 8,
+          "type": "string"
+        },
+        "events": {
+          "items": {
+            "$ref": "#/$defs/event"
+          },
+          "maxItems": 24,
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/evidence"
+          },
+          "maxItems": 16,
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "expressions": {
+          "items": {
+            "$ref": "#/$defs/expression"
+          },
+          "maxItems": 8,
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "id": {
+          "maxLength": 160,
+          "minLength": 3,
+          "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+          "type": "string"
+        },
+        "lesson": {
+          "maxLength": 640,
+          "minLength": 8,
+          "type": "string"
+        },
+        "lifecycleRecords": {
+          "items": {
+            "$ref": "#/$defs/lifecycleRecord"
+          },
+          "maxItems": 8,
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "narratives": {
+          "items": {
+            "$ref": "#/$defs/narrative"
+          },
+          "maxItems": 8,
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "nonClaims": {
+          "items": {
+            "maxLength": 640,
+            "minLength": 8,
+            "type": "string"
+          },
+          "maxItems": 12,
+          "minItems": 2,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "reasoning": {
+          "items": {
+            "$ref": "#/$defs/reasoning"
+          },
+          "maxItems": 8,
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "scenario": {
+          "maxLength": 1200,
+          "minLength": 8,
+          "type": "string"
+        },
+        "synthetic": {
+          "const": true,
+          "type": "boolean"
+        },
+        "timeScope": {
+          "$ref": "#/$defs/timeScope"
+        },
+        "title": {
+          "maxLength": 240,
+          "minLength": 3,
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "lesson",
+        "synthetic",
+        "declaredQuestion",
+        "scenario",
+        "timeScope",
+        "authorStipulatedConditions",
+        "expressions",
+        "claims",
+        "evidence",
+        "reasoning",
+        "events",
+        "narratives",
+        "assessments",
+        "assessmentAudits",
+        "lifecycleRecords",
+        "nonClaims"
+      ],
+      "type": "object"
+    },
+    "fixtureSet": {
+      "additionalProperties": false,
+      "properties": {
+        "asOf": {
+          "format": "date",
+          "maxLength": 10,
+          "minLength": 10,
+          "type": "string"
+        },
+        "declaredCaseCount": {
+          "maximum": 24,
+          "minimum": 24,
+          "type": "integer"
+        },
+        "id": {
+          "maxLength": 100,
+          "minLength": 10,
+          "type": "string"
+        },
+        "liveClaims": {
+          "const": false,
+          "type": "boolean"
+        },
+        "realPeople": {
+          "const": false,
+          "type": "boolean"
+        },
+        "runtimeCurrentnessClaim": {
+          "const": false,
+          "type": "boolean"
+        },
+        "syntheticOnly": {
+          "const": true,
+          "type": "boolean"
+        },
+        "version": {
+          "maxLength": 16,
+          "minLength": 5,
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "version",
+        "asOf",
+        "declaredCaseCount",
+        "syntheticOnly",
+        "realPeople",
+        "liveClaims",
+        "runtimeCurrentnessClaim"
+      ],
+      "type": "object"
+    },
+    "jsonInputReceipt": {
+      "additionalProperties": false,
+      "properties": {
+        "byteSha256": {
+          "maxLength": 71,
+          "minLength": 71,
+          "pattern": "^sha256:[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "bytes": {
+          "maximum": 8388608,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "canonicalSha256": {
+          "maxLength": 71,
+          "minLength": 71,
+          "pattern": "^sha256:[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "path": {
+          "enum": [
+            "data/config.json",
+            "data/fixtures.json"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "path",
+        "bytes",
+        "byteSha256",
+        "canonicalSha256"
+      ],
+      "type": "object"
+    },
+    "lifecycleRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "asOf": {
+          "format": "date",
+          "maxLength": 10,
+          "minLength": 10,
+          "type": "string"
+        },
+        "establishesTruthOrFalsehood": {
+          "const": false,
+          "type": "boolean"
+        },
+        "id": {
+          "maxLength": 160,
+          "minLength": 3,
+          "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+          "type": "string"
+        },
+        "preservesHistory": {
+          "const": true,
+          "type": "boolean"
+        },
+        "reason": {
+          "maxLength": 640,
+          "minLength": 8,
+          "type": "string"
+        },
+        "replacementExpressionIds": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 3,
+            "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+            "type": "string"
+          },
+          "maxItems": 8,
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "scope": {
+          "maxLength": 640,
+          "minLength": 8,
+          "type": "string"
+        },
+        "state": {
+          "enum": [
+            "CURRENT_AS_OF",
+            "CORRECTED",
+            "WITHDRAWN",
+            "SUPERSEDED",
+            "RETRACTED"
+          ],
+          "type": "string"
+        },
+        "targetExpressionIds": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 3,
+            "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+            "type": "string"
+          },
+          "maxItems": 8,
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "id",
+        "targetExpressionIds",
+        "replacementExpressionIds",
+        "state",
+        "asOf",
+        "scope",
+        "reason",
+        "establishesTruthOrFalsehood",
+        "preservesHistory"
+      ],
+      "type": "object"
+    },
+    "lifecycleVocabulary": {
+      "additionalProperties": false,
+      "properties": {
+        "definition": {
+          "maxLength": 512,
+          "minLength": 8,
+          "type": "string"
+        },
+        "establishesTruthOrFalsehood": {
+          "const": false,
+          "type": "boolean"
+        },
+        "id": {
+          "enum": [
+            "CURRENT_AS_OF",
+            "CORRECTED",
+            "WITHDRAWN",
+            "SUPERSEDED",
+            "RETRACTED"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "definition",
+        "establishesTruthOrFalsehood"
+      ],
+      "type": "object"
+    },
+    "method": {
+      "additionalProperties": false,
+      "properties": {
+        "definition": {
+          "maxLength": 640,
+          "minLength": 8,
+          "type": "string"
+        },
+        "establishesTruthBeyondFixture": {
+          "const": false,
+          "type": "boolean"
+        },
+        "id": {
+          "enum": [
+            "DECLARED_FIXTURE_WORLD_COMPARISON",
+            "FORMAL_VALIDITY_CHECK",
+            "PROVENANCE_INTEGRITY_CHECK",
+            "SOURCE_INDEPENDENCE_AUDIT",
+            "NARRATIVE_SELECTION_AUDIT",
+            "AUTHORITY_SCOPE_CHECK",
+            "CITATION_EXISTENCE_CHECK",
+            "TEMPORAL_SCOPE_CHECK",
+            "INTERPRETATION_BOUNDARY_CHECK",
+            "TESTIMONY_UPTAKE_AUDIT",
+            "CAUSAL_MODEL_CHECK",
+            "NORMATIVE_REASON_BOUNDARY_CHECK",
+            "SELF_REFERENCE_STRATIFICATION_CHECK",
+            "PREDICTIVE_HORIZON_CHECK",
+            "COUNTERFACTUAL_MODEL_COMPARISON",
+            "PHENOMENAL_REPORT_BOUNDARY_CHECK",
+            "TESTIMONIAL_ACCESS_CHECK",
+            "DEFINITIONAL_SCOPE_CHECK",
+            "METAPHYSICAL_ATTRIBUTION_BOUNDARY_CHECK"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "definition",
+        "establishesTruthBeyondFixture"
+      ],
+      "type": "object"
+    },
+    "narrative": {
+      "additionalProperties": false,
+      "properties": {
+        "audience": {
+          "maxLength": 120,
+          "minLength": 2,
+          "type": "string"
+        },
+        "causalAttributions": {
+          "items": {
+            "$ref": "#/$defs/causalAttribution"
+          },
+          "maxItems": 12,
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "claimFragmentIds": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 3,
+            "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+            "type": "string"
+          },
+          "maxItems": 12,
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "coherenceNote": {
+          "maxLength": 640,
+          "minLength": 8,
+          "type": "string"
+        },
+        "correspondenceNote": {
+          "maxLength": 640,
+          "minLength": 8,
+          "type": "string"
+        },
+        "counterstoryIds": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 3,
+            "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+            "type": "string"
+          },
+          "maxItems": 8,
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "counterstorySearchState": {
+          "const": "REFERENCED",
+          "maxLength": 10,
+          "minLength": 10,
+          "type": "string"
+        },
+        "fidelityNote": {
+          "maxLength": 640,
+          "minLength": 8,
+          "type": "string"
+        },
+        "genre": {
+          "maxLength": 120,
+          "minLength": 2,
+          "type": "string"
+        },
+        "id": {
+          "maxLength": 160,
+          "minLength": 3,
+          "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+          "type": "string"
+        },
+        "level": {
+          "const": "L0_NARRATIVE_ARTIFACT",
+          "maxLength": 21,
+          "minLength": 21,
+          "type": "string"
+        },
+        "omittedEventIds": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 3,
+            "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+            "type": "string"
+          },
+          "maxItems": 24,
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "orderedEventIds": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 3,
+            "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+            "type": "string"
+          },
+          "maxItems": 24,
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "selectedEventIds": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 3,
+            "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+            "type": "string"
+          },
+          "maxItems": 24,
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "selectionRationale": {
+          "maxLength": 640,
+          "minLength": 8,
+          "type": "string"
+        },
+        "selectorRole": {
+          "maxLength": 160,
+          "minLength": 2,
+          "type": "string"
+        },
+        "standpoint": {
+          "maxLength": 160,
+          "minLength": 2,
+          "type": "string"
+        },
+        "title": {
+          "maxLength": 240,
+          "minLength": 3,
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "level",
+        "title",
+        "genre",
+        "audience",
+        "standpoint",
+        "selectorRole",
+        "selectionRationale",
+        "claimFragmentIds",
+        "selectedEventIds",
+        "omittedEventIds",
+        "orderedEventIds",
+        "causalAttributions",
+        "counterstoryIds",
+        "counterstorySearchState",
+        "coherenceNote",
+        "fidelityNote",
+        "correspondenceNote"
+      ],
+      "type": "object"
+    },
+    "predecessorBinding": {
+      "additionalProperties": false,
+      "properties": {
+        "authorizesAction": {
+          "const": false,
+          "type": "boolean"
+        },
+        "byteSha256": {
+          "maxLength": 71,
+          "minLength": 71,
+          "pattern": "^sha256:[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "characterizationAuthorship": {
+          "const": "PHASE_0_PRODUCER_NON_AUTHORITATIVE",
+          "maxLength": 34,
+          "minLength": 34,
+          "type": "string"
+        },
+        "classification": {
+          "enum": [
+            "OPERATIONAL_BOUNDARY",
+            "SEMANTIC_PREDECESSOR",
+            "SCHEMA_PREDECESSOR",
+            "METHOD_PREDECESSOR",
+            "MYTHIC_OR_DOCTRINAL_SELF_DESCRIPTION"
+          ],
+          "type": "string"
+        },
+        "copiesContent": {
+          "const": false,
+          "type": "boolean"
+        },
+        "establishesTruth": {
+          "const": false,
+          "type": "boolean"
+        },
+        "id": {
+          "maxLength": 160,
+          "minLength": 3,
+          "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+          "type": "string"
+        },
+        "importsAuthority": {
+          "const": false,
+          "type": "boolean"
+        },
+        "path": {
+          "maxLength": 300,
+          "minLength": 3,
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.?(?:/|$))[A-Za-z0-9._-]+(?:/[A-Za-z0-9._-]+)*$",
+          "type": "string"
+        },
+        "repositoryUrl": {
+          "const": "https://github.com/cambridgetcg/KINGDOM-OS.git",
+          "format": "uri",
+          "maxLength": 46,
+          "minLength": 46,
+          "type": "string"
+        },
+        "revision": {
+          "maxLength": 40,
+          "minLength": 40,
+          "pattern": "^[a-f0-9]{40}$",
+          "type": "string"
+        },
+        "role": {
+          "maxLength": 640,
+          "minLength": 8,
+          "type": "string"
+        },
+        "usesForSemanticOrientation": {
+          "const": true,
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "repositoryUrl",
+        "revision",
+        "path",
+        "byteSha256",
+        "classification",
+        "role",
+        "copiesContent",
+        "usesForSemanticOrientation",
+        "characterizationAuthorship",
+        "importsAuthority",
+        "establishesTruth",
+        "authorizesAction"
+      ],
+      "type": "object"
+    },
+    "publicHandoff": {
+      "additionalProperties": false,
+      "properties": {
+        "canonicalPath": {
+          "const": "/truth/polyphonic-claim-atlas-2026-08-26.json",
+          "maxLength": 45,
+          "minLength": 45,
+          "type": "string"
+        },
+        "guidePath": {
+          "const": "/POLYPHONIC-CLAIM-ATLAS-v0.1.md",
+          "maxLength": 31,
+          "minLength": 31,
+          "type": "string"
+        },
+        "htmlPage": {
+          "const": false,
+          "type": "boolean"
+        },
+        "runtime": {
+          "const": false,
+          "type": "boolean"
+        },
+        "schemaPath": {
+          "const": "/truth/schemas/v0.1/public-snapshot.schema.json",
+          "maxLength": 47,
+          "minLength": 47,
+          "type": "string"
+        }
+      },
+      "required": [
+        "canonicalPath",
+        "schemaPath",
+        "guidePath",
+        "htmlPage",
+        "runtime"
+      ],
+      "type": "object"
+    },
+    "reasoning": {
+      "additionalProperties": false,
+      "properties": {
+        "conclusionClaimId": {
+          "maxLength": 160,
+          "minLength": 3,
+          "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+          "type": "string"
+        },
+        "id": {
+          "maxLength": 160,
+          "minLength": 3,
+          "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+          "type": "string"
+        },
+        "level": {
+          "const": "L0_REASONING",
+          "maxLength": 12,
+          "minLength": 12,
+          "type": "string"
+        },
+        "premiseClaimIds": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 3,
+            "pattern": "^[a-z0-9]+(?:[-:][a-z0-9]+)*$",
+            "type": "string"
+          },
+          "maxItems": 12,
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "rule": {
+          "maxLength": 640,
+          "minLength": 3,
+          "type": "string"
+        },
+        "structuralNote": {
+          "maxLength": 640,
+          "minLength": 8,
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "level",
+        "premiseClaimIds",
+        "conclusionClaimId",
+        "rule",
+        "structuralNote"
+      ],
+      "type": "object"
+    },
+    "regimeCompatibility": {
+      "additionalProperties": false,
+      "properties": {
+        "canProduceGlobalVerdict": {
+          "const": false,
+          "type": "boolean"
+        },
+        "compatibilityNote": {
+          "maxLength": 640,
+          "minLength": 8,
+          "type": "string"
+        },
+        "compatibleDispositionIds": {
+          "items": {
+            "enum": [
+              "NOT_ASSESSED_UNDER_NAMED_METHOD",
+              "SUPPORTED_UNDER_NAMED_TEST",
+              "CHALLENGED_UNDER_NAMED_TEST",
+              "CONTRADICTED_UNDER_NAMED_TEST",
+              "MIXED_UNDER_NAMED_TEST",
+              "INSUFFICIENT_FOR_NAMED_METHOD",
+              "CONTESTED_UNDER_NAMED_TEST",
+              "INCOMPARABLE_UNDER_NAMED_METHOD",
+              "OUTSIDE_NAMED_METHOD",
+              "UNKNOWN_UNDER_NAMED_METHOD"
+            ],
+            "type": "string"
+          },
+          "maxItems": 10,
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "compatibleMethodIds": {
+          "items": {
+            "enum": [
+              "DECLARED_FIXTURE_WORLD_COMPARISON",
+              "FORMAL_VALIDITY_CHECK",
+              "PROVENANCE_INTEGRITY_CHECK",
+              "SOURCE_INDEPENDENCE_AUDIT",
+              "NARRATIVE_SELECTION_AUDIT",
+              "AUTHORITY_SCOPE_CHECK",
+              "CITATION_EXISTENCE_CHECK",
+              "TEMPORAL_SCOPE_CHECK",
+              "INTERPRETATION_BOUNDARY_CHECK",
+              "TESTIMONY_UPTAKE_AUDIT",
+              "CAUSAL_MODEL_CHECK",
+              "NORMATIVE_REASON_BOUNDARY_CHECK",
+              "SELF_REFERENCE_STRATIFICATION_CHECK",
+              "PREDICTIVE_HORIZON_CHECK",
+              "COUNTERFACTUAL_MODEL_COMPARISON",
+              "PHENOMENAL_REPORT_BOUNDARY_CHECK",
+              "TESTIMONIAL_ACCESS_CHECK",
+              "DEFINITIONAL_SCOPE_CHECK",
+              "METAPHYSICAL_ATTRIBUTION_BOUNDARY_CHECK"
+            ],
+            "type": "string"
+          },
+          "maxItems": 8,
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "regime": {
+          "enum": [
+            "EMPIRICAL",
+            "FORMAL_LOGICAL",
+            "INSTITUTIONAL",
+            "PROCEDURAL",
+            "INTERPRETIVE",
+            "NARRATIVE_CLAIM_FRAGMENT",
+            "METAPHORICAL",
+            "FICTIONAL",
+            "NORMATIVE",
+            "SELF_REFERENTIAL",
+            "PHENOMENAL",
+            "PREDICTIVE",
+            "COUNTERFACTUAL",
+            "PERFORMATIVE_OR_DIRECTIVE",
+            "TESTIMONIAL",
+            "CAUSAL",
+            "DEFINITIONAL",
+            "METAPHYSICAL_SOURCE_ATTRIBUTION",
+            "METAPHYSICAL_REFERENT_PROPOSITION"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "regime",
+        "compatibleMethodIds",
+        "compatibleDispositionIds",
+        "compatibilityNote",
+        "canProduceGlobalVerdict"
+      ],
+      "type": "object"
+    },
+    "scope": {
+      "additionalProperties": false,
+      "properties": {
+        "claimsRuntimeCurrentness": {
+          "const": false,
+          "type": "boolean"
+        },
+        "datasetNature": {
+          "const": "SYNTHETIC_ONLY",
+          "maxLength": 14,
+          "minLength": 14,
+          "type": "string"
+        },
+        "liveClaims": {
+          "const": false,
+          "type": "boolean"
+        },
+        "networkInputs": {
+          "const": false,
+          "type": "boolean"
+        },
+        "personalData": {
+          "const": false,
+          "type": "boolean"
+        },
+        "purpose": {
+          "maxLength": 512,
+          "minLength": 8,
+          "type": "string"
+        },
+        "realPeople": {
+          "const": false,
+          "type": "boolean"
+        },
+        "sourceBodies": {
+          "const": false,
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "purpose",
+        "datasetNature",
+        "realPeople",
+        "liveClaims",
+        "personalData",
+        "sourceBodies",
+        "networkInputs",
+        "claimsRuntimeCurrentness"
+      ],
+      "type": "object"
+    },
+    "selfReferenceLevel": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "enum": [
+            "L0_EXPRESSION_OR_CLAIM",
+            "L1_ASSESSMENT",
+            "L2_ASSESSMENT_AUDIT"
+          ],
+          "type": "string"
+        },
+        "mayTargetLevels": {
+          "items": {
+            "enum": [
+              "L0_EXPRESSION_OR_CLAIM",
+              "L1_ASSESSMENT"
+            ],
+            "type": "string"
+          },
+          "maxItems": 1,
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "memberLevels": {
+          "items": {
+            "enum": [
+              "L0_EXPRESSION",
+              "L0_CLAIM",
+              "L0_REASONING",
+              "L0_NARRATIVE_ARTIFACT",
+              "L1_ASSESSMENT",
+              "L2_ASSESSMENT_AUDIT"
+            ],
+            "type": "string"
+          },
+          "maxItems": 4,
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "rank": {
+          "maximum": 2,
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "rank",
+        "mayTargetLevels",
+        "memberLevels"
+      ],
+      "type": "object"
+    },
+    "selfReferenceStratification": {
+      "additionalProperties": false,
+      "properties": {
+        "assessmentDerivedAsTargetSupport": {
+          "const": false,
+          "type": "boolean"
+        },
+        "cyclicAssessment": {
+          "const": false,
+          "type": "boolean"
+        },
+        "fixedPointVerdict": {
+          "const": false,
+          "type": "boolean"
+        },
+        "levels": {
+          "items": {
+            "$ref": "#/$defs/selfReferenceLevel"
+          },
+          "maxItems": 3,
+          "minItems": 3,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "paradoxDisposition": {
+          "const": "OUTSIDE_NAMED_METHOD",
+          "maxLength": 20,
+          "minLength": 20,
+          "type": "string"
+        },
+        "selfTargeting": {
+          "const": false,
+          "type": "boolean"
+        },
+        "targetRankMustBeLower": {
+          "const": true,
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "levels",
+        "targetRankMustBeLower",
+        "selfTargeting",
+        "cyclicAssessment",
+        "assessmentDerivedAsTargetSupport",
+        "paradoxDisposition",
+        "fixedPointVerdict"
+      ],
+      "type": "object"
+    },
+    "textInputReceipt": {
+      "additionalProperties": false,
+      "properties": {
+        "byteSha256": {
+          "maxLength": 71,
+          "minLength": 71,
+          "pattern": "^sha256:[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "bytes": {
+          "maximum": 1048576,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "path": {
+          "enum": [
+            "guide/public-guide.md",
+            "src/atlas.mjs",
+            "src/cli.mjs",
+            "src/io.mjs",
+            "src/schema-definition.mjs",
+            "src/schema-validator.mjs"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "path",
+        "bytes",
+        "byteSha256"
+      ],
+      "type": "object"
+    },
+    "timeScope": {
+      "additionalProperties": false,
+      "properties": {
+        "basis": {
+          "const": "AUTHOR_STIPULATED_FIXTURE_TIME",
+          "maxLength": 30,
+          "minLength": 30,
+          "type": "string"
+        },
+        "from": {
+          "format": "date",
+          "maxLength": 10,
+          "minLength": 10,
+          "type": "string"
+        },
+        "runtimeCurrentnessClaim": {
+          "const": false,
+          "type": "boolean"
+        },
+        "through": {
+          "format": "date",
+          "maxLength": 10,
+          "minLength": 10,
+          "type": "string"
+        }
+      },
+      "required": [
+        "from",
+        "through",
+        "basis",
+        "runtimeCurrentnessClaim"
+      ],
+      "type": "object"
+    }
+  },
+  "$id": "https://thekingdom.dev/truth/schemas/v0.1/public-snapshot.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Closed Phase-0 schema for static synthetic truth-relations fixtures; no truth oracle, score, person classification, runtime or action authority.",
+  "properties": {
+    "$schema": {
+      "const": "https://thekingdom.dev/truth/schemas/v0.1/public-snapshot.schema.json",
+      "maxLength": 69,
+      "minLength": 69,
+      "type": "string"
+    },
+    "artifact": {
+      "$ref": "#/$defs/artifact"
+    },
+    "assessmentDispositions": {
+      "items": {
+        "enum": [
+          "NOT_ASSESSED_UNDER_NAMED_METHOD",
+          "SUPPORTED_UNDER_NAMED_TEST",
+          "CHALLENGED_UNDER_NAMED_TEST",
+          "CONTRADICTED_UNDER_NAMED_TEST",
+          "MIXED_UNDER_NAMED_TEST",
+          "INSUFFICIENT_FOR_NAMED_METHOD",
+          "CONTESTED_UNDER_NAMED_TEST",
+          "INCOMPARABLE_UNDER_NAMED_METHOD",
+          "OUTSIDE_NAMED_METHOD",
+          "UNKNOWN_UNDER_NAMED_METHOD"
+        ],
+        "type": "string"
+      },
+      "maxItems": 10,
+      "minItems": 10,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "authorship": {
+      "$ref": "#/$defs/authorship"
+    },
+    "buildProvenance": {
+      "$ref": "#/$defs/buildProvenance"
+    },
+    "cases": {
+      "items": {
+        "$ref": "#/$defs/fixtureCase"
+      },
+      "maxItems": 24,
+      "minItems": 24,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "claimRegimes": {
+      "items": {
+        "$ref": "#/$defs/claimRegime"
+      },
+      "maxItems": 19,
+      "minItems": 19,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "constitutionalBoundaries": {
+      "$ref": "#/$defs/constitutionalBoundaries"
+    },
+    "contradictionRegister": {
+      "items": {
+        "$ref": "#/$defs/contradictionRegister"
+      },
+      "maxItems": 4,
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "counts": {
+      "$ref": "#/$defs/counts"
+    },
+    "description": {
+      "maxLength": 1000,
+      "minLength": 20,
+      "type": "string"
+    },
+    "epistemicSeparations": {
+      "items": {
+        "$ref": "#/$defs/epistemicSeparation"
+      },
+      "maxItems": 40,
+      "minItems": 14,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "fixtureSet": {
+      "$ref": "#/$defs/fixtureSet"
+    },
+    "methodVocabulary": {
+      "items": {
+        "$ref": "#/$defs/method"
+      },
+      "maxItems": 19,
+      "minItems": 19,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "predecessorBindings": {
+      "items": {
+        "$ref": "#/$defs/predecessorBinding"
+      },
+      "maxItems": 12,
+      "minItems": 12,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "protocol": {
+      "const": "kingdom.truth-relations/0.1",
+      "maxLength": 27,
+      "minLength": 27,
+      "type": "string"
+    },
+    "publicHandoff": {
+      "$ref": "#/$defs/publicHandoff"
+    },
+    "recordLifecycleStates": {
+      "items": {
+        "$ref": "#/$defs/lifecycleVocabulary"
+      },
+      "maxItems": 5,
+      "minItems": 5,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "regimeMethodCompatibility": {
+      "items": {
+        "$ref": "#/$defs/regimeCompatibility"
+      },
+      "maxItems": 19,
+      "minItems": 19,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "scope": {
+      "$ref": "#/$defs/scope"
+    },
+    "selfReferenceStratification": {
+      "$ref": "#/$defs/selfReferenceStratification"
+    },
+    "title": {
+      "const": "KINGDOM Polyphonic Claim Atlas: Truth Relations Phase 0",
+      "maxLength": 55,
+      "minLength": 55,
+      "type": "string"
+    }
+  },
+  "required": [
+    "$schema",
+    "protocol",
+    "title",
+    "description",
+    "artifact",
+    "publicHandoff",
+    "authorship",
+    "scope",
+    "constitutionalBoundaries",
+    "selfReferenceStratification",
+    "assessmentDispositions",
+    "recordLifecycleStates",
+    "claimRegimes",
+    "methodVocabulary",
+    "regimeMethodCompatibility",
+    "epistemicSeparations",
+    "predecessorBindings",
+    "contradictionRegister",
+    "buildProvenance",
+    "fixtureSet",
+    "cases",
+    "counts"
+  ],
+  "title": "KINGDOM Polyphonic Claim Atlas public snapshot schema v0.1",
+  "type": "object"
+}
